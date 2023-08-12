@@ -32,7 +32,7 @@ class BaseClass {
 
   protected function executeRequest($method, $url, $options) {
     // Add bearer token if it's present
-    $bearerToken = $this->replaceVariables('{{User.Auth_Token}}');
+    $bearerToken = $this->replaceVariables('{{ACCESS_TOKEN}}');
     if ($bearerToken) {
       $options['headers']['Authorization'] = 'Bearer ' . $bearerToken;
     }

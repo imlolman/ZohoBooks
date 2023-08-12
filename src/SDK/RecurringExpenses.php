@@ -8,48 +8,44 @@ class RecurringExpenses extends BaseClass {
 
   /**
    * Create a Recurring Expenses
-   * URL: https://books.zoho.com/api/v3/recurringexpenses?organization_id={{Organization.Organization_ID}}
+   * URL: https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}
    * Method: POST
-   * @param $organization_id
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
+   * @param array $data = []
    */
-  public function create_a_recurring_expenses($organization_id) {
-    $url = $this->replaceVariables('https://books.zoho.com/api/v3/recurringexpenses?organization_id={{Organization.Organization_ID}}');
+  public function create_a_recurring_expenses($data = []) {
+    $url = $this->replaceVariables('https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
+    $options['form_params'] = [
+        "JSONString" => json_encode($data)
+    ];
     $options['query'] = [
-        $this->replaceVariables('organization_id') => $this->replaceVariables($organization_id),
+        $this->replaceVariables('organization_id') => $this->replaceVariables('{{ORGANIZATION_ID}}'),
     ];
     return $this->executeRequest('POST', $url, $options);
   }
 
-
   /**
    * List of Recurring Expenses
-   * URL: https://books.zoho.com/api/v3/recurringexpenses?organization_id={{Organization.Organization_ID}}
+   * URL: https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}
    * Method: GET
-   * @param $organization_id
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
    */
-  public function list_of_recurring_expenses($organization_id) {
-    $url = $this->replaceVariables('https://books.zoho.com/api/v3/recurringexpenses?organization_id={{Organization.Organization_ID}}');
+  public function list_of_recurring_expenses() {
+    $url = $this->replaceVariables('https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
     $options['query'] = [
-        $this->replaceVariables('organization_id') => $this->replaceVariables($organization_id),
+        $this->replaceVariables('organization_id') => $this->replaceVariables('{{ORGANIZATION_ID}}'),
     ];
     return $this->executeRequest('GET', $url, $options);
   }
-
 
 }

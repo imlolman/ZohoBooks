@@ -8,48 +8,44 @@ class Items extends BaseClass {
 
   /**
    * Create an Item
-   * URL: https://books.zoho.com/api/v3/items?organization_id={{Organization.Organization_ID}}
+   * URL: https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}
    * Method: POST
-   * @param $organization_id
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
+   * @param array $data = []
    */
-  public function create_an_item($organization_id) {
-    $url = $this->replaceVariables('https://books.zoho.com/api/v3/items?organization_id={{Organization.Organization_ID}}');
+  public function create_an_item($data = []) {
+    $url = $this->replaceVariables('https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
+    $options['form_params'] = [
+        "JSONString" => json_encode($data)
+    ];
     $options['query'] = [
-        $this->replaceVariables('organization_id') => $this->replaceVariables($organization_id),
+        $this->replaceVariables('organization_id') => $this->replaceVariables('{{ORGANIZATION_ID}}'),
     ];
     return $this->executeRequest('POST', $url, $options);
   }
 
-
   /**
    * List of Items
-   * URL: https://books.zoho.com/api/v3/items?organization_id={{Organization.Organization_ID}}
+   * URL: https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}
    * Method: GET
-   * @param $organization_id
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
    */
-  public function list_of_items($organization_id) {
-    $url = $this->replaceVariables('https://books.zoho.com/api/v3/items?organization_id={{Organization.Organization_ID}}');
+  public function list_of_items() {
+    $url = $this->replaceVariables('https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
     $options['query'] = [
-        $this->replaceVariables('organization_id') => $this->replaceVariables($organization_id),
+        $this->replaceVariables('organization_id') => $this->replaceVariables('{{ORGANIZATION_ID}}'),
     ];
     return $this->executeRequest('GET', $url, $options);
   }
-
 
 }

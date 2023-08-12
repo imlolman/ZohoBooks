@@ -11,37 +11,35 @@ class Organization extends BaseClass {
    * URL: https://books.zoho.com/api/v3/organizations
    * Method: GET
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
    */
-  public function list_of_organizations() {
+  public function list_of_organization() {
     $url = $this->replaceVariables('https://books.zoho.com/api/v3/organizations');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
     return $this->executeRequest('GET', $url, $options);
   }
-
 
   /**
    * Create an Organization
    * URL: https://books.zoho.com/api/v3/organizations
    * Method: POST
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
+   * @param array $data = []
    */
-  public function create_an_organization() {
+  public function create_an_organization($data = []) {
     $url = $this->replaceVariables('https://books.zoho.com/api/v3/organizations');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
+    $options['form_params'] = [
+        "JSONString" => json_encode($data)
+    ];
     return $this->executeRequest('POST', $url, $options);
   }
-
 
 }

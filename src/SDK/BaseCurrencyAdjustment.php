@@ -8,50 +8,46 @@ class BaseCurrencyAdjustment extends BaseClass {
 
   /**
    * Create a Base Currency Adjustment
-   * URL: https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{Organization.Organization_ID}}&account_ids=${Accounts.Account_ID}
+   * URL: https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}&account_ids=${Accounts.Account_ID}
    * Method: POST
-   * @param $organization_id
    * @param $account_ids
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
+   * @param array $data = []
    */
-  public function create_a_base_currency_adjustment($organization_id, $account_ids) {
-    $url = $this->replaceVariables('https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{Organization.Organization_ID}}&account_ids=${Accounts.Account_ID}');
+  public function create_a_base_currency_adjustment($organization_id, $account_ids, $data = []) {
+    $url = $this->replaceVariables('https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}&account_ids=${Accounts.Account_ID}');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
+    $options['form_params'] = [
+        "JSONString" => json_encode($data)
+    ];
     $options['query'] = [
-        $this->replaceVariables('organization_id') => $this->replaceVariables($organization_id),
+        $this->replaceVariables('organization_id') => $this->replaceVariables('{{ORGANIZATION_ID}}'),
         $this->replaceVariables('account_ids') => $this->replaceVariables($account_ids),
     ];
     return $this->executeRequest('POST', $url, $options);
   }
 
-
   /**
    * List of Base Currency Adjustments
-   * URL: https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{Organization.Organization_ID}}
+   * URL: https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
    * Method: GET
-   * @param $organization_id
    * Headers:
-   *  - Authorization: Zoho-authtoken {{User.Auth_Token}}
+   *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
    */
-  public function list_of_base_currency_adjustments($organization_id) {
-    $url = $this->replaceVariables('https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{Organization.Organization_ID}}');
+  public function list_of_base_currency_adjustments() {
+    $url = $this->replaceVariables('https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}');
     $options = [];
     $options['headers'] = [
-        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{User.Auth_Token}}'),
+        $this->replaceVariables('Authorization') => $this->replaceVariables('Zoho-authtoken {{ACCESS_TOKEN}}'),
     ];
-    $options['json'] = [
-      ];
     $options['query'] = [
-        $this->replaceVariables('organization_id') => $this->replaceVariables($organization_id),
+        $this->replaceVariables('organization_id') => $this->replaceVariables('{{ORGANIZATION_ID}}'),
     ];
     return $this->executeRequest('GET', $url, $options);
   }
-
 
 }
