@@ -4896,3 +4896,6 @@ $contactpersons->mark_as_primary_contact_person([]);
 // For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
 ```
 
+License
+-------
+[OSL - Open Software Licence 3.0](http://opensource.org/licenses/osl-3.0.php)
