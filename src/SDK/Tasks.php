@@ -7,27 +7,22 @@ use ZohoBooks\BaseClass;
 class Tasks extends BaseClass
 {
     /**
-     * Create a Task
-     * URL: https://books.zoho.com/api/v3/projects/${Project.Project_ID}/tasks?organization_id={{ORGANIZATION_ID}}
+     * Add a task
+     * URL: https://books.zoho.com/api/v3/projects/${project_id}/tasks?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $ProjectProjectID
+     * @param $projectid
      * Headers:
-     *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
      * @param array $data = []
      */
-    public function create_a_task($ProjectProjectID, $data = [])
+    public function add_a_task($projectid, $data = [])
     {
         $url = $this->replaceVariables(
             "https://books.zoho.com/api/v3/projects/" .
-                $ProjectProjectID .
+                $projectid .
                 "/tasks?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
-        $options["headers"] = [
-            $this->replaceVariables("Authorization") => $this->replaceVariables(
-                "Zoho-authtoken {{ACCESS_TOKEN}}"
-            ),
-        ];
+        $options["headers"] = [];
         $options["form_params"] = [
             "JSONString" => json_encode($data),
         ];
@@ -40,31 +35,111 @@ class Tasks extends BaseClass
     }
 
     /**
-     * List of tasks
-     * URL: https://books.zoho.com/api/v3/projects/${Projects.Project_ID}/tasks?organization_id={{ORGANIZATION_ID}}
+     * List tasks
+     * URL: https://books.zoho.com/api/v3/projects/${project_id}/tasks?organization_id={{ORGANIZATION_ID}}
      * Method: GET
-     * @param $ProjectsProjectID
+     * @param $projectid
      * Headers:
-     *  - Authorization: Zoho-authtoken {{ACCESS_TOKEN}}
      */
-    public function list_of_tasks($ProjectsProjectID)
+    public function list_tasks($projectid)
     {
         $url = $this->replaceVariables(
             "https://books.zoho.com/api/v3/projects/" .
-                $ProjectsProjectID .
+                $projectid .
                 "/tasks?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
-        $options["headers"] = [
-            $this->replaceVariables("Authorization") => $this->replaceVariables(
-                "Zoho-authtoken {{ACCESS_TOKEN}}"
-            ),
-        ];
+        $options["headers"] = [];
         $options["query"] = [
             $this->replaceVariables(
                 "organization_id"
             ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
         ];
         return $this->executeRequest("GET", $url, $options);
+    }
+
+    /**
+     * Update a task
+     * URL: https://books.zoho.com/api/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
+     * Method: PUT
+     * @param $projectid
+     * @param $taskid
+     * Headers:
+     * @param array $data = []
+     */
+    public function update_a_task($projectid, $taskid, $data = [])
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/projects/" .
+                $projectid .
+                "/tasks/" .
+                $taskid .
+                "?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["form_params"] = [
+            "JSONString" => json_encode($data),
+        ];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("PUT", $url, $options);
+    }
+
+    /**
+     * Get a task
+     * URL: https://books.zoho.com/api/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
+     * Method: GET
+     * @param $projectid
+     * @param $taskid
+     * Headers:
+     */
+    public function get_a_task($projectid, $taskid)
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/projects/" .
+                $projectid .
+                "/tasks/" .
+                $taskid .
+                "?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("GET", $url, $options);
+    }
+
+    /**
+     * Delete Task
+     * URL: https://books.zoho.com/api/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
+     * Method: DELETE
+     * @param $projectid
+     * @param $taskid
+     * Headers:
+     */
+    public function delete_task($projectid, $taskid)
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/projects/" .
+                $projectid .
+                "/tasks/" .
+                $taskid .
+                "?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("DELETE", $url, $options);
     }
 }

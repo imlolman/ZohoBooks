@@ -4,19 +4,19 @@ namespace ZohoBooks\SDK;
 
 use ZohoBooks\BaseClass;
 
-class RecurringExpenses extends BaseClass
+class BankAccounts extends BaseClass
 {
     /**
-     * Create a recurring expense
-     * URL: https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}
+     * Create a bank account
+     * URL: https://books.zoho.com/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
      */
-    public function create_a_recurring_expense($data = [])
+    public function create_a_bank_account($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -32,15 +32,15 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * List recurring expenses
-     * URL: https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}
+     * List view of accounts
+     * URL: https://books.zoho.com/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
-    public function list_recurring_expenses()
+    public function list_view_of_accounts()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -53,18 +53,18 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * Update a recurring expense
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}?organization_id={{ORGANIZATION_ID}}
+     * Update bank account
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
-     * @param $recurringexpenseid
+     * @param $accountid
      * Headers:
      * @param array $data = []
      */
-    public function update_a_recurring_expense($recurringexpenseid, $data = [])
+    public function update_bank_account($accountid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -81,17 +81,17 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * Get a recurring expense
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}?organization_id={{ORGANIZATION_ID}}
+     * Get account details
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
-     * @param $recurringexpenseid
+     * @param $accountid
      * Headers:
      */
-    public function get_a_recurring_expense($recurringexpenseid)
+    public function get_account_details($accountid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -105,17 +105,17 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * Delete a recurring expense
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}?organization_id={{ORGANIZATION_ID}}
+     * Delete an account
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
-     * @param $recurringexpenseid
+     * @param $accountid
      * Headers:
      */
-    public function delete_a_recurring_expense($recurringexpenseid)
+    public function delete_an_account($accountid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -129,19 +129,19 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * Stop a recurring expense
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}/status/stop?organization_id={{ORGANIZATION_ID}}
+     * Deactivate account.
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}/inactive?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $recurringexpenseid
+     * @param $accountid
      * Headers:
      * @param array $data = []
      */
-    public function stop_a_recurring_expense($recurringexpenseid, $data = [])
+    public function deactivate_account($accountid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
-                "/status/stop?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
+                "/inactive?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -157,19 +157,19 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * Resume a recurring Expense
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}/status/resume?organization_id={{ORGANIZATION_ID}}
+     * Activate account
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}/active?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $recurringexpenseid
+     * @param $accountid
      * Headers:
      * @param array $data = []
      */
-    public function resume_a_recurring_expense($recurringexpenseid, $data = [])
+    public function activate_account($accountid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
-                "/status/resume?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
+                "/active?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -185,18 +185,43 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * List child expenses created
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}/expenses?organization_id={{ORGANIZATION_ID}}
-     * Method: GET
-     * @param $recurringexpenseid
+     * Import a Bank/Credit Card Statement
+     * URL: https://books.zoho.com/api/v3/bankstatements?organization_id={{ORGANIZATION_ID}}
+     * Method: POST
      * Headers:
+     * @param array $data = []
      */
-    public function list_child_expenses_created($recurringexpenseid)
+    public function import_a_bank_credit_card_statement($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
-                "/expenses?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankstatements?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["form_params"] = [
+            "JSONString" => json_encode($data),
+        ];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("POST", $url, $options);
+    }
+
+    /**
+     * Get last imported statement
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}/statement/lastimported?organization_id={{ORGANIZATION_ID}}
+     * Method: GET
+     * @param $accountid
+     * Headers:
+     */
+    public function get_last_imported_statement($accountid)
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
+                "/statement/lastimported?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -209,18 +234,21 @@ class RecurringExpenses extends BaseClass
     }
 
     /**
-     * List recurring expense history
-     * URL: https://books.zoho.com/api/v3/recurringexpenses/${recurring_expense_id}/comments?organization_id={{ORGANIZATION_ID}}
-     * Method: GET
-     * @param $recurringexpenseid
+     * Delete last imported statement
+     * URL: https://books.zoho.com/api/v3/bankaccounts/${account_id}/statement/${statement_id}?organization_id={{ORGANIZATION_ID}}
+     * Method: DELETE
+     * @param $accountid
+     * @param $statementid
      * Headers:
      */
-    public function list_recurring_expense_history($recurringexpenseid)
+    public function delete_last_imported_statement($accountid, $statementid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringexpenses/" .
-                $recurringexpenseid .
-                "/comments?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts/" .
+                $accountid .
+                "/statement/" .
+                $statementid .
+                "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -229,6 +257,6 @@ class RecurringExpenses extends BaseClass
                 "organization_id"
             ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
         ];
-        return $this->executeRequest("GET", $url, $options);
+        return $this->executeRequest("DELETE", $url, $options);
     }
 }

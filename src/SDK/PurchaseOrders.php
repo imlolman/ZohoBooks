@@ -4,19 +4,19 @@ namespace ZohoBooks\SDK;
 
 use ZohoBooks\BaseClass;
 
-class Estimates extends BaseClass
+class PurchaseOrders extends BaseClass
 {
     /**
-     * Create an Estimate
-     * URL: https://books.zoho.com/api/v3/estimates?organization_id={{ORGANIZATION_ID}}
+     * Create a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
      */
-    public function create_an_estimate($data = [])
+    public function create_a_purchase_order($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/purchaseorders?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -32,15 +32,15 @@ class Estimates extends BaseClass
     }
 
     /**
-     * List estimates
-     * URL: https://books.zoho.com/api/v3/estimates?organization_id={{ORGANIZATION_ID}}
+     * List purchase orders
+     * URL: https://books.zoho.com/api/v3/purchaseorders?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
-    public function list_estimates()
+    public function list_purchase_orders()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/purchaseorders?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -53,18 +53,18 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Update an Estimate
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
+     * Update a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchase_order_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function update_an_estimate($estimateid, $data = [])
+    public function update_a_purchase_order($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -81,17 +81,17 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Get an estimate
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
+     * Get a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchase_order_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      */
-    public function get_an_estimate($estimateid)
+    public function get_a_purchase_order($purchaseorderid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -105,17 +105,17 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Delete an Estimate
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
+     * Delete purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchase_order_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      */
-    public function delete_an_estimate($estimateid)
+    public function delete_purchase_order($purchaseorderid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -129,19 +129,19 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Mark an estimate as sent
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/status/sent?organization_id={{ORGANIZATION_ID}}
+     * Mark a purchase order as open
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/status/open?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function mark_an_estimate_as_sent($estimateid, $data = [])
+    public function mark_a_purchase_order_as_open($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
-                "/status/sent?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/status/open?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -157,19 +157,19 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Mark an estimate as accepted
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/status/accepted?organization_id={{ORGANIZATION_ID}}
+     * Mark as billed
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/status/billed?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function mark_an_estimate_as_accepted($estimateid, $data = [])
+    public function mark_as_billed($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
-                "/status/accepted?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/status/billed?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -185,19 +185,19 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Mark an estimate as declined
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/status/declined?organization_id={{ORGANIZATION_ID}}
+     * Cancel a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/status/cancelled?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function mark_an_estimate_as_declined($estimateid, $data = [])
+    public function cancel_a_purchase_order($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
-                "/status/declined?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/status/cancelled?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -213,18 +213,20 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Submit an estimate for approval
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/submit?organization_id={{ORGANIZATION_ID}}
+     * Submit a purchase order for approval
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/submit?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function submit_an_estimate_for_approval($estimateid, $data = [])
-    {
+    public function submit_a_purchase_order_for_approval(
+        $purchaseorderid,
+        $data = []
+    ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/submit?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -241,18 +243,18 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Approve an estimate.
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/approve?organization_id={{ORGANIZATION_ID}}
+     * Approve a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/approve?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function approve_an_estimate($estimateid, $data = [])
+    public function approve_a_purchase_order($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/approve?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -269,18 +271,18 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Email an estimate
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/email?organization_id={{ORGANIZATION_ID}}
+     * Email a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function email_an_estimate($estimateid, $data = [])
+    public function email_a_purchase_order($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -297,85 +299,18 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Get estimate email content
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/email?organization_id={{ORGANIZATION_ID}}
+     * Get purchase order email content
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: GET
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      */
-    public function get_estimate_email_content($estimateid)
+    public function get_purchase_order_email_content($purchaseorderid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
-        );
-        $options = [];
-        $options["headers"] = [];
-        $options["query"] = [
-            $this->replaceVariables(
-                "organization_id"
-            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
-        ];
-        return $this->executeRequest("GET", $url, $options);
-    }
-
-    /**
-     * Email multiple estimates
-     * URL: https://books.zoho.com/api/v3/estimates/email?organization_id={{ORGANIZATION_ID}}
-     * Method: POST
-     * Headers:
-     * @param array $data = []
-     */
-    public function email_multiple_estimates($data = [])
-    {
-        $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/email?organization_id={{ORGANIZATION_ID}}"
-        );
-        $options = [];
-        $options["headers"] = [];
-        $options["form_params"] = [
-            "JSONString" => json_encode($data),
-        ];
-        $options["query"] = [
-            $this->replaceVariables(
-                "organization_id"
-            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
-        ];
-        return $this->executeRequest("POST", $url, $options);
-    }
-
-    /**
-     * Bulk export estimates
-     * URL: https://books.zoho.com/api/v3/estimates/pdf?organization_id={{ORGANIZATION_ID}}
-     * Method: GET
-     * Headers:
-     */
-    public function bulk_export_estimates()
-    {
-        $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/pdf?organization_id={{ORGANIZATION_ID}}"
-        );
-        $options = [];
-        $options["headers"] = [];
-        $options["query"] = [
-            $this->replaceVariables(
-                "organization_id"
-            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
-        ];
-        return $this->executeRequest("GET", $url, $options);
-    }
-
-    /**
-     * Bulk print estimates
-     * URL: https://books.zoho.com/api/v3/estimates/print?organization_id={{ORGANIZATION_ID}}
-     * Method: GET
-     * Headers:
-     */
-    public function bulk_print_estimates()
-    {
-        $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/print?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -389,17 +324,17 @@ class Estimates extends BaseClass
 
     /**
      * Update billing address
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/address/billing?organization_id={{ORGANIZATION_ID}}
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/address/billing?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function update_billing_address($estimateid, $data = [])
+    public function update_billing_address($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/address/billing?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -416,43 +351,15 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Update shipping address
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
-     * Method: PUT
-     * @param $estimateid
-     * Headers:
-     * @param array $data = []
-     */
-    public function update_shipping_address($estimateid, $data = [])
-    {
-        $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
-                "/address/shipping?organization_id={{ORGANIZATION_ID}}"
-        );
-        $options = [];
-        $options["headers"] = [];
-        $options["form_params"] = [
-            "JSONString" => json_encode($data),
-        ];
-        $options["query"] = [
-            $this->replaceVariables(
-                "organization_id"
-            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
-        ];
-        return $this->executeRequest("PUT", $url, $options);
-    }
-
-    /**
-     * List estimate template
-     * URL: https://books.zoho.com/api/v3/estimates/templates?organization_id={{ORGANIZATION_ID}}
+     * List purchase order templates
+     * URL: https://books.zoho.com/api/v3/purchaseorders/templates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
-    public function list_estimate_template()
+    public function list_purchase_order_templates()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/templates?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/purchaseorders/templates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -465,22 +372,22 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Update estimate template
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
+     * Update purchase order template
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
-     * @param $estimateid
+     * @param $purchaseorderid
      * @param $templateid
      * Headers:
      * @param array $data = []
      */
-    public function update_estimate_template(
-        $estimateid,
+    public function update_purchase_order_template(
+        $purchaseorderid,
         $templateid,
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/templates/" .
                 $templateid .
                 "?organization_id={{ORGANIZATION_ID}}"
@@ -499,18 +406,124 @@ class Estimates extends BaseClass
     }
 
     /**
-     * Add Comments
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * Add attachment to a purchase order
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: POST
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      * @param array $data = []
      */
-    public function add_comments($estimateid, $data = [])
+    public function add_attachment_to_a_purchase_order(
+        $purchaseorderid,
+        $data = []
+    ) {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/attachment?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["form_params"] = [
+            "JSONString" => json_encode($data),
+        ];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("POST", $url, $options);
+    }
+
+    /**
+     * Update attachment preference
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * Method: PUT
+     * @param $purchaseorderid
+     * Headers:
+     * @param array $data = []
+     */
+    public function update_attachment_preference($purchaseorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/attachment?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["form_params"] = [
+            "JSONString" => json_encode($data),
+        ];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("PUT", $url, $options);
+    }
+
+    /**
+     * Get a purchase order attachment
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * Method: GET
+     * @param $purchaseorderid
+     * Headers:
+     */
+    public function get_a_purchase_order_attachment($purchaseorderid)
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/attachment?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("GET", $url, $options);
+    }
+
+    /**
+     * Delete an attachment
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * Method: DELETE
+     * @param $purchaseorderid
+     * Headers:
+     */
+    public function delete_an_attachment($purchaseorderid)
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
+                "/attachment?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("DELETE", $url, $options);
+    }
+
+    /**
+     * Add comment
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * Method: POST
+     * @param $purchaseorderid
+     * Headers:
+     * @param array $data = []
+     */
+    public function add_comment($purchaseorderid, $data = [])
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -527,17 +540,17 @@ class Estimates extends BaseClass
     }
 
     /**
-     * List estimate comments & history
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * List purchase order comments & history
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
-     * @param $estimateid
+     * @param $purchaseorderid
      * Headers:
      */
-    public function list_estimate_comments_and_history($estimateid)
+    public function list_purchase_order_comments_and_history($purchaseorderid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -552,18 +565,18 @@ class Estimates extends BaseClass
 
     /**
      * Update comment
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
-     * @param $estimateid
+     * @param $purchaseorderid
      * @param $commentid
      * Headers:
      * @param array $data = []
      */
-    public function update_comment($estimateid, $commentid, $data = [])
+    public function update_comment($purchaseorderid, $commentid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/comments/" .
                 $commentid .
                 "?organization_id={{ORGANIZATION_ID}}"
@@ -583,17 +596,17 @@ class Estimates extends BaseClass
 
     /**
      * Delete a comment
-     * URL: https://books.zoho.com/api/v3/estimates/${estimate_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://books.zoho.com/api/v3/purchaseorders/${purchaseorder_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
-     * @param $estimateid
+     * @param $purchaseorderid
      * @param $commentid
      * Headers:
      */
-    public function delete_a_comment($estimateid, $commentid)
+    public function delete_a_comment($purchaseorderid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/estimates/" .
-                $estimateid .
+            "https://books.zoho.com/api/v3/purchaseorders/" .
+                $purchaseorderid .
                 "/comments/" .
                 $commentid .
                 "?organization_id={{ORGANIZATION_ID}}"

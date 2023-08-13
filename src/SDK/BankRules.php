@@ -4,19 +4,19 @@ namespace ZohoBooks\SDK;
 
 use ZohoBooks\BaseClass;
 
-class BaseCurrencyAdjustment extends BaseClass
+class BankRules extends BaseClass
 {
     /**
-     * Create a base currency adjustment
-     * URL: https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
+     * Create a rule
+     * URL: https://books.zoho.com/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
      */
-    public function create_a_base_currency_adjustment($data = [])
+    public function create_a_rule($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -32,15 +32,15 @@ class BaseCurrencyAdjustment extends BaseClass
     }
 
     /**
-     * List base currency adjustment
-     * URL: https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
+     * Get Rules List
+     * URL: https://books.zoho.com/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
-    public function list_base_currency_adjustment()
+    public function get_rules_list()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}"
+            "https://books.zoho.com/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -53,17 +53,45 @@ class BaseCurrencyAdjustment extends BaseClass
     }
 
     /**
-     * Get a base currency adjustment
-     * URL: https://books.zoho.com/api/v3/basecurrencyadjustment/${base_currency_adjustment_id}?organization_id={{ORGANIZATION_ID}}
-     * Method: GET
-     * @param $basecurrencyadjustmentid
+     * Update a rule
+     * URL: https://books.zoho.com/api/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
+     * Method: PUT
+     * @param $ruleid
      * Headers:
+     * @param array $data = []
      */
-    public function get_a_base_currency_adjustment($basecurrencyadjustmentid)
+    public function update_a_rule($ruleid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/basecurrencyadjustment/" .
-                $basecurrencyadjustmentid .
+            "https://books.zoho.com/api/v3/bankaccounts/rules/" .
+                $ruleid .
+                "?organization_id={{ORGANIZATION_ID}}"
+        );
+        $options = [];
+        $options["headers"] = [];
+        $options["form_params"] = [
+            "JSONString" => json_encode($data),
+        ];
+        $options["query"] = [
+            $this->replaceVariables(
+                "organization_id"
+            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
+        ];
+        return $this->executeRequest("PUT", $url, $options);
+    }
+
+    /**
+     * Get a rule
+     * URL: https://books.zoho.com/api/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
+     * Method: GET
+     * @param $ruleid
+     * Headers:
+     */
+    public function get_a_rule($ruleid)
+    {
+        $url = $this->replaceVariables(
+            "https://books.zoho.com/api/v3/bankaccounts/rules/" .
+                $ruleid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -77,17 +105,17 @@ class BaseCurrencyAdjustment extends BaseClass
     }
 
     /**
-     * Delete a base currency adjustment
-     * URL: https://books.zoho.com/api/v3/basecurrencyadjustment/${base_currency_adjustment_id}?organization_id={{ORGANIZATION_ID}}
+     * Delete a rule
+     * URL: https://books.zoho.com/api/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
-     * @param $basecurrencyadjustmentid
+     * @param $ruleid
      * Headers:
      */
-    public function delete_a_base_currency_adjustment($basecurrencyadjustmentid)
+    public function delete_a_rule($ruleid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/basecurrencyadjustment/" .
-                $basecurrencyadjustmentid .
+            "https://books.zoho.com/api/v3/bankaccounts/rules/" .
+                $ruleid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
@@ -98,26 +126,5 @@ class BaseCurrencyAdjustment extends BaseClass
             ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
         ];
         return $this->executeRequest("DELETE", $url, $options);
-    }
-
-    /**
-     * List account details for base currency adjustment
-     * URL: https://books.zoho.com/api/v3/basecurrencyadjustment/accounts?organization_id={{ORGANIZATION_ID}}
-     * Method: GET
-     * Headers:
-     */
-    public function list_account_details_for_base_currency_adjustment()
-    {
-        $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/basecurrencyadjustment/accounts?organization_id={{ORGANIZATION_ID}}"
-        );
-        $options = [];
-        $options["headers"] = [];
-        $options["query"] = [
-            $this->replaceVariables(
-                "organization_id"
-            ) => $this->replaceVariables("{{ORGANIZATION_ID}}"),
-        ];
-        return $this->executeRequest("GET", $url, $options);
     }
 }
