@@ -4,12 +4,6 @@ This is a PHP SDK generated with the help of the Postman Collection of ZohoBooks
 
 ### Installation
 
-Since this repository is not registered on packagist, you need to add it manually to your composer.json
-
-```
-composer config repositories.zohobooks vcs https://github.com/imlolman/ZohoBooks
-```
-
 ```
 composer require imlolman/zohobooks
 ```
