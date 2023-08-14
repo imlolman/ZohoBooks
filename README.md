@@ -68,7 +68,6 @@ $contacts->create_a_contact([
 
 // For more information about the parameters, please refer to the official documentation at https://www.zoho.com/books/api/v3/
 ```
-
 # Table of Contents
 - [SalesOrders](#salesorders)
   - [create_a_sales_order](#create_a_sales_order)
@@ -538,8 +537,7 @@ $contacts->create_a_contact([
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->create_a_sales_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->create_a_sales_order($data);
 ```
 
 ## list_sales_orders <a name='list_sales_orders'></a>
@@ -558,8 +556,7 @@ $salesorders->list_sales_orders();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_a_sales_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_a_sales_order($salesorderid, $data);
 ```
 
 ## get_a_sales_order <a name='get_a_sales_order'></a>
@@ -568,7 +565,7 @@ $salesorders->update_a_sales_order([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->get_a_sales_order();
+$salesorders->get_a_sales_order($salesorderid);
 ```
 
 ## delete_a_sales_order <a name='delete_a_sales_order'></a>
@@ -577,7 +574,7 @@ $salesorders->get_a_sales_order();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->delete_a_sales_order();
+$salesorders->delete_a_sales_order($salesorderid);
 ```
 
 ## mark_a_sales_order_as_open <a name='mark_a_sales_order_as_open'></a>
@@ -587,8 +584,7 @@ $salesorders->delete_a_sales_order();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->mark_a_sales_order_as_open([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->mark_a_sales_order_as_open($salesorderid, $data);
 ```
 
 ## mark_a_sales_order_as_void <a name='mark_a_sales_order_as_void'></a>
@@ -598,8 +594,7 @@ $salesorders->mark_a_sales_order_as_open([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->mark_a_sales_order_as_void([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->mark_a_sales_order_as_void($salesorderid, $data);
 ```
 
 ## update_a_sales_order_sub_status <a name='update_a_sales_order_sub_status'></a>
@@ -610,8 +605,7 @@ $salesorders->mark_a_sales_order_as_void([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_a_sales_order_sub_status([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_a_sales_order_sub_status($salesorderid, $statuscode, $data);
 ```
 
 ## email_a_sales_order <a name='email_a_sales_order'></a>
@@ -621,8 +615,7 @@ $salesorders->update_a_sales_order_sub_status([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->email_a_sales_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->email_a_sales_order($salesorderid, $data);
 ```
 
 ## get_sales_order_email_content <a name='get_sales_order_email_content'></a>
@@ -631,7 +624,7 @@ $salesorders->email_a_sales_order([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->get_sales_order_email_content();
+$salesorders->get_sales_order_email_content($salesorderid);
 ```
 
 ## submit_a_sales_order_for_approval <a name='submit_a_sales_order_for_approval'></a>
@@ -641,8 +634,7 @@ $salesorders->get_sales_order_email_content();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->submit_a_sales_order_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->submit_a_sales_order_for_approval($salesorderid, $data);
 ```
 
 ## approve_a_sales_order <a name='approve_a_sales_order'></a>
@@ -652,8 +644,7 @@ $salesorders->submit_a_sales_order_for_approval([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->approve_a_sales_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->approve_a_sales_order($salesorderid, $data);
 ```
 
 ## bulk_export_sales_orders <a name='bulk_export_sales_orders'></a>
@@ -681,8 +672,7 @@ $salesorders->bulk_print_sales_orders();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_billing_address($salesorderid, $data);
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -692,8 +682,7 @@ $salesorders->update_billing_address([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_shipping_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_shipping_address($salesorderid, $data);
 ```
 
 ## list_sales_order_templates <a name='list_sales_order_templates'></a>
@@ -713,8 +702,7 @@ $salesorders->list_sales_order_templates();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_sales_order_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_sales_order_template($salesorderid, $templateid, $data);
 ```
 
 ## add_attachment_to_a_sales_order <a name='add_attachment_to_a_sales_order'></a>
@@ -724,8 +712,7 @@ $salesorders->update_sales_order_template([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->add_attachment_to_a_sales_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->add_attachment_to_a_sales_order($salesorderid, $data);
 ```
 
 ## update_attachment_preference <a name='update_attachment_preference'></a>
@@ -735,8 +722,7 @@ $salesorders->add_attachment_to_a_sales_order([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_attachment_preference([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_attachment_preference($salesorderid, $data);
 ```
 
 ## get_a_sales_order_attachment <a name='get_a_sales_order_attachment'></a>
@@ -745,7 +731,7 @@ $salesorders->update_attachment_preference([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->get_a_sales_order_attachment();
+$salesorders->get_a_sales_order_attachment($salesorderid);
 ```
 
 ## delete_an_attachment <a name='delete_an_attachment'></a>
@@ -754,7 +740,7 @@ $salesorders->get_a_sales_order_attachment();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->delete_an_attachment();
+$salesorders->delete_an_attachment($salesorderid);
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -764,8 +750,7 @@ $salesorders->delete_an_attachment();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->add_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->add_comment($salesorderid, $data);
 ```
 
 ## list_sales_order_comments_and_history <a name='list_sales_order_comments_and_history'></a>
@@ -774,7 +759,7 @@ $salesorders->add_comment([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->list_sales_order_comments_and_history();
+$salesorders->list_sales_order_comments_and_history($salesorderid);
 ```
 
 ## update_comment <a name='update_comment'></a>
@@ -785,8 +770,7 @@ $salesorders->list_sales_order_comments_and_history();
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->update_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$salesorders->update_comment($salesorderid, $commentid, $data);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -796,7 +780,7 @@ $salesorders->update_comment([]);
 ### Example:
 ```php
 $salesorders = new SalesOrders();
-$salesorders->delete_a_comment();
+$salesorders->delete_a_comment($salesorderid, $commentid);
 ```
 
 # Organizations <a name='organizations'></a>
@@ -806,8 +790,7 @@ $salesorders->delete_a_comment();
 ### Example:
 ```php
 $organizations = new Organizations();
-$organizations->create_an_organization([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$organizations->create_an_organization($data);
 ```
 
 ## get_organization_details <a name='get_organization_details'></a>
@@ -834,7 +817,7 @@ $organizations->delete_an_organization();
 ### Example:
 ```php
 $organizations = new Organizations();
-$organizations->get_organization();
+$organizations->get_organization($organizationid);
 ```
 
 ## update_organization <a name='update_organization'></a>
@@ -844,8 +827,7 @@ $organizations->get_organization();
 ### Example:
 ```php
 $organizations = new Organizations();
-$organizations->update_organization([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$organizations->update_organization($organizationid, $data);
 ```
 
 # BankRules <a name='bankrules'></a>
@@ -855,8 +837,7 @@ $organizations->update_organization([]);
 ### Example:
 ```php
 $bankrules = new BankRules();
-$bankrules->create_a_rule([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankrules->create_a_rule($data);
 ```
 
 ## get_rules_list <a name='get_rules_list'></a>
@@ -875,8 +856,7 @@ $bankrules->get_rules_list();
 ### Example:
 ```php
 $bankrules = new BankRules();
-$bankrules->update_a_rule([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankrules->update_a_rule($ruleid, $data);
 ```
 
 ## get_a_rule <a name='get_a_rule'></a>
@@ -885,7 +865,7 @@ $bankrules->update_a_rule([]);
 ### Example:
 ```php
 $bankrules = new BankRules();
-$bankrules->get_a_rule();
+$bankrules->get_a_rule($ruleid);
 ```
 
 ## delete_a_rule <a name='delete_a_rule'></a>
@@ -894,7 +874,7 @@ $bankrules->get_a_rule();
 ### Example:
 ```php
 $bankrules = new BankRules();
-$bankrules->delete_a_rule();
+$bankrules->delete_a_rule($ruleid);
 ```
 
 # BankAccounts <a name='bankaccounts'></a>
@@ -904,8 +884,7 @@ $bankrules->delete_a_rule();
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->create_a_bank_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankaccounts->create_a_bank_account($data);
 ```
 
 ## list_view_of_accounts <a name='list_view_of_accounts'></a>
@@ -924,8 +903,7 @@ $bankaccounts->list_view_of_accounts();
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->update_bank_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankaccounts->update_bank_account($accountid, $data);
 ```
 
 ## get_account_details <a name='get_account_details'></a>
@@ -934,7 +912,7 @@ $bankaccounts->update_bank_account([]);
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->get_account_details();
+$bankaccounts->get_account_details($accountid);
 ```
 
 ## delete_an_account <a name='delete_an_account'></a>
@@ -943,7 +921,7 @@ $bankaccounts->get_account_details();
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->delete_an_account();
+$bankaccounts->delete_an_account($accountid);
 ```
 
 ## deactivate_account <a name='deactivate_account'></a>
@@ -953,8 +931,7 @@ $bankaccounts->delete_an_account();
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->deactivate_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankaccounts->deactivate_account($accountid, $data);
 ```
 
 ## activate_account <a name='activate_account'></a>
@@ -964,8 +941,7 @@ $bankaccounts->deactivate_account([]);
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->activate_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankaccounts->activate_account($accountid, $data);
 ```
 
 ## import_a_bank_credit_card_statement <a name='import_a_bank_credit_card_statement'></a>
@@ -974,8 +950,7 @@ $bankaccounts->activate_account([]);
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->import_a_bank_credit_card_statement([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bankaccounts->import_a_bank_credit_card_statement($data);
 ```
 
 ## get_last_imported_statement <a name='get_last_imported_statement'></a>
@@ -984,7 +959,7 @@ $bankaccounts->import_a_bank_credit_card_statement([]);
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->get_last_imported_statement();
+$bankaccounts->get_last_imported_statement($accountid);
 ```
 
 ## delete_last_imported_statement <a name='delete_last_imported_statement'></a>
@@ -994,7 +969,7 @@ $bankaccounts->get_last_imported_statement();
 ### Example:
 ```php
 $bankaccounts = new BankAccounts();
-$bankaccounts->delete_last_imported_statement();
+$bankaccounts->delete_last_imported_statement($accountid, $statementid);
 ```
 
 # Projects <a name='projects'></a>
@@ -1004,8 +979,7 @@ $bankaccounts->delete_last_imported_statement();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->create_a_project([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->create_a_project($data);
 ```
 
 ## list_projects <a name='list_projects'></a>
@@ -1024,8 +998,7 @@ $projects->list_projects();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->update_project([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->update_project($projectid, $data);
 ```
 
 ## get_a_project <a name='get_a_project'></a>
@@ -1034,7 +1007,7 @@ $projects->update_project([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->get_a_project();
+$projects->get_a_project($projectid);
 ```
 
 ## delete_project <a name='delete_project'></a>
@@ -1043,7 +1016,7 @@ $projects->get_a_project();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->delete_project();
+$projects->delete_project($projectid);
 ```
 
 ## activate_project <a name='activate_project'></a>
@@ -1053,8 +1026,7 @@ $projects->delete_project();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->activate_project([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->activate_project($projectid, $data);
 ```
 
 ## inactivate_a_project <a name='inactivate_a_project'></a>
@@ -1064,8 +1036,7 @@ $projects->activate_project([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->inactivate_a_project([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->inactivate_a_project($projectid, $data);
 ```
 
 ## clone_project <a name='clone_project'></a>
@@ -1075,8 +1046,7 @@ $projects->inactivate_a_project([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->clone_project([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->clone_project($projectid, $data);
 ```
 
 ## assign_users <a name='assign_users'></a>
@@ -1086,8 +1056,7 @@ $projects->clone_project([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->assign_users([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->assign_users($projectid, $data);
 ```
 
 ## list_users <a name='list_users'></a>
@@ -1096,7 +1065,7 @@ $projects->assign_users([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->list_users();
+$projects->list_users($projectid);
 ```
 
 ## invite_user <a name='invite_user'></a>
@@ -1106,8 +1075,7 @@ $projects->list_users();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->invite_user([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->invite_user($projectid, $data);
 ```
 
 ## update_user <a name='update_user'></a>
@@ -1118,8 +1086,7 @@ $projects->invite_user([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->update_user([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->update_user($projectid, $userid, $data);
 ```
 
 ## get_a_user <a name='get_a_user'></a>
@@ -1129,7 +1096,7 @@ $projects->update_user([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->get_a_user();
+$projects->get_a_user($projectid, $userid);
 ```
 
 ## delete_user <a name='delete_user'></a>
@@ -1139,7 +1106,7 @@ $projects->get_a_user();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->delete_user();
+$projects->delete_user($projectid, $userid);
 ```
 
 ## post_comment <a name='post_comment'></a>
@@ -1149,8 +1116,7 @@ $projects->delete_user();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->post_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$projects->post_comment($projectid, $data);
 ```
 
 ## list_comments <a name='list_comments'></a>
@@ -1159,7 +1125,7 @@ $projects->post_comment([]);
 ### Example:
 ```php
 $projects = new Projects();
-$projects->list_comments();
+$projects->list_comments($projectid);
 ```
 
 ## delete_comment <a name='delete_comment'></a>
@@ -1169,7 +1135,7 @@ $projects->list_comments();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->delete_comment();
+$projects->delete_comment($projectid, $commentid);
 ```
 
 ## list_invoices <a name='list_invoices'></a>
@@ -1178,7 +1144,7 @@ $projects->delete_comment();
 ### Example:
 ```php
 $projects = new Projects();
-$projects->list_invoices();
+$projects->list_invoices($projectid);
 ```
 
 # RecurringBills <a name='recurringbills'></a>
@@ -1188,8 +1154,7 @@ $projects->list_invoices();
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->create_a_recurring_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringbills->create_a_recurring_bill($data);
 ```
 
 ## list_recurring_bills <a name='list_recurring_bills'></a>
@@ -1208,8 +1173,7 @@ $recurringbills->list_recurring_bills();
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->update_a_recurring_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringbills->update_a_recurring_bill($recurringbillid, $data);
 ```
 
 ## get_a_recurring_bill <a name='get_a_recurring_bill'></a>
@@ -1218,7 +1182,7 @@ $recurringbills->update_a_recurring_bill([]);
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->get_a_recurring_bill();
+$recurringbills->get_a_recurring_bill($recurringbillid);
 ```
 
 ## delete_a_recurring_bill <a name='delete_a_recurring_bill'></a>
@@ -1227,7 +1191,7 @@ $recurringbills->get_a_recurring_bill();
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->delete_a_recurring_bill();
+$recurringbills->delete_a_recurring_bill($recurringbillid);
 ```
 
 ## stop_a_recurring_bill <a name='stop_a_recurring_bill'></a>
@@ -1237,8 +1201,7 @@ $recurringbills->delete_a_recurring_bill();
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->stop_a_recurring_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringbills->stop_a_recurring_bill($recurringbillid, $data);
 ```
 
 ## resume_a_recurring_bill <a name='resume_a_recurring_bill'></a>
@@ -1248,8 +1211,7 @@ $recurringbills->stop_a_recurring_bill([]);
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->resume_a_recurring_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringbills->resume_a_recurring_bill($recurringbillid, $data);
 ```
 
 ## list_recurring_bill_history <a name='list_recurring_bill_history'></a>
@@ -1258,7 +1220,7 @@ $recurringbills->resume_a_recurring_bill([]);
 ### Example:
 ```php
 $recurringbills = new RecurringBills();
-$recurringbills->list_recurring_bill_history();
+$recurringbills->list_recurring_bill_history($recurringbillid);
 ```
 
 # CustomModules <a name='custommodules'></a>
@@ -1269,8 +1231,7 @@ $recurringbills->list_recurring_bill_history();
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->create_custom_modules([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$custommodules->create_custom_modules($modulename, $data);
 ```
 
 ## bulk_update_custom_module <a name='bulk_update_custom_module'></a>
@@ -1280,8 +1241,7 @@ $custommodules->create_custom_modules([]);
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->bulk_update_custom_module([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$custommodules->bulk_update_custom_module($modulename, $data);
 ```
 
 ## get_record_list_of_a_custom_module <a name='get_record_list_of_a_custom_module'></a>
@@ -1290,7 +1250,7 @@ $custommodules->bulk_update_custom_module([]);
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->get_record_list_of_a_custom_module();
+$custommodules->get_record_list_of_a_custom_module($modulename);
 ```
 
 ## delete_custom_modules <a name='delete_custom_modules'></a>
@@ -1299,7 +1259,7 @@ $custommodules->get_record_list_of_a_custom_module();
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->delete_custom_modules();
+$custommodules->delete_custom_modules($modulename);
 ```
 
 ## update_custom_module <a name='update_custom_module'></a>
@@ -1310,8 +1270,7 @@ $custommodules->delete_custom_modules();
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->update_custom_module([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$custommodules->update_custom_module($modulename, $moduleid, $data);
 ```
 
 ## get_individual_record_details <a name='get_individual_record_details'></a>
@@ -1321,7 +1280,7 @@ $custommodules->update_custom_module([]);
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->get_individual_record_details();
+$custommodules->get_individual_record_details($modulename, $moduleid);
 ```
 
 ## delete_individual_records <a name='delete_individual_records'></a>
@@ -1331,7 +1290,7 @@ $custommodules->get_individual_record_details();
 ### Example:
 ```php
 $custommodules = new CustomModules();
-$custommodules->delete_individual_records();
+$custommodules->delete_individual_records($modulename, $moduleid);
 ```
 
 # RecurringExpenses <a name='recurringexpenses'></a>
@@ -1341,8 +1300,7 @@ $custommodules->delete_individual_records();
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->create_a_recurring_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringexpenses->create_a_recurring_expense($data);
 ```
 
 ## list_recurring_expenses <a name='list_recurring_expenses'></a>
@@ -1361,8 +1319,7 @@ $recurringexpenses->list_recurring_expenses();
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->update_a_recurring_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringexpenses->update_a_recurring_expense($recurringexpenseid, $data);
 ```
 
 ## get_a_recurring_expense <a name='get_a_recurring_expense'></a>
@@ -1371,7 +1328,7 @@ $recurringexpenses->update_a_recurring_expense([]);
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->get_a_recurring_expense();
+$recurringexpenses->get_a_recurring_expense($recurringexpenseid);
 ```
 
 ## delete_a_recurring_expense <a name='delete_a_recurring_expense'></a>
@@ -1380,7 +1337,7 @@ $recurringexpenses->get_a_recurring_expense();
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->delete_a_recurring_expense();
+$recurringexpenses->delete_a_recurring_expense($recurringexpenseid);
 ```
 
 ## stop_a_recurring_expense <a name='stop_a_recurring_expense'></a>
@@ -1390,8 +1347,7 @@ $recurringexpenses->delete_a_recurring_expense();
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->stop_a_recurring_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringexpenses->stop_a_recurring_expense($recurringexpenseid, $data);
 ```
 
 ## resume_a_recurring_expense <a name='resume_a_recurring_expense'></a>
@@ -1401,8 +1357,7 @@ $recurringexpenses->stop_a_recurring_expense([]);
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->resume_a_recurring_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringexpenses->resume_a_recurring_expense($recurringexpenseid, $data);
 ```
 
 ## list_child_expenses_created <a name='list_child_expenses_created'></a>
@@ -1411,7 +1366,7 @@ $recurringexpenses->resume_a_recurring_expense([]);
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->list_child_expenses_created();
+$recurringexpenses->list_child_expenses_created($recurringexpenseid);
 ```
 
 ## list_recurring_expense_history <a name='list_recurring_expense_history'></a>
@@ -1420,7 +1375,7 @@ $recurringexpenses->list_child_expenses_created();
 ### Example:
 ```php
 $recurringexpenses = new RecurringExpenses();
-$recurringexpenses->list_recurring_expense_history();
+$recurringexpenses->list_recurring_expense_history($recurringexpenseid);
 ```
 
 # Invoices <a name='invoices'></a>
@@ -1430,8 +1385,7 @@ $recurringexpenses->list_recurring_expense_history();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->create_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->create_an_invoice($data);
 ```
 
 ## list_invoices <a name='list_invoices'></a>
@@ -1450,8 +1404,7 @@ $invoices->list_invoices();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->update_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->update_an_invoice($invoiceid, $data);
 ```
 
 ## get_an_invoice <a name='get_an_invoice'></a>
@@ -1460,7 +1413,7 @@ $invoices->update_an_invoice([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->get_an_invoice();
+$invoices->get_an_invoice($invoiceid);
 ```
 
 ## delete_an_invoice <a name='delete_an_invoice'></a>
@@ -1469,7 +1422,7 @@ $invoices->get_an_invoice();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->delete_an_invoice();
+$invoices->delete_an_invoice($invoiceid);
 ```
 
 ## mark_an_invoice_as_sent <a name='mark_an_invoice_as_sent'></a>
@@ -1479,8 +1432,7 @@ $invoices->delete_an_invoice();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->mark_an_invoice_as_sent([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->mark_an_invoice_as_sent($invoiceid, $data);
 ```
 
 ## void_an_invoice <a name='void_an_invoice'></a>
@@ -1490,8 +1442,7 @@ $invoices->mark_an_invoice_as_sent([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->void_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->void_an_invoice($invoiceid, $data);
 ```
 
 ## mark_as_draft <a name='mark_as_draft'></a>
@@ -1501,8 +1452,7 @@ $invoices->void_an_invoice([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->mark_as_draft([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->mark_as_draft($invoiceid, $data);
 ```
 
 ## email_invoices <a name='email_invoices'></a>
@@ -1511,8 +1461,7 @@ $invoices->mark_as_draft([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->email_invoices([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->email_invoices($data);
 ```
 
 ## submit_an_invoice_for_approval <a name='submit_an_invoice_for_approval'></a>
@@ -1522,8 +1471,7 @@ $invoices->email_invoices([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->submit_an_invoice_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->submit_an_invoice_for_approval($invoiceid, $data);
 ```
 
 ## approve_an_invoice <a name='approve_an_invoice'></a>
@@ -1533,8 +1481,7 @@ $invoices->submit_an_invoice_for_approval([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->approve_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->approve_an_invoice($invoiceid, $data);
 ```
 
 ## email_an_invoice <a name='email_an_invoice'></a>
@@ -1544,8 +1491,7 @@ $invoices->approve_an_invoice([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->email_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->email_an_invoice($invoiceid, $data);
 ```
 
 ## get_invoice_email_content <a name='get_invoice_email_content'></a>
@@ -1554,7 +1500,7 @@ $invoices->email_an_invoice([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->get_invoice_email_content();
+$invoices->get_invoice_email_content($invoiceid);
 ```
 
 ## remind_customer <a name='remind_customer'></a>
@@ -1564,8 +1510,7 @@ $invoices->get_invoice_email_content();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->remind_customer([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->remind_customer($invoiceid, $data);
 ```
 
 ## get_payment_reminder_mail_content <a name='get_payment_reminder_mail_content'></a>
@@ -1574,7 +1519,7 @@ $invoices->remind_customer([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->get_payment_reminder_mail_content();
+$invoices->get_payment_reminder_mail_content($invoiceid);
 ```
 
 ## bulk_invoice_reminder <a name='bulk_invoice_reminder'></a>
@@ -1583,8 +1528,7 @@ $invoices->get_payment_reminder_mail_content();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->bulk_invoice_reminder([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->bulk_invoice_reminder($data);
 ```
 
 ## bulk_export_invoices <a name='bulk_export_invoices'></a>
@@ -1612,8 +1556,7 @@ $invoices->bulk_print_invoices();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->disable_payment_reminder([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->disable_payment_reminder($invoiceid, $data);
 ```
 
 ## enable_payment_reminder <a name='enable_payment_reminder'></a>
@@ -1623,8 +1566,7 @@ $invoices->disable_payment_reminder([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->enable_payment_reminder([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->enable_payment_reminder($invoiceid, $data);
 ```
 
 ## write_off_invoice <a name='write_off_invoice'></a>
@@ -1634,8 +1576,7 @@ $invoices->enable_payment_reminder([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->write_off_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->write_off_invoice($invoiceid, $data);
 ```
 
 ## cancel_write_off <a name='cancel_write_off'></a>
@@ -1645,8 +1586,7 @@ $invoices->write_off_invoice([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->cancel_write_off([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->cancel_write_off($invoiceid, $data);
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -1656,8 +1596,7 @@ $invoices->cancel_write_off([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->update_billing_address($invoiceid, $data);
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -1667,8 +1606,7 @@ $invoices->update_billing_address([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->update_shipping_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->update_shipping_address($invoiceid, $data);
 ```
 
 ## list_invoice_templates <a name='list_invoice_templates'></a>
@@ -1688,8 +1626,7 @@ $invoices->list_invoice_templates();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->update_invoice_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->update_invoice_template($invoiceid, $templateid, $data);
 ```
 
 ## list_invoice_payments <a name='list_invoice_payments'></a>
@@ -1698,7 +1635,7 @@ $invoices->update_invoice_template([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->list_invoice_payments();
+$invoices->list_invoice_payments($invoiceid);
 ```
 
 ## list_credits_applied <a name='list_credits_applied'></a>
@@ -1707,7 +1644,7 @@ $invoices->list_invoice_payments();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->list_credits_applied();
+$invoices->list_credits_applied($invoiceid);
 ```
 
 ## apply_credits <a name='apply_credits'></a>
@@ -1717,8 +1654,7 @@ $invoices->list_credits_applied();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->apply_credits([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->apply_credits($invoiceid, $data);
 ```
 
 ## delete_a_payment <a name='delete_a_payment'></a>
@@ -1728,7 +1664,7 @@ $invoices->apply_credits([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->delete_a_payment();
+$invoices->delete_a_payment($invoiceid, $invoicepaymentid);
 ```
 
 ## delete_applied_credit <a name='delete_applied_credit'></a>
@@ -1738,7 +1674,7 @@ $invoices->delete_a_payment();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->delete_applied_credit();
+$invoices->delete_applied_credit($invoiceid, $creditnotesinvoiceid);
 ```
 
 ## add_attachment_to_an_invoice <a name='add_attachment_to_an_invoice'></a>
@@ -1748,8 +1684,7 @@ $invoices->delete_applied_credit();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->add_attachment_to_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->add_attachment_to_an_invoice($invoiceid, $data);
 ```
 
 ## update_attachment_preference <a name='update_attachment_preference'></a>
@@ -1759,8 +1694,7 @@ $invoices->add_attachment_to_an_invoice([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->update_attachment_preference([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->update_attachment_preference($invoiceid, $data);
 ```
 
 ## get_an_invoice_attachment <a name='get_an_invoice_attachment'></a>
@@ -1769,7 +1703,7 @@ $invoices->update_attachment_preference([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->get_an_invoice_attachment();
+$invoices->get_an_invoice_attachment($invoiceid);
 ```
 
 ## delete_an_attachment <a name='delete_an_attachment'></a>
@@ -1778,7 +1712,7 @@ $invoices->get_an_invoice_attachment();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->delete_an_attachment();
+$invoices->delete_an_attachment($invoiceid);
 ```
 
 ## delete_the_expense_receipt <a name='delete_the_expense_receipt'></a>
@@ -1787,7 +1721,7 @@ $invoices->delete_an_attachment();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->delete_the_expense_receipt();
+$invoices->delete_the_expense_receipt($expenseid);
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -1797,8 +1731,7 @@ $invoices->delete_the_expense_receipt();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->add_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->add_comment($invoiceid, $data);
 ```
 
 ## list_invoice_comments_and_history <a name='list_invoice_comments_and_history'></a>
@@ -1807,7 +1740,7 @@ $invoices->add_comment([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->list_invoice_comments_and_history();
+$invoices->list_invoice_comments_and_history($invoiceid);
 ```
 
 ## update_comment <a name='update_comment'></a>
@@ -1818,8 +1751,7 @@ $invoices->list_invoice_comments_and_history();
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->update_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$invoices->update_comment($invoiceid, $commentid, $data);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -1829,7 +1761,7 @@ $invoices->update_comment([]);
 ### Example:
 ```php
 $invoices = new Invoices();
-$invoices->delete_a_comment();
+$invoices->delete_a_comment($invoiceid, $commentid);
 ```
 
 # Contacts <a name='contacts'></a>
@@ -1839,8 +1771,7 @@ $invoices->delete_a_comment();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->create_a_contact([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->create_a_contact($data);
 ```
 
 ## list_contacts <a name='list_contacts'></a>
@@ -1859,8 +1790,7 @@ $contacts->list_contacts();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->update_a_contact([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->update_a_contact($contactid, $data);
 ```
 
 ## get_contact <a name='get_contact'></a>
@@ -1869,7 +1799,7 @@ $contacts->update_a_contact([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->get_contact();
+$contacts->get_contact($contactid);
 ```
 
 ## delete_a_contact <a name='delete_a_contact'></a>
@@ -1878,7 +1808,7 @@ $contacts->get_contact();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->delete_a_contact();
+$contacts->delete_a_contact($contactid);
 ```
 
 ## mark_as_active <a name='mark_as_active'></a>
@@ -1888,8 +1818,7 @@ $contacts->delete_a_contact();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->mark_as_active([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->mark_as_active($contactid, $data);
 ```
 
 ## mark_as_inactive <a name='mark_as_inactive'></a>
@@ -1899,8 +1828,7 @@ $contacts->mark_as_active([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->mark_as_inactive([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->mark_as_inactive($contactid, $data);
 ```
 
 ## enable_portal_access <a name='enable_portal_access'></a>
@@ -1910,8 +1838,7 @@ $contacts->mark_as_inactive([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->enable_portal_access([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->enable_portal_access($contactid, $data);
 ```
 
 ## enable_payment_reminders <a name='enable_payment_reminders'></a>
@@ -1921,8 +1848,7 @@ $contacts->enable_portal_access([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->enable_payment_reminders([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->enable_payment_reminders($contactid, $data);
 ```
 
 ## disable_payment_reminders <a name='disable_payment_reminders'></a>
@@ -1932,8 +1858,7 @@ $contacts->enable_payment_reminders([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->disable_payment_reminders([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->disable_payment_reminders($contactid, $data);
 ```
 
 ## email_statement <a name='email_statement'></a>
@@ -1943,8 +1868,7 @@ $contacts->disable_payment_reminders([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->email_statement([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->email_statement($contactid, $data);
 ```
 
 ## get_statement_mail_content <a name='get_statement_mail_content'></a>
@@ -1953,7 +1877,7 @@ $contacts->email_statement([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->get_statement_mail_content();
+$contacts->get_statement_mail_content($contactid);
 ```
 
 ## email_contact <a name='email_contact'></a>
@@ -1963,8 +1887,7 @@ $contacts->get_statement_mail_content();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->email_contact([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->email_contact($contactid, $data);
 ```
 
 ## list_comments <a name='list_comments'></a>
@@ -1973,7 +1896,7 @@ $contacts->email_contact([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->list_comments();
+$contacts->list_comments($contactid);
 ```
 
 ## add_additional_address <a name='add_additional_address'></a>
@@ -1983,8 +1906,7 @@ $contacts->list_comments();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->add_additional_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->add_additional_address($contactid, $data);
 ```
 
 ## get_contact_addresses <a name='get_contact_addresses'></a>
@@ -1993,7 +1915,7 @@ $contacts->add_additional_address([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->get_contact_addresses();
+$contacts->get_contact_addresses($contactid);
 ```
 
 ## edit_additional_address <a name='edit_additional_address'></a>
@@ -2004,8 +1926,7 @@ $contacts->get_contact_addresses();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->edit_additional_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->edit_additional_address($contactid, $addressid, $data);
 ```
 
 ## delete_additional_address <a name='delete_additional_address'></a>
@@ -2015,7 +1936,7 @@ $contacts->edit_additional_address([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->delete_additional_address();
+$contacts->delete_additional_address($contactid, $addressid);
 ```
 
 ## list_refunds <a name='list_refunds'></a>
@@ -2024,7 +1945,7 @@ $contacts->delete_additional_address();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->list_refunds();
+$contacts->list_refunds($contactid);
 ```
 
 ## track_1099 <a name='track_1099'></a>
@@ -2034,8 +1955,7 @@ $contacts->list_refunds();
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->track_1099([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->track_1099($contactid, $data);
 ```
 
 ## untrack_1099 <a name='untrack_1099'></a>
@@ -2045,8 +1965,7 @@ $contacts->track_1099([]);
 ### Example:
 ```php
 $contacts = new Contacts();
-$contacts->untrack_1099([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contacts->untrack_1099($contactid, $data);
 ```
 
 # VendorCredits <a name='vendorcredits'></a>
@@ -2056,8 +1975,7 @@ $contacts->untrack_1099([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->create_a_vendor_credit([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->create_a_vendor_credit($data);
 ```
 
 ## list_vendor_credits <a name='list_vendor_credits'></a>
@@ -2076,8 +1994,7 @@ $vendorcredits->list_vendor_credits();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->update_vendor_credit([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->update_vendor_credit($vendorcreditid, $data);
 ```
 
 ## get_vendor_credit <a name='get_vendor_credit'></a>
@@ -2086,7 +2003,7 @@ $vendorcredits->update_vendor_credit([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->get_vendor_credit();
+$vendorcredits->get_vendor_credit($vendorcreditid);
 ```
 
 ## delete_vendor_credit <a name='delete_vendor_credit'></a>
@@ -2095,7 +2012,7 @@ $vendorcredits->get_vendor_credit();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->delete_vendor_credit();
+$vendorcredits->delete_vendor_credit($vendorcreditid);
 ```
 
 ## convert_to_open <a name='convert_to_open'></a>
@@ -2105,8 +2022,7 @@ $vendorcredits->delete_vendor_credit();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->convert_to_open([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->convert_to_open($vendorcreditid, $data);
 ```
 
 ## void_vendor_credit <a name='void_vendor_credit'></a>
@@ -2116,8 +2032,7 @@ $vendorcredits->convert_to_open([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->void_vendor_credit([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->void_vendor_credit($vendorcreditid, $data);
 ```
 
 ## submit_a_vendor_credit_for_approval <a name='submit_a_vendor_credit_for_approval'></a>
@@ -2127,8 +2042,7 @@ $vendorcredits->void_vendor_credit([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->submit_a_vendor_credit_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->submit_a_vendor_credit_for_approval($vendorcreditid, $data);
 ```
 
 ## approve_a_vendor_credit <a name='approve_a_vendor_credit'></a>
@@ -2138,8 +2052,7 @@ $vendorcredits->submit_a_vendor_credit_for_approval([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->approve_a_vendor_credit([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->approve_a_vendor_credit($vendorcreditid, $data);
 ```
 
 ## apply_credits_to_a_bill <a name='apply_credits_to_a_bill'></a>
@@ -2149,8 +2062,7 @@ $vendorcredits->approve_a_vendor_credit([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->apply_credits_to_a_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->apply_credits_to_a_bill($vendorcreditid, $data);
 ```
 
 ## list_bills_credited <a name='list_bills_credited'></a>
@@ -2159,7 +2071,7 @@ $vendorcredits->apply_credits_to_a_bill([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->list_bills_credited();
+$vendorcredits->list_bills_credited($vendorcreditid);
 ```
 
 ## delete_bills_credited <a name='delete_bills_credited'></a>
@@ -2169,7 +2081,7 @@ $vendorcredits->list_bills_credited();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->delete_bills_credited();
+$vendorcredits->delete_bills_credited($vendorcreditid, $vendorcreditbillid);
 ```
 
 ## refund_a_vendor_credit <a name='refund_a_vendor_credit'></a>
@@ -2179,8 +2091,7 @@ $vendorcredits->delete_bills_credited();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->refund_a_vendor_credit([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->refund_a_vendor_credit($vendorcreditid, $data);
 ```
 
 ## list_refunds_of_a_vendor_credit <a name='list_refunds_of_a_vendor_credit'></a>
@@ -2189,7 +2100,7 @@ $vendorcredits->refund_a_vendor_credit([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->list_refunds_of_a_vendor_credit();
+$vendorcredits->list_refunds_of_a_vendor_credit($vendorcreditid);
 ```
 
 ## update_vendor_credit_refund <a name='update_vendor_credit_refund'></a>
@@ -2200,8 +2111,7 @@ $vendorcredits->list_refunds_of_a_vendor_credit();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->update_vendor_credit_refund([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->update_vendor_credit_refund($vendorcreditid, $vendorcreditrefundid, $data);
 ```
 
 ## get_vendor_credit_refund <a name='get_vendor_credit_refund'></a>
@@ -2211,7 +2121,7 @@ $vendorcredits->update_vendor_credit_refund([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->get_vendor_credit_refund();
+$vendorcredits->get_vendor_credit_refund($vendorcreditid, $vendorcreditrefundid);
 ```
 
 ## delete_vendor_credit_refund <a name='delete_vendor_credit_refund'></a>
@@ -2221,7 +2131,7 @@ $vendorcredits->get_vendor_credit_refund();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->delete_vendor_credit_refund();
+$vendorcredits->delete_vendor_credit_refund($vendorcreditid, $vendorcreditrefundid);
 ```
 
 ## list_vendor_credit_refunds <a name='list_vendor_credit_refunds'></a>
@@ -2240,8 +2150,7 @@ $vendorcredits->list_vendor_credit_refunds();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->add_a_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$vendorcredits->add_a_comment($vendorcreditid, $data);
 ```
 
 ## list_vendor_credit_comments_and_history <a name='list_vendor_credit_comments_and_history'></a>
@@ -2250,7 +2159,7 @@ $vendorcredits->add_a_comment([]);
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->list_vendor_credit_comments_and_history();
+$vendorcredits->list_vendor_credit_comments_and_history($vendorcreditid);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -2260,7 +2169,7 @@ $vendorcredits->list_vendor_credit_comments_and_history();
 ### Example:
 ```php
 $vendorcredits = new VendorCredits();
-$vendorcredits->delete_a_comment();
+$vendorcredits->delete_a_comment($vendorcreditid, $commentid);
 ```
 
 # RecurringInvoices <a name='recurringinvoices'></a>
@@ -2270,8 +2179,7 @@ $vendorcredits->delete_a_comment();
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->create_a_recurring_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringinvoices->create_a_recurring_invoice($data);
 ```
 
 ## list_all_recurring_invoice <a name='list_all_recurring_invoice'></a>
@@ -2290,8 +2198,7 @@ $recurringinvoices->list_all_recurring_invoice();
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->update_recurring_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringinvoices->update_recurring_invoice($recurringinvoiceid, $data);
 ```
 
 ## get_a_recurring_invoice <a name='get_a_recurring_invoice'></a>
@@ -2300,7 +2207,7 @@ $recurringinvoices->update_recurring_invoice([]);
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->get_a_recurring_invoice();
+$recurringinvoices->get_a_recurring_invoice($recurringinvoiceid);
 ```
 
 ## delete_a_recurring_invoice <a name='delete_a_recurring_invoice'></a>
@@ -2309,7 +2216,7 @@ $recurringinvoices->get_a_recurring_invoice();
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->delete_a_recurring_invoice();
+$recurringinvoices->delete_a_recurring_invoice($recurringinvoiceid);
 ```
 
 ## stop_a_recurring_invoice <a name='stop_a_recurring_invoice'></a>
@@ -2319,8 +2226,7 @@ $recurringinvoices->delete_a_recurring_invoice();
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->stop_a_recurring_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringinvoices->stop_a_recurring_invoice($recurringinvoiceid, $data);
 ```
 
 ## resume_a_recurring_invoice <a name='resume_a_recurring_invoice'></a>
@@ -2330,8 +2236,7 @@ $recurringinvoices->stop_a_recurring_invoice([]);
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->resume_a_recurring_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringinvoices->resume_a_recurring_invoice($recurringinvoiceid, $data);
 ```
 
 ## update_recurring_invoice_template <a name='update_recurring_invoice_template'></a>
@@ -2342,8 +2247,7 @@ $recurringinvoices->resume_a_recurring_invoice([]);
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->update_recurring_invoice_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$recurringinvoices->update_recurring_invoice_template($recurringinvoiceid, $templateid, $data);
 ```
 
 ## list_recurring_invoice_history <a name='list_recurring_invoice_history'></a>
@@ -2352,7 +2256,7 @@ $recurringinvoices->update_recurring_invoice_template([]);
 ### Example:
 ```php
 $recurringinvoices = new RecurringInvoices();
-$recurringinvoices->list_recurring_invoice_history();
+$recurringinvoices->list_recurring_invoice_history($recurringinvoiceid);
 ```
 
 # Expenses <a name='expenses'></a>
@@ -2362,8 +2266,7 @@ $recurringinvoices->list_recurring_invoice_history();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->create_an_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$expenses->create_an_expense($data);
 ```
 
 ## list_expenses <a name='list_expenses'></a>
@@ -2382,8 +2285,7 @@ $expenses->list_expenses();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->update_an_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$expenses->update_an_expense($expenseid, $data);
 ```
 
 ## get_an_expense <a name='get_an_expense'></a>
@@ -2392,7 +2294,7 @@ $expenses->update_an_expense([]);
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->get_an_expense();
+$expenses->get_an_expense($expenseid);
 ```
 
 ## delete_an_expense <a name='delete_an_expense'></a>
@@ -2401,7 +2303,7 @@ $expenses->get_an_expense();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->delete_an_expense();
+$expenses->delete_an_expense($expenseid);
 ```
 
 ## list_expense_history_and_comments <a name='list_expense_history_and_comments'></a>
@@ -2410,7 +2312,7 @@ $expenses->delete_an_expense();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->list_expense_history_and_comments();
+$expenses->list_expense_history_and_comments($expenseid);
 ```
 
 ## create_an_employee <a name='create_an_employee'></a>
@@ -2419,8 +2321,7 @@ $expenses->list_expense_history_and_comments();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->create_an_employee([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$expenses->create_an_employee($data);
 ```
 
 ## list_employees <a name='list_employees'></a>
@@ -2438,7 +2339,7 @@ $expenses->list_employees();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->get_an_employee();
+$expenses->get_an_employee($employeeid);
 ```
 
 ## delete_an_employee <a name='delete_an_employee'></a>
@@ -2447,7 +2348,7 @@ $expenses->get_an_employee();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->delete_an_employee();
+$expenses->delete_an_employee($employeeid);
 ```
 
 ## add_receipt_to_an_expense <a name='add_receipt_to_an_expense'></a>
@@ -2457,8 +2358,7 @@ $expenses->delete_an_employee();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->add_receipt_to_an_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$expenses->add_receipt_to_an_expense($expenseid, $data);
 ```
 
 ## get_an_expense_receipt <a name='get_an_expense_receipt'></a>
@@ -2467,7 +2367,7 @@ $expenses->add_receipt_to_an_expense([]);
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->get_an_expense_receipt();
+$expenses->get_an_expense_receipt($expenseid);
 ```
 
 ## delete_a_receipt <a name='delete_a_receipt'></a>
@@ -2476,7 +2376,7 @@ $expenses->get_an_expense_receipt();
 ### Example:
 ```php
 $expenses = new Expenses();
-$expenses->delete_a_receipt();
+$expenses->delete_a_receipt($expenseid);
 ```
 
 # Currency <a name='currency'></a>
@@ -2486,8 +2386,7 @@ $expenses->delete_a_receipt();
 ### Example:
 ```php
 $currency = new Currency();
-$currency->create_a_currency([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$currency->create_a_currency($data);
 ```
 
 ## list_currencies <a name='list_currencies'></a>
@@ -2506,8 +2405,7 @@ $currency->list_currencies();
 ### Example:
 ```php
 $currency = new Currency();
-$currency->update_a_currency([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$currency->update_a_currency($currencyid, $data);
 ```
 
 ## get_a_currency <a name='get_a_currency'></a>
@@ -2516,7 +2414,7 @@ $currency->update_a_currency([]);
 ### Example:
 ```php
 $currency = new Currency();
-$currency->get_a_currency();
+$currency->get_a_currency($currencyid);
 ```
 
 ## delete_a_currency <a name='delete_a_currency'></a>
@@ -2525,7 +2423,7 @@ $currency->get_a_currency();
 ### Example:
 ```php
 $currency = new Currency();
-$currency->delete_a_currency();
+$currency->delete_a_currency($currencyid);
 ```
 
 ## create_an_exchange_rate <a name='create_an_exchange_rate'></a>
@@ -2535,8 +2433,7 @@ $currency->delete_a_currency();
 ### Example:
 ```php
 $currency = new Currency();
-$currency->create_an_exchange_rate([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$currency->create_an_exchange_rate($currencyid, $data);
 ```
 
 ## list_exchange_rates <a name='list_exchange_rates'></a>
@@ -2545,7 +2442,7 @@ $currency->create_an_exchange_rate([]);
 ### Example:
 ```php
 $currency = new Currency();
-$currency->list_exchange_rates();
+$currency->list_exchange_rates($currencyid);
 ```
 
 ## update_an_exchange_rate <a name='update_an_exchange_rate'></a>
@@ -2556,8 +2453,7 @@ $currency->list_exchange_rates();
 ### Example:
 ```php
 $currency = new Currency();
-$currency->update_an_exchange_rate([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$currency->update_an_exchange_rate($currencyid, $exchangerateid, $data);
 ```
 
 ## get_an_exchange_rate <a name='get_an_exchange_rate'></a>
@@ -2567,7 +2463,7 @@ $currency->update_an_exchange_rate([]);
 ### Example:
 ```php
 $currency = new Currency();
-$currency->get_an_exchange_rate();
+$currency->get_an_exchange_rate($currencyid, $exchangerateid);
 ```
 
 ## delete_an_exchage_rate <a name='delete_an_exchage_rate'></a>
@@ -2577,7 +2473,7 @@ $currency->get_an_exchange_rate();
 ### Example:
 ```php
 $currency = new Currency();
-$currency->delete_an_exchage_rate();
+$currency->delete_an_exchage_rate($currencyid, $exchangerateid);
 ```
 
 # OpeningBalances <a name='openingbalances'></a>
@@ -2587,8 +2483,7 @@ $currency->delete_an_exchage_rate();
 ### Example:
 ```php
 $openingbalances = new OpeningBalances();
-$openingbalances->create_opening_balance([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$openingbalances->create_opening_balance($data);
 ```
 
 ## update_opening_balance <a name='update_opening_balance'></a>
@@ -2597,8 +2492,7 @@ $openingbalances->create_opening_balance([]);
 ### Example:
 ```php
 $openingbalances = new OpeningBalances();
-$openingbalances->update_opening_balance([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$openingbalances->update_opening_balance($data);
 ```
 
 ## get_opening_balance <a name='get_opening_balance'></a>
@@ -2626,8 +2520,7 @@ $openingbalances->delete_opening_balance();
 ### Example:
 ```php
 $basecurrencyadjustment = new BaseCurrencyAdjustment();
-$basecurrencyadjustment->create_a_base_currency_adjustment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$basecurrencyadjustment->create_a_base_currency_adjustment($data);
 ```
 
 ## list_base_currency_adjustment <a name='list_base_currency_adjustment'></a>
@@ -2645,7 +2538,7 @@ $basecurrencyadjustment->list_base_currency_adjustment();
 ### Example:
 ```php
 $basecurrencyadjustment = new BaseCurrencyAdjustment();
-$basecurrencyadjustment->get_a_base_currency_adjustment();
+$basecurrencyadjustment->get_a_base_currency_adjustment($basecurrencyadjustmentid);
 ```
 
 ## delete_a_base_currency_adjustment <a name='delete_a_base_currency_adjustment'></a>
@@ -2654,7 +2547,7 @@ $basecurrencyadjustment->get_a_base_currency_adjustment();
 ### Example:
 ```php
 $basecurrencyadjustment = new BaseCurrencyAdjustment();
-$basecurrencyadjustment->delete_a_base_currency_adjustment();
+$basecurrencyadjustment->delete_a_base_currency_adjustment($basecurrencyadjustmentid);
 ```
 
 ## list_account_details_for_base_currency_adjustment <a name='list_account_details_for_base_currency_adjustment'></a>
@@ -2673,8 +2566,7 @@ $basecurrencyadjustment->list_account_details_for_base_currency_adjustment();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->create_an_estimate([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->create_an_estimate($data);
 ```
 
 ## list_estimates <a name='list_estimates'></a>
@@ -2693,8 +2585,7 @@ $estimates->list_estimates();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->update_an_estimate([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->update_an_estimate($estimateid, $data);
 ```
 
 ## get_an_estimate <a name='get_an_estimate'></a>
@@ -2703,7 +2594,7 @@ $estimates->update_an_estimate([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->get_an_estimate();
+$estimates->get_an_estimate($estimateid);
 ```
 
 ## delete_an_estimate <a name='delete_an_estimate'></a>
@@ -2712,7 +2603,7 @@ $estimates->get_an_estimate();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->delete_an_estimate();
+$estimates->delete_an_estimate($estimateid);
 ```
 
 ## mark_an_estimate_as_sent <a name='mark_an_estimate_as_sent'></a>
@@ -2722,8 +2613,7 @@ $estimates->delete_an_estimate();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->mark_an_estimate_as_sent([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->mark_an_estimate_as_sent($estimateid, $data);
 ```
 
 ## mark_an_estimate_as_accepted <a name='mark_an_estimate_as_accepted'></a>
@@ -2733,8 +2623,7 @@ $estimates->mark_an_estimate_as_sent([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->mark_an_estimate_as_accepted([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->mark_an_estimate_as_accepted($estimateid, $data);
 ```
 
 ## mark_an_estimate_as_declined <a name='mark_an_estimate_as_declined'></a>
@@ -2744,8 +2633,7 @@ $estimates->mark_an_estimate_as_accepted([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->mark_an_estimate_as_declined([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->mark_an_estimate_as_declined($estimateid, $data);
 ```
 
 ## submit_an_estimate_for_approval <a name='submit_an_estimate_for_approval'></a>
@@ -2755,8 +2643,7 @@ $estimates->mark_an_estimate_as_declined([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->submit_an_estimate_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->submit_an_estimate_for_approval($estimateid, $data);
 ```
 
 ## approve_an_estimate <a name='approve_an_estimate'></a>
@@ -2766,8 +2653,7 @@ $estimates->submit_an_estimate_for_approval([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->approve_an_estimate([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->approve_an_estimate($estimateid, $data);
 ```
 
 ## email_an_estimate <a name='email_an_estimate'></a>
@@ -2777,8 +2663,7 @@ $estimates->approve_an_estimate([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->email_an_estimate([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->email_an_estimate($estimateid, $data);
 ```
 
 ## get_estimate_email_content <a name='get_estimate_email_content'></a>
@@ -2787,7 +2672,7 @@ $estimates->email_an_estimate([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->get_estimate_email_content();
+$estimates->get_estimate_email_content($estimateid);
 ```
 
 ## email_multiple_estimates <a name='email_multiple_estimates'></a>
@@ -2796,8 +2681,7 @@ $estimates->get_estimate_email_content();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->email_multiple_estimates([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->email_multiple_estimates($data);
 ```
 
 ## bulk_export_estimates <a name='bulk_export_estimates'></a>
@@ -2825,8 +2709,7 @@ $estimates->bulk_print_estimates();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->update_billing_address($estimateid, $data);
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -2836,8 +2719,7 @@ $estimates->update_billing_address([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->update_shipping_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->update_shipping_address($estimateid, $data);
 ```
 
 ## list_estimate_template <a name='list_estimate_template'></a>
@@ -2857,8 +2739,7 @@ $estimates->list_estimate_template();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->update_estimate_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->update_estimate_template($estimateid, $templateid, $data);
 ```
 
 ## add_comments <a name='add_comments'></a>
@@ -2868,8 +2749,7 @@ $estimates->update_estimate_template([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->add_comments([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->add_comments($estimateid, $data);
 ```
 
 ## list_estimate_comments_and_history <a name='list_estimate_comments_and_history'></a>
@@ -2878,7 +2758,7 @@ $estimates->add_comments([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->list_estimate_comments_and_history();
+$estimates->list_estimate_comments_and_history($estimateid);
 ```
 
 ## update_comment <a name='update_comment'></a>
@@ -2889,8 +2769,7 @@ $estimates->list_estimate_comments_and_history();
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->update_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$estimates->update_comment($estimateid, $commentid, $data);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -2900,7 +2779,7 @@ $estimates->update_comment([]);
 ### Example:
 ```php
 $estimates = new Estimates();
-$estimates->delete_a_comment();
+$estimates->delete_a_comment($estimateid, $commentid);
 ```
 
 # Taxes <a name='taxes'></a>
@@ -2910,8 +2789,7 @@ $estimates->delete_a_comment();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->create_a_tax([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->create_a_tax($data);
 ```
 
 ## list_taxes <a name='list_taxes'></a>
@@ -2930,8 +2808,7 @@ $taxes->list_taxes();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->update_a_tax([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->update_a_tax($taxid, $data);
 ```
 
 ## get_a_tax <a name='get_a_tax'></a>
@@ -2940,7 +2817,7 @@ $taxes->update_a_tax([]);
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->get_a_tax();
+$taxes->get_a_tax($taxid);
 ```
 
 ## delete_a_tax <a name='delete_a_tax'></a>
@@ -2949,7 +2826,7 @@ $taxes->get_a_tax();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->delete_a_tax();
+$taxes->delete_a_tax($taxid);
 ```
 
 ## update_a_tax_group <a name='update_a_tax_group'></a>
@@ -2959,8 +2836,7 @@ $taxes->delete_a_tax();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->update_a_tax_group([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->update_a_tax_group($taxgroupid, $data);
 ```
 
 ## get_a_tax_group <a name='get_a_tax_group'></a>
@@ -2969,7 +2845,7 @@ $taxes->update_a_tax_group([]);
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->get_a_tax_group();
+$taxes->get_a_tax_group($taxgroupid);
 ```
 
 ## delete_a_tax_group <a name='delete_a_tax_group'></a>
@@ -2978,7 +2854,7 @@ $taxes->get_a_tax_group();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->delete_a_tax_group();
+$taxes->delete_a_tax_group($taxgroupid);
 ```
 
 ## create_a_tax_group <a name='create_a_tax_group'></a>
@@ -2987,8 +2863,7 @@ $taxes->delete_a_tax_group();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->create_a_tax_group([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->create_a_tax_group($data);
 ```
 
 ## create_a_tax_authority__us_and_ca_edition_only_ <a name='create_a_tax_authority__us_and_ca_edition_only_'></a>
@@ -2997,8 +2872,7 @@ $taxes->create_a_tax_group([]);
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->create_a_tax_authority__us_and_ca_edition_only_([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->create_a_tax_authority__us_and_ca_edition_only_($data);
 ```
 
 ## list_tax_authorities__us_edition_only_ <a name='list_tax_authorities__us_edition_only_'></a>
@@ -3017,8 +2891,7 @@ $taxes->list_tax_authorities__us_edition_only_();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->update_a_tax_authority__us_and_ca_edition_only_([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->update_a_tax_authority__us_and_ca_edition_only_($taxauthorityid, $data);
 ```
 
 ## get_a_tax_authority__us_and_ca_edition_only_ <a name='get_a_tax_authority__us_and_ca_edition_only_'></a>
@@ -3027,7 +2900,7 @@ $taxes->update_a_tax_authority__us_and_ca_edition_only_([]);
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->get_a_tax_authority__us_and_ca_edition_only_();
+$taxes->get_a_tax_authority__us_and_ca_edition_only_($taxauthorityid);
 ```
 
 ## delete_a_tax_authority__us_and_ca_edition_only_ <a name='delete_a_tax_authority__us_and_ca_edition_only_'></a>
@@ -3036,7 +2909,7 @@ $taxes->get_a_tax_authority__us_and_ca_edition_only_();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->delete_a_tax_authority__us_and_ca_edition_only_();
+$taxes->delete_a_tax_authority__us_and_ca_edition_only_($taxauthorityid);
 ```
 
 ## create_a_tax_exemption__us_edition_only_ <a name='create_a_tax_exemption__us_edition_only_'></a>
@@ -3045,8 +2918,7 @@ $taxes->delete_a_tax_authority__us_and_ca_edition_only_();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->create_a_tax_exemption__us_edition_only_([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->create_a_tax_exemption__us_edition_only_($data);
 ```
 
 ## list_tax_exemptions__us_edition_only_ <a name='list_tax_exemptions__us_edition_only_'></a>
@@ -3065,8 +2937,7 @@ $taxes->list_tax_exemptions__us_edition_only_();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->update_a_tax_exemption__us_edition_only_([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$taxes->update_a_tax_exemption__us_edition_only_($taxexemptionid, $data);
 ```
 
 ## get_a_tax_exemption__us_edition_only_ <a name='get_a_tax_exemption__us_edition_only_'></a>
@@ -3075,7 +2946,7 @@ $taxes->update_a_tax_exemption__us_edition_only_([]);
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->get_a_tax_exemption__us_edition_only_();
+$taxes->get_a_tax_exemption__us_edition_only_($taxexemptionid);
 ```
 
 ## delete_a_tax_exemption__us_edition_only_ <a name='delete_a_tax_exemption__us_edition_only_'></a>
@@ -3084,7 +2955,7 @@ $taxes->get_a_tax_exemption__us_edition_only_();
 ### Example:
 ```php
 $taxes = new Taxes();
-$taxes->delete_a_tax_exemption__us_edition_only_();
+$taxes->delete_a_tax_exemption__us_edition_only_($taxexemptionid);
 ```
 
 # Journals <a name='journals'></a>
@@ -3094,8 +2965,7 @@ $taxes->delete_a_tax_exemption__us_edition_only_();
 ### Example:
 ```php
 $journals = new Journals();
-$journals->create_a_journal([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$journals->create_a_journal($data);
 ```
 
 ## get_journal_list <a name='get_journal_list'></a>
@@ -3114,8 +2984,7 @@ $journals->get_journal_list();
 ### Example:
 ```php
 $journals = new Journals();
-$journals->update_a_journal([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$journals->update_a_journal($journalid, $data);
 ```
 
 ## get_journal <a name='get_journal'></a>
@@ -3124,7 +2993,7 @@ $journals->update_a_journal([]);
 ### Example:
 ```php
 $journals = new Journals();
-$journals->get_journal();
+$journals->get_journal($journalid);
 ```
 
 ## delete_a_journal <a name='delete_a_journal'></a>
@@ -3133,7 +3002,7 @@ $journals->get_journal();
 ### Example:
 ```php
 $journals = new Journals();
-$journals->delete_a_journal();
+$journals->delete_a_journal($journalid);
 ```
 
 ## mark_a_journal_as_published <a name='mark_a_journal_as_published'></a>
@@ -3143,8 +3012,7 @@ $journals->delete_a_journal();
 ### Example:
 ```php
 $journals = new Journals();
-$journals->mark_a_journal_as_published([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$journals->mark_a_journal_as_published($journalid, $data);
 ```
 
 ## add_attachment_to_a_journal <a name='add_attachment_to_a_journal'></a>
@@ -3154,8 +3022,7 @@ $journals->mark_a_journal_as_published([]);
 ### Example:
 ```php
 $journals = new Journals();
-$journals->add_attachment_to_a_journal([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$journals->add_attachment_to_a_journal($journalid, $data);
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -3165,8 +3032,7 @@ $journals->add_attachment_to_a_journal([]);
 ### Example:
 ```php
 $journals = new Journals();
-$journals->add_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$journals->add_comment($jounralid, $data);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -3176,7 +3042,7 @@ $journals->add_comment([]);
 ### Example:
 ```php
 $journals = new Journals();
-$journals->delete_a_comment();
+$journals->delete_a_comment($jounralid, $commentid);
 ```
 
 # Bills <a name='bills'></a>
@@ -3186,8 +3052,7 @@ $journals->delete_a_comment();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->create_a_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->create_a_bill($data);
 ```
 
 ## list_bills <a name='list_bills'></a>
@@ -3206,8 +3071,7 @@ $bills->list_bills();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->update_a_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->update_a_bill($billid, $data);
 ```
 
 ## get_a_bill <a name='get_a_bill'></a>
@@ -3216,7 +3080,7 @@ $bills->update_a_bill([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->get_a_bill();
+$bills->get_a_bill($billid);
 ```
 
 ## delete_a_bill <a name='delete_a_bill'></a>
@@ -3225,7 +3089,7 @@ $bills->get_a_bill();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->delete_a_bill();
+$bills->delete_a_bill($billid);
 ```
 
 ## void_a_bill <a name='void_a_bill'></a>
@@ -3235,8 +3099,7 @@ $bills->delete_a_bill();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->void_a_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->void_a_bill($billid, $data);
 ```
 
 ## mark_a_bill_as_open <a name='mark_a_bill_as_open'></a>
@@ -3246,8 +3109,7 @@ $bills->void_a_bill([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->mark_a_bill_as_open([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->mark_a_bill_as_open($billid, $data);
 ```
 
 ## submit_a_bill_for_approval <a name='submit_a_bill_for_approval'></a>
@@ -3257,8 +3119,7 @@ $bills->mark_a_bill_as_open([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->submit_a_bill_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->submit_a_bill_for_approval($billid, $data);
 ```
 
 ## approve_a_bill <a name='approve_a_bill'></a>
@@ -3268,8 +3129,7 @@ $bills->submit_a_bill_for_approval([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->approve_a_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->approve_a_bill($billid, $data);
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -3279,8 +3139,7 @@ $bills->approve_a_bill([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->update_billing_address($billid, $data);
 ```
 
 ## list_bill_payments <a name='list_bill_payments'></a>
@@ -3289,7 +3148,7 @@ $bills->update_billing_address([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->list_bill_payments();
+$bills->list_bill_payments($billid);
 ```
 
 ## apply_credits <a name='apply_credits'></a>
@@ -3299,8 +3158,7 @@ $bills->list_bill_payments();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->apply_credits([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->apply_credits($billid, $data);
 ```
 
 ## delete_a_payment <a name='delete_a_payment'></a>
@@ -3310,7 +3168,7 @@ $bills->apply_credits([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->delete_a_payment();
+$bills->delete_a_payment($billid, $billpaymentid);
 ```
 
 ## add_attachment_to_a_bill <a name='add_attachment_to_a_bill'></a>
@@ -3320,8 +3178,7 @@ $bills->delete_a_payment();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->add_attachment_to_a_bill([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->add_attachment_to_a_bill($billid, $data);
 ```
 
 ## get_a_bill_attachment <a name='get_a_bill_attachment'></a>
@@ -3330,7 +3187,7 @@ $bills->add_attachment_to_a_bill([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->get_a_bill_attachment();
+$bills->get_a_bill_attachment($billid);
 ```
 
 ## delete_an_attachment <a name='delete_an_attachment'></a>
@@ -3339,7 +3196,7 @@ $bills->get_a_bill_attachment();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->delete_an_attachment();
+$bills->delete_an_attachment($billid);
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -3349,8 +3206,7 @@ $bills->delete_an_attachment();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->add_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$bills->add_comment($billid, $data);
 ```
 
 ## list_bill_comments_and_history <a name='list_bill_comments_and_history'></a>
@@ -3359,7 +3215,7 @@ $bills->add_comment([]);
 ### Example:
 ```php
 $bills = new Bills();
-$bills->list_bill_comments_and_history();
+$bills->list_bill_comments_and_history($billid);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -3369,7 +3225,7 @@ $bills->list_bill_comments_and_history();
 ### Example:
 ```php
 $bills = new Bills();
-$bills->delete_a_comment();
+$bills->delete_a_comment($billid, $commentid);
 ```
 
 # TimeEntries <a name='timeentries'></a>
@@ -3379,8 +3235,7 @@ $bills->delete_a_comment();
 ### Example:
 ```php
 $timeentries = new TimeEntries();
-$timeentries->log_time_entries([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$timeentries->log_time_entries($data);
 ```
 
 ## list_time_entries <a name='list_time_entries'></a>
@@ -3408,8 +3263,7 @@ $timeentries->delete_time_entries();
 ### Example:
 ```php
 $timeentries = new TimeEntries();
-$timeentries->update_time_entry([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$timeentries->update_time_entry($timeentryid, $data);
 ```
 
 ## get_a_time_entry <a name='get_a_time_entry'></a>
@@ -3418,7 +3272,7 @@ $timeentries->update_time_entry([]);
 ### Example:
 ```php
 $timeentries = new TimeEntries();
-$timeentries->get_a_time_entry();
+$timeentries->get_a_time_entry($timeentryid);
 ```
 
 ## delete_time_entry <a name='delete_time_entry'></a>
@@ -3427,7 +3281,7 @@ $timeentries->get_a_time_entry();
 ### Example:
 ```php
 $timeentries = new TimeEntries();
-$timeentries->delete_time_entry();
+$timeentries->delete_time_entry($timeentryid);
 ```
 
 ## start_timer <a name='start_timer'></a>
@@ -3437,8 +3291,7 @@ $timeentries->delete_time_entry();
 ### Example:
 ```php
 $timeentries = new TimeEntries();
-$timeentries->start_timer([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$timeentries->start_timer($timeentryid, $data);
 ```
 
 ## stop_timer <a name='stop_timer'></a>
@@ -3447,8 +3300,7 @@ $timeentries->start_timer([]);
 ### Example:
 ```php
 $timeentries = new TimeEntries();
-$timeentries->stop_timer([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$timeentries->stop_timer($data);
 ```
 
 ## get_timer <a name='get_timer'></a>
@@ -3467,8 +3319,7 @@ $timeentries->get_timer();
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->create_an_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$chartofaccounts->create_an_account($data);
 ```
 
 ## list_chart_of_accounts <a name='list_chart_of_accounts'></a>
@@ -3487,8 +3338,7 @@ $chartofaccounts->list_chart_of_accounts();
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->update_an_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$chartofaccounts->update_an_account($accountid, $data);
 ```
 
 ## get_an_account <a name='get_an_account'></a>
@@ -3497,7 +3347,7 @@ $chartofaccounts->update_an_account([]);
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->get_an_account();
+$chartofaccounts->get_an_account($accountid);
 ```
 
 ## delete_an_account <a name='delete_an_account'></a>
@@ -3506,7 +3356,7 @@ $chartofaccounts->get_an_account();
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->delete_an_account();
+$chartofaccounts->delete_an_account($accountid);
 ```
 
 ## mark_an_account_as_active <a name='mark_an_account_as_active'></a>
@@ -3516,8 +3366,7 @@ $chartofaccounts->delete_an_account();
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->mark_an_account_as_active([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$chartofaccounts->mark_an_account_as_active($accountid, $data);
 ```
 
 ## mark_an_account_as_inactive <a name='mark_an_account_as_inactive'></a>
@@ -3527,8 +3376,7 @@ $chartofaccounts->mark_an_account_as_active([]);
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->mark_an_account_as_inactive([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$chartofaccounts->mark_an_account_as_inactive($accountid, $data);
 ```
 
 ## list_of_transactions_for_an_account <a name='list_of_transactions_for_an_account'></a>
@@ -3546,7 +3394,7 @@ $chartofaccounts->list_of_transactions_for_an_account();
 ### Example:
 ```php
 $chartofaccounts = new ChartOfAccounts();
-$chartofaccounts->delete_a_transaction();
+$chartofaccounts->delete_a_transaction($transactionid);
 ```
 
 # Tasks <a name='tasks'></a>
@@ -3557,8 +3405,7 @@ $chartofaccounts->delete_a_transaction();
 ### Example:
 ```php
 $tasks = new Tasks();
-$tasks->add_a_task([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$tasks->add_a_task($projectid, $data);
 ```
 
 ## list_tasks <a name='list_tasks'></a>
@@ -3567,7 +3414,7 @@ $tasks->add_a_task([]);
 ### Example:
 ```php
 $tasks = new Tasks();
-$tasks->list_tasks();
+$tasks->list_tasks($projectid);
 ```
 
 ## update_a_task <a name='update_a_task'></a>
@@ -3578,8 +3425,7 @@ $tasks->list_tasks();
 ### Example:
 ```php
 $tasks = new Tasks();
-$tasks->update_a_task([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$tasks->update_a_task($projectid, $taskid, $data);
 ```
 
 ## get_a_task <a name='get_a_task'></a>
@@ -3589,7 +3435,7 @@ $tasks->update_a_task([]);
 ### Example:
 ```php
 $tasks = new Tasks();
-$tasks->get_a_task();
+$tasks->get_a_task($projectid, $taskid);
 ```
 
 ## delete_task <a name='delete_task'></a>
@@ -3599,7 +3445,7 @@ $tasks->get_a_task();
 ### Example:
 ```php
 $tasks = new Tasks();
-$tasks->delete_task();
+$tasks->delete_task($projectid, $taskid);
 ```
 
 # CustomerPayments <a name='customerpayments'></a>
@@ -3609,8 +3455,7 @@ $tasks->delete_task();
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->create_a_payment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$customerpayments->create_a_payment($data);
 ```
 
 ## list_customer_payments <a name='list_customer_payments'></a>
@@ -3629,8 +3474,7 @@ $customerpayments->list_customer_payments();
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->update_a_payment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$customerpayments->update_a_payment($paymentid, $data);
 ```
 
 ## retrieve_a_payment <a name='retrieve_a_payment'></a>
@@ -3639,7 +3483,7 @@ $customerpayments->update_a_payment([]);
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->retrieve_a_payment();
+$customerpayments->retrieve_a_payment($paymentid);
 ```
 
 ## delete_a_payment <a name='delete_a_payment'></a>
@@ -3648,7 +3492,7 @@ $customerpayments->retrieve_a_payment();
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->delete_a_payment();
+$customerpayments->delete_a_payment($paymentid);
 ```
 
 ## refund_an_excess_customer_payment <a name='refund_an_excess_customer_payment'></a>
@@ -3658,8 +3502,7 @@ $customerpayments->delete_a_payment();
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->refund_an_excess_customer_payment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$customerpayments->refund_an_excess_customer_payment($customerpaymentid, $data);
 ```
 
 ## list_refunds_of_a_customer_payment <a name='list_refunds_of_a_customer_payment'></a>
@@ -3668,7 +3511,7 @@ $customerpayments->refund_an_excess_customer_payment([]);
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->list_refunds_of_a_customer_payment();
+$customerpayments->list_refunds_of_a_customer_payment($customerpaymentid);
 ```
 
 ## update_a_refund <a name='update_a_refund'></a>
@@ -3679,8 +3522,7 @@ $customerpayments->list_refunds_of_a_customer_payment();
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->update_a_refund([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$customerpayments->update_a_refund($customerpaymentid, $refundid, $data);
 ```
 
 ## details_of_a_refund <a name='details_of_a_refund'></a>
@@ -3690,7 +3532,7 @@ $customerpayments->update_a_refund([]);
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->details_of_a_refund();
+$customerpayments->details_of_a_refund($customerpaymentid, $refundid);
 ```
 
 ## delete_a_refund <a name='delete_a_refund'></a>
@@ -3700,7 +3542,7 @@ $customerpayments->details_of_a_refund();
 ### Example:
 ```php
 $customerpayments = new CustomerPayments();
-$customerpayments->delete_a_refund();
+$customerpayments->delete_a_refund($customerpaymentid, $refundid);
 ```
 
 # RetainerInvoices <a name='retainerinvoices'></a>
@@ -3710,8 +3552,7 @@ $customerpayments->delete_a_refund();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->create_a_retainerinvoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->create_a_retainerinvoice($data);
 ```
 
 ## list_a_retainer_invoices <a name='list_a_retainer_invoices'></a>
@@ -3730,8 +3571,7 @@ $retainerinvoices->list_a_retainer_invoices();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->update_a_retainerinvoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->update_a_retainerinvoice($retainerinvoiceid, $data);
 ```
 
 ## get_a_retainer_invoice <a name='get_a_retainer_invoice'></a>
@@ -3740,7 +3580,7 @@ $retainerinvoices->update_a_retainerinvoice([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->get_a_retainer_invoice();
+$retainerinvoices->get_a_retainer_invoice($retainerinvoiceid);
 ```
 
 ## delete_a_retainer_invoice <a name='delete_a_retainer_invoice'></a>
@@ -3749,7 +3589,7 @@ $retainerinvoices->get_a_retainer_invoice();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->delete_a_retainer_invoice();
+$retainerinvoices->delete_a_retainer_invoice($retainerinvoiceid);
 ```
 
 ## mark_a_retainer_invoice_as_sent <a name='mark_a_retainer_invoice_as_sent'></a>
@@ -3759,8 +3599,7 @@ $retainerinvoices->delete_a_retainer_invoice();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->mark_a_retainer_invoice_as_sent([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->mark_a_retainer_invoice_as_sent($retainerinvoiceid, $data);
 ```
 
 ## update_retainer_invoice_template <a name='update_retainer_invoice_template'></a>
@@ -3771,8 +3610,7 @@ $retainerinvoices->mark_a_retainer_invoice_as_sent([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->update_retainer_invoice_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->update_retainer_invoice_template($retainerinvoiceid, $templateid, $data);
 ```
 
 ## void_a_retainer_invoice <a name='void_a_retainer_invoice'></a>
@@ -3782,8 +3620,7 @@ $retainerinvoices->update_retainer_invoice_template([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->void_a_retainer_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->void_a_retainer_invoice($retainerinvoiceid, $data);
 ```
 
 ## mark_as_draft <a name='mark_as_draft'></a>
@@ -3793,8 +3630,7 @@ $retainerinvoices->void_a_retainer_invoice([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->mark_as_draft([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->mark_as_draft($reatinerinvoiceid, $data);
 ```
 
 ## submit_a_retainer_invoice_for_approval <a name='submit_a_retainer_invoice_for_approval'></a>
@@ -3804,8 +3640,7 @@ $retainerinvoices->mark_as_draft([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->submit_a_retainer_invoice_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->submit_a_retainer_invoice_for_approval($reatinerinvoiceid, $data);
 ```
 
 ## approve_a_retainer_invoice <a name='approve_a_retainer_invoice'></a>
@@ -3815,8 +3650,7 @@ $retainerinvoices->submit_a_retainer_invoice_for_approval([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->approve_a_retainer_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->approve_a_retainer_invoice($reatinerinvoiceid, $data);
 ```
 
 ## email_a_retainer_invoice <a name='email_a_retainer_invoice'></a>
@@ -3826,8 +3660,7 @@ $retainerinvoices->approve_a_retainer_invoice([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->email_a_retainer_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->email_a_retainer_invoice($retainerinvoiceid, $data);
 ```
 
 ## get_retainer_invoice_email_content <a name='get_retainer_invoice_email_content'></a>
@@ -3836,7 +3669,7 @@ $retainerinvoices->email_a_retainer_invoice([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->get_retainer_invoice_email_content();
+$retainerinvoices->get_retainer_invoice_email_content($retainerinvoiceid);
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -3846,8 +3679,7 @@ $retainerinvoices->get_retainer_invoice_email_content();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->update_billing_address($retainerinvoiceid, $data);
 ```
 
 ## list_retainer_invoice_templates <a name='list_retainer_invoice_templates'></a>
@@ -3866,8 +3698,7 @@ $retainerinvoices->list_retainer_invoice_templates();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->add_attachment_to_a_retainer_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->add_attachment_to_a_retainer_invoice($retainerinvoiceid, $data);
 ```
 
 ## get_a_retainer_invoice_attachment <a name='get_a_retainer_invoice_attachment'></a>
@@ -3876,7 +3707,7 @@ $retainerinvoices->add_attachment_to_a_retainer_invoice([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->get_a_retainer_invoice_attachment();
+$retainerinvoices->get_a_retainer_invoice_attachment($retainerinvoiceid);
 ```
 
 ## delete_an_attachment <a name='delete_an_attachment'></a>
@@ -3886,7 +3717,7 @@ $retainerinvoices->get_a_retainer_invoice_attachment();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->delete_an_attachment();
+$retainerinvoices->delete_an_attachment($retainerinvoiceid, $documentid);
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -3896,8 +3727,7 @@ $retainerinvoices->delete_an_attachment();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->add_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->add_comment($retainerinvoiceid, $data);
 ```
 
 ## list_retainer_invoice_comments_and_history <a name='list_retainer_invoice_comments_and_history'></a>
@@ -3906,7 +3736,7 @@ $retainerinvoices->add_comment([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->list_retainer_invoice_comments_and_history();
+$retainerinvoices->list_retainer_invoice_comments_and_history($retainerinvoiceid);
 ```
 
 ## update_comment <a name='update_comment'></a>
@@ -3917,8 +3747,7 @@ $retainerinvoices->list_retainer_invoice_comments_and_history();
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->update_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$retainerinvoices->update_comment($retainerinvoiceid, $commentid, $data);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -3928,7 +3757,7 @@ $retainerinvoices->update_comment([]);
 ### Example:
 ```php
 $retainerinvoices = new RetainerInvoices();
-$retainerinvoices->delete_a_comment();
+$retainerinvoices->delete_a_comment($retainerinvoiceid, $commentid);
 ```
 
 # Users <a name='users'></a>
@@ -3938,8 +3767,7 @@ $retainerinvoices->delete_a_comment();
 ### Example:
 ```php
 $users = new Users();
-$users->create_a_user([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$users->create_a_user($data);
 ```
 
 ## list_users <a name='list_users'></a>
@@ -3958,8 +3786,7 @@ $users->list_users();
 ### Example:
 ```php
 $users = new Users();
-$users->update_a_user([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$users->update_a_user($userid, $data);
 ```
 
 ## get_a_user <a name='get_a_user'></a>
@@ -3968,7 +3795,7 @@ $users->update_a_user([]);
 ### Example:
 ```php
 $users = new Users();
-$users->get_a_user();
+$users->get_a_user($userid);
 ```
 
 ## delete_a_user <a name='delete_a_user'></a>
@@ -3977,7 +3804,7 @@ $users->get_a_user();
 ### Example:
 ```php
 $users = new Users();
-$users->delete_a_user();
+$users->delete_a_user($userid);
 ```
 
 ## get_current_user <a name='get_current_user'></a>
@@ -3996,8 +3823,7 @@ $users->get_current_user();
 ### Example:
 ```php
 $users = new Users();
-$users->invite_a_user([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$users->invite_a_user($userid, $data);
 ```
 
 ## mark_user_as_active <a name='mark_user_as_active'></a>
@@ -4007,8 +3833,7 @@ $users->invite_a_user([]);
 ### Example:
 ```php
 $users = new Users();
-$users->mark_user_as_active([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$users->mark_user_as_active($userid, $data);
 ```
 
 ## mark_user_as_inactive <a name='mark_user_as_inactive'></a>
@@ -4018,8 +3843,7 @@ $users->mark_user_as_active([]);
 ### Example:
 ```php
 $users = new Users();
-$users->mark_user_as_inactive([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$users->mark_user_as_inactive($userid, $data);
 ```
 
 # CreditNotes <a name='creditnotes'></a>
@@ -4029,8 +3853,7 @@ $users->mark_user_as_inactive([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->create_a_credit_note([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->create_a_credit_note($data);
 ```
 
 ## list_all_credit_notes <a name='list_all_credit_notes'></a>
@@ -4049,8 +3872,7 @@ $creditnotes->list_all_credit_notes();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->update_a_credit_note([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->update_a_credit_note($creditnoteid, $data);
 ```
 
 ## get_a_credit_note <a name='get_a_credit_note'></a>
@@ -4059,7 +3881,7 @@ $creditnotes->update_a_credit_note([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->get_a_credit_note();
+$creditnotes->get_a_credit_note($creditnoteid);
 ```
 
 ## delete_a_credit_note <a name='delete_a_credit_note'></a>
@@ -4068,7 +3890,7 @@ $creditnotes->get_a_credit_note();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->delete_a_credit_note();
+$creditnotes->delete_a_credit_note($creditnoteid);
 ```
 
 ## email_a_credit_note <a name='email_a_credit_note'></a>
@@ -4078,8 +3900,7 @@ $creditnotes->delete_a_credit_note();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->email_a_credit_note([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->email_a_credit_note($creditnoteid, $data);
 ```
 
 ## get_email_content <a name='get_email_content'></a>
@@ -4088,7 +3909,7 @@ $creditnotes->email_a_credit_note([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->get_email_content();
+$creditnotes->get_email_content($creditnoteid);
 ```
 
 ## void_a_credit_note <a name='void_a_credit_note'></a>
@@ -4098,8 +3919,7 @@ $creditnotes->get_email_content();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->void_a_credit_note([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->void_a_credit_note($creditnoteid, $data);
 ```
 
 ## convert_credit_note_to_draft <a name='convert_credit_note_to_draft'></a>
@@ -4109,8 +3929,7 @@ $creditnotes->void_a_credit_note([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->convert_credit_note_to_draft([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->convert_credit_note_to_draft($creditnoteid, $data);
 ```
 
 ## convert_to_open <a name='convert_to_open'></a>
@@ -4120,8 +3939,7 @@ $creditnotes->convert_credit_note_to_draft([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->convert_to_open([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->convert_to_open($creditnoteid, $data);
 ```
 
 ## submit_a_credit_note_for_approval <a name='submit_a_credit_note_for_approval'></a>
@@ -4131,8 +3949,7 @@ $creditnotes->convert_to_open([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->submit_a_credit_note_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->submit_a_credit_note_for_approval($creditnoteid, $data);
 ```
 
 ## approve_a_credit_note <a name='approve_a_credit_note'></a>
@@ -4142,8 +3959,7 @@ $creditnotes->submit_a_credit_note_for_approval([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->approve_a_credit_note([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->approve_a_credit_note($creditnoteid, $data);
 ```
 
 ## email_history <a name='email_history'></a>
@@ -4152,7 +3968,7 @@ $creditnotes->approve_a_credit_note([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->email_history();
+$creditnotes->email_history($creditnoteid);
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -4162,8 +3978,7 @@ $creditnotes->email_history();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->update_billing_address($creditnoteid, $data);
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -4173,8 +3988,7 @@ $creditnotes->update_billing_address([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->update_shipping_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->update_shipping_address($creditnoteid, $data);
 ```
 
 ## list_credit_note_template <a name='list_credit_note_template'></a>
@@ -4194,8 +4008,7 @@ $creditnotes->list_credit_note_template();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->update_a_credit_note_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->update_a_credit_note_template($creditnoteid, $templateid, $data);
 ```
 
 ## credit_to_an_invoice <a name='credit_to_an_invoice'></a>
@@ -4205,8 +4018,7 @@ $creditnotes->update_a_credit_note_template([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->credit_to_an_invoice([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->credit_to_an_invoice($creditnoteid, $data);
 ```
 
 ## list_invoices_credited <a name='list_invoices_credited'></a>
@@ -4215,7 +4027,7 @@ $creditnotes->credit_to_an_invoice([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->list_invoices_credited();
+$creditnotes->list_invoices_credited($creditnoteid);
 ```
 
 ## delete_invoices_credited <a name='delete_invoices_credited'></a>
@@ -4225,7 +4037,7 @@ $creditnotes->list_invoices_credited();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->delete_invoices_credited();
+$creditnotes->delete_invoices_credited($creditnoteid, $creditnoteinvoiceid);
 ```
 
 ## add_a_comment <a name='add_a_comment'></a>
@@ -4235,8 +4047,7 @@ $creditnotes->delete_invoices_credited();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->add_a_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->add_a_comment($creditnoteid, $data);
 ```
 
 ## list_credit_note_comments_and_history <a name='list_credit_note_comments_and_history'></a>
@@ -4245,7 +4056,7 @@ $creditnotes->add_a_comment([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->list_credit_note_comments_and_history();
+$creditnotes->list_credit_note_comments_and_history($creditnoteid);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -4255,7 +4066,7 @@ $creditnotes->list_credit_note_comments_and_history();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->delete_a_comment();
+$creditnotes->delete_a_comment($creditnoteid, $commentid);
 ```
 
 ## list_credit_note_refunds <a name='list_credit_note_refunds'></a>
@@ -4274,8 +4085,7 @@ $creditnotes->list_credit_note_refunds();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->refund_credit_note([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->refund_credit_note($creditnoteid, $data);
 ```
 
 ## list_refunds_of_a_credit_note <a name='list_refunds_of_a_credit_note'></a>
@@ -4284,7 +4094,7 @@ $creditnotes->refund_credit_note([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->list_refunds_of_a_credit_note();
+$creditnotes->list_refunds_of_a_credit_note($creditnoteid);
 ```
 
 ## update_credit_note_refund <a name='update_credit_note_refund'></a>
@@ -4295,8 +4105,7 @@ $creditnotes->list_refunds_of_a_credit_note();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->update_credit_note_refund([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$creditnotes->update_credit_note_refund($creditnoteid, $creditnoterefundid, $data);
 ```
 
 ## get_credit_note_refund <a name='get_credit_note_refund'></a>
@@ -4306,7 +4115,7 @@ $creditnotes->update_credit_note_refund([]);
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->get_credit_note_refund();
+$creditnotes->get_credit_note_refund($creditnoteid, $creditnoterefundid);
 ```
 
 ## delete_credit_note_refund <a name='delete_credit_note_refund'></a>
@@ -4316,7 +4125,7 @@ $creditnotes->get_credit_note_refund();
 ### Example:
 ```php
 $creditnotes = new CreditNotes();
-$creditnotes->delete_credit_note_refund();
+$creditnotes->delete_credit_note_refund($creditnoteid, $creditnoterefundid);
 ```
 
 # Items <a name='items'></a>
@@ -4326,8 +4135,7 @@ $creditnotes->delete_credit_note_refund();
 ### Example:
 ```php
 $items = new Items();
-$items->create_an_item([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$items->create_an_item($data);
 ```
 
 ## list_items <a name='list_items'></a>
@@ -4346,8 +4154,7 @@ $items->list_items();
 ### Example:
 ```php
 $items = new Items();
-$items->update_an_item([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$items->update_an_item($itemid, $data);
 ```
 
 ## get_an_item <a name='get_an_item'></a>
@@ -4356,7 +4163,7 @@ $items->update_an_item([]);
 ### Example:
 ```php
 $items = new Items();
-$items->get_an_item();
+$items->get_an_item($itemid);
 ```
 
 ## delete_an_item <a name='delete_an_item'></a>
@@ -4365,7 +4172,7 @@ $items->get_an_item();
 ### Example:
 ```php
 $items = new Items();
-$items->delete_an_item();
+$items->delete_an_item($itemid);
 ```
 
 ## mark_as_active <a name='mark_as_active'></a>
@@ -4375,8 +4182,7 @@ $items->delete_an_item();
 ### Example:
 ```php
 $items = new Items();
-$items->mark_as_active([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$items->mark_as_active($itemid, $data);
 ```
 
 ## mark_as_inactive <a name='mark_as_inactive'></a>
@@ -4386,8 +4192,7 @@ $items->mark_as_active([]);
 ### Example:
 ```php
 $items = new Items();
-$items->mark_as_inactive([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$items->mark_as_inactive($itemid, $data);
 ```
 
 # PurchaseOrders <a name='purchaseorders'></a>
@@ -4397,8 +4202,7 @@ $items->mark_as_inactive([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->create_a_purchase_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->create_a_purchase_order($data);
 ```
 
 ## list_purchase_orders <a name='list_purchase_orders'></a>
@@ -4417,8 +4221,7 @@ $purchaseorders->list_purchase_orders();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->update_a_purchase_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->update_a_purchase_order($purchaseorderid, $data);
 ```
 
 ## get_a_purchase_order <a name='get_a_purchase_order'></a>
@@ -4427,7 +4230,7 @@ $purchaseorders->update_a_purchase_order([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->get_a_purchase_order();
+$purchaseorders->get_a_purchase_order($purchaseorderid);
 ```
 
 ## delete_purchase_order <a name='delete_purchase_order'></a>
@@ -4436,7 +4239,7 @@ $purchaseorders->get_a_purchase_order();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->delete_purchase_order();
+$purchaseorders->delete_purchase_order($purchaseorderid);
 ```
 
 ## mark_a_purchase_order_as_open <a name='mark_a_purchase_order_as_open'></a>
@@ -4446,8 +4249,7 @@ $purchaseorders->delete_purchase_order();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->mark_a_purchase_order_as_open([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->mark_a_purchase_order_as_open($purchaseorderid, $data);
 ```
 
 ## mark_as_billed <a name='mark_as_billed'></a>
@@ -4457,8 +4259,7 @@ $purchaseorders->mark_a_purchase_order_as_open([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->mark_as_billed([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->mark_as_billed($purchaseorderid, $data);
 ```
 
 ## cancel_a_purchase_order <a name='cancel_a_purchase_order'></a>
@@ -4468,8 +4269,7 @@ $purchaseorders->mark_as_billed([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->cancel_a_purchase_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->cancel_a_purchase_order($purchaseorderid, $data);
 ```
 
 ## submit_a_purchase_order_for_approval <a name='submit_a_purchase_order_for_approval'></a>
@@ -4479,8 +4279,7 @@ $purchaseorders->cancel_a_purchase_order([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->submit_a_purchase_order_for_approval([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->submit_a_purchase_order_for_approval($purchaseorderid, $data);
 ```
 
 ## approve_a_purchase_order <a name='approve_a_purchase_order'></a>
@@ -4490,8 +4289,7 @@ $purchaseorders->submit_a_purchase_order_for_approval([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->approve_a_purchase_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->approve_a_purchase_order($purchaseorderid, $data);
 ```
 
 ## email_a_purchase_order <a name='email_a_purchase_order'></a>
@@ -4501,8 +4299,7 @@ $purchaseorders->approve_a_purchase_order([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->email_a_purchase_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->email_a_purchase_order($purchaseorderid, $data);
 ```
 
 ## get_purchase_order_email_content <a name='get_purchase_order_email_content'></a>
@@ -4511,7 +4308,7 @@ $purchaseorders->email_a_purchase_order([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->get_purchase_order_email_content();
+$purchaseorders->get_purchase_order_email_content($purchaseorderid);
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -4521,8 +4318,7 @@ $purchaseorders->get_purchase_order_email_content();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->update_billing_address([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->update_billing_address($purchaseorderid, $data);
 ```
 
 ## list_purchase_order_templates <a name='list_purchase_order_templates'></a>
@@ -4542,8 +4338,7 @@ $purchaseorders->list_purchase_order_templates();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->update_purchase_order_template([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->update_purchase_order_template($purchaseorderid, $templateid, $data);
 ```
 
 ## add_attachment_to_a_purchase_order <a name='add_attachment_to_a_purchase_order'></a>
@@ -4553,8 +4348,7 @@ $purchaseorders->update_purchase_order_template([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->add_attachment_to_a_purchase_order([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->add_attachment_to_a_purchase_order($purchaseorderid, $data);
 ```
 
 ## update_attachment_preference <a name='update_attachment_preference'></a>
@@ -4564,8 +4358,7 @@ $purchaseorders->add_attachment_to_a_purchase_order([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->update_attachment_preference([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->update_attachment_preference($purchaseorderid, $data);
 ```
 
 ## get_a_purchase_order_attachment <a name='get_a_purchase_order_attachment'></a>
@@ -4574,7 +4367,7 @@ $purchaseorders->update_attachment_preference([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->get_a_purchase_order_attachment();
+$purchaseorders->get_a_purchase_order_attachment($purchaseorderid);
 ```
 
 ## delete_an_attachment <a name='delete_an_attachment'></a>
@@ -4583,7 +4376,7 @@ $purchaseorders->get_a_purchase_order_attachment();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->delete_an_attachment();
+$purchaseorders->delete_an_attachment($purchaseorderid);
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -4593,8 +4386,7 @@ $purchaseorders->delete_an_attachment();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->add_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->add_comment($purchaseorderid, $data);
 ```
 
 ## list_purchase_order_comments_and_history <a name='list_purchase_order_comments_and_history'></a>
@@ -4603,7 +4395,7 @@ $purchaseorders->add_comment([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->list_purchase_order_comments_and_history();
+$purchaseorders->list_purchase_order_comments_and_history($purchaseorderid);
 ```
 
 ## update_comment <a name='update_comment'></a>
@@ -4614,8 +4406,7 @@ $purchaseorders->list_purchase_order_comments_and_history();
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->update_comment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$purchaseorders->update_comment($purchaseorderid, $commentid, $data);
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -4625,7 +4416,7 @@ $purchaseorders->update_comment([]);
 ### Example:
 ```php
 $purchaseorders = new PurchaseOrders();
-$purchaseorders->delete_a_comment();
+$purchaseorders->delete_a_comment($purchaseorderid, $commentid);
 ```
 
 # BankTransactions <a name='banktransactions'></a>
@@ -4635,8 +4426,7 @@ $purchaseorders->delete_a_comment();
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->create_a_transaction_for_an_account([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->create_a_transaction_for_an_account($data);
 ```
 
 ## get_transactions_list <a name='get_transactions_list'></a>
@@ -4655,8 +4445,7 @@ $banktransactions->get_transactions_list();
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->update_a_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->update_a_transaction($banktransactionid, $data);
 ```
 
 ## get_transaction <a name='get_transaction'></a>
@@ -4665,7 +4454,7 @@ $banktransactions->update_a_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->get_transaction();
+$banktransactions->get_transaction($banktransactionid);
 ```
 
 ## delete_a_transaction <a name='delete_a_transaction'></a>
@@ -4674,7 +4463,7 @@ $banktransactions->get_transaction();
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->delete_a_transaction();
+$banktransactions->delete_a_transaction($banktransactionid);
 ```
 
 ## match_a_transaction <a name='match_a_transaction'></a>
@@ -4684,8 +4473,7 @@ $banktransactions->delete_a_transaction();
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->match_a_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->match_a_transaction($transactionid, $data);
 ```
 
 ## get_matching_transactions <a name='get_matching_transactions'></a>
@@ -4694,7 +4482,7 @@ $banktransactions->match_a_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->get_matching_transactions();
+$banktransactions->get_matching_transactions($transactionid);
 ```
 
 ## unmatch_a_matched_transaction <a name='unmatch_a_matched_transaction'></a>
@@ -4704,8 +4492,7 @@ $banktransactions->get_matching_transactions();
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->unmatch_a_matched_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->unmatch_a_matched_transaction($transactionid, $data);
 ```
 
 ## exclude_a_transaction <a name='exclude_a_transaction'></a>
@@ -4715,8 +4502,7 @@ $banktransactions->unmatch_a_matched_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->exclude_a_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->exclude_a_transaction($transactionid, $data);
 ```
 
 ## restore_a_transaction <a name='restore_a_transaction'></a>
@@ -4726,8 +4512,7 @@ $banktransactions->exclude_a_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->restore_a_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->restore_a_transaction($transactionid, $data);
 ```
 
 ## categorize_an_uncategorized_transaction <a name='categorize_an_uncategorized_transaction'></a>
@@ -4737,8 +4522,7 @@ $banktransactions->restore_a_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_an_uncategorized_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_an_uncategorized_transaction($transactionid, $data);
 ```
 
 ## categorize_as_expense <a name='categorize_as_expense'></a>
@@ -4748,8 +4532,7 @@ $banktransactions->categorize_an_uncategorized_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_as_expense([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_as_expense($transactionid, $data);
 ```
 
 ## uncategorize_a_categorized_transaction <a name='uncategorize_a_categorized_transaction'></a>
@@ -4759,8 +4542,7 @@ $banktransactions->categorize_as_expense([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->uncategorize_a_categorized_transaction([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->uncategorize_a_categorized_transaction($transactionid, $data);
 ```
 
 ## categorize_a_vendor_payment <a name='categorize_a_vendor_payment'></a>
@@ -4770,8 +4552,7 @@ $banktransactions->uncategorize_a_categorized_transaction([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_a_vendor_payment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_a_vendor_payment($transactionid, $data);
 ```
 
 ## categorize_as_customer_payment <a name='categorize_as_customer_payment'></a>
@@ -4781,8 +4562,7 @@ $banktransactions->categorize_a_vendor_payment([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_as_customer_payment([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_as_customer_payment($transactionid, $data);
 ```
 
 ## categorize_as_credit_note_refunds <a name='categorize_as_credit_note_refunds'></a>
@@ -4792,8 +4572,7 @@ $banktransactions->categorize_as_customer_payment([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_as_credit_note_refunds([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_as_credit_note_refunds($transactionid, $data);
 ```
 
 ## categorize_as_vendor_credit_refunds <a name='categorize_as_vendor_credit_refunds'></a>
@@ -4803,8 +4582,7 @@ $banktransactions->categorize_as_credit_note_refunds([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_as_vendor_credit_refunds([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_as_vendor_credit_refunds($transactionid, $data);
 ```
 
 ## categorize_as_customer_payment_refund <a name='categorize_as_customer_payment_refund'></a>
@@ -4814,8 +4592,7 @@ $banktransactions->categorize_as_vendor_credit_refunds([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_as_customer_payment_refund([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_as_customer_payment_refund($statementlineid, $data);
 ```
 
 ## categorize_as_vendor_payment_refund <a name='categorize_as_vendor_payment_refund'></a>
@@ -4825,8 +4602,7 @@ $banktransactions->categorize_as_customer_payment_refund([]);
 ### Example:
 ```php
 $banktransactions = new BankTransactions();
-$banktransactions->categorize_as_vendor_payment_refund([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$banktransactions->categorize_as_vendor_payment_refund($statementlineid, $data);
 ```
 
 # ContactPersons <a name='contactpersons'></a>
@@ -4836,8 +4612,7 @@ $banktransactions->categorize_as_vendor_payment_refund([]);
 ### Example:
 ```php
 $contactpersons = new ContactPersons();
-$contactpersons->create_a_contact_person([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contactpersons->create_a_contact_person($data);
 ```
 
 ## update_a_contact_person <a name='update_a_contact_person'></a>
@@ -4847,8 +4622,7 @@ $contactpersons->create_a_contact_person([]);
 ### Example:
 ```php
 $contactpersons = new ContactPersons();
-$contactpersons->update_a_contact_person([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contactpersons->update_a_contact_person($contactpersonid, $data);
 ```
 
 ## delete_a_contact_person <a name='delete_a_contact_person'></a>
@@ -4857,7 +4631,7 @@ $contactpersons->update_a_contact_person([]);
 ### Example:
 ```php
 $contactpersons = new ContactPersons();
-$contactpersons->delete_a_contact_person();
+$contactpersons->delete_a_contact_person($contactpersonid);
 ```
 
 ## list_contact_persons <a name='list_contact_persons'></a>
@@ -4866,7 +4640,7 @@ $contactpersons->delete_a_contact_person();
 ### Example:
 ```php
 $contactpersons = new ContactPersons();
-$contactpersons->list_contact_persons();
+$contactpersons->list_contact_persons($contactid);
 ```
 
 ## get_a_contact_person <a name='get_a_contact_person'></a>
@@ -4876,7 +4650,7 @@ $contactpersons->list_contact_persons();
 ### Example:
 ```php
 $contactpersons = new ContactPersons();
-$contactpersons->get_a_contact_person();
+$contactpersons->get_a_contact_person($contactid, $contactpersonid);
 ```
 
 ## mark_as_primary_contact_person <a name='mark_as_primary_contact_person'></a>
@@ -4886,10 +4660,6 @@ $contactpersons->get_a_contact_person();
 ### Example:
 ```php
 $contactpersons = new ContactPersons();
-$contactpersons->mark_as_primary_contact_person([]);
-// For fields to be passed in $data array, visit official API Docs https://www.zoho.com/books/api/v3/
+$contactpersons->mark_as_primary_contact_person($contactpersonid, $data);
 ```
 
-License
--------
-[OSL - Open Software Licence 3.0](http://opensource.org/licenses/osl-3.0.php)
