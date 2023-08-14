@@ -538,6 +538,7 @@ $contacts->create_a_contact([
 ```php
 $salesorders = new SalesOrders();
 $salesorders->create_a_sales_order($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_sales_orders <a name='list_sales_orders'></a>
@@ -557,6 +558,7 @@ $salesorders->list_sales_orders();
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_a_sales_order($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_sales_order <a name='get_a_sales_order'></a>
@@ -585,6 +587,7 @@ $salesorders->delete_a_sales_order($salesorderid);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->mark_a_sales_order_as_open($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_a_sales_order_as_void <a name='mark_a_sales_order_as_void'></a>
@@ -595,6 +598,7 @@ $salesorders->mark_a_sales_order_as_open($salesorderid, $data);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->mark_a_sales_order_as_void($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_a_sales_order_sub_status <a name='update_a_sales_order_sub_status'></a>
@@ -606,6 +610,7 @@ $salesorders->mark_a_sales_order_as_void($salesorderid, $data);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_a_sales_order_sub_status($salesorderid, $statuscode, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_a_sales_order <a name='email_a_sales_order'></a>
@@ -616,6 +621,7 @@ $salesorders->update_a_sales_order_sub_status($salesorderid, $statuscode, $data)
 ```php
 $salesorders = new SalesOrders();
 $salesorders->email_a_sales_order($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_sales_order_email_content <a name='get_sales_order_email_content'></a>
@@ -635,6 +641,7 @@ $salesorders->get_sales_order_email_content($salesorderid);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->submit_a_sales_order_for_approval($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_a_sales_order <a name='approve_a_sales_order'></a>
@@ -645,6 +652,7 @@ $salesorders->submit_a_sales_order_for_approval($salesorderid, $data);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->approve_a_sales_order($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## bulk_export_sales_orders <a name='bulk_export_sales_orders'></a>
@@ -673,6 +681,7 @@ $salesorders->bulk_print_sales_orders();
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_billing_address($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -683,6 +692,7 @@ $salesorders->update_billing_address($salesorderid, $data);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_shipping_address($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_sales_order_templates <a name='list_sales_order_templates'></a>
@@ -703,6 +713,7 @@ $salesorders->list_sales_order_templates();
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_sales_order_template($salesorderid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## add_attachment_to_a_sales_order <a name='add_attachment_to_a_sales_order'></a>
@@ -713,6 +724,7 @@ $salesorders->update_sales_order_template($salesorderid, $templateid, $data);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->add_attachment_to_a_sales_order($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_attachment_preference <a name='update_attachment_preference'></a>
@@ -723,6 +735,7 @@ $salesorders->add_attachment_to_a_sales_order($salesorderid, $data);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_attachment_preference($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_sales_order_attachment <a name='get_a_sales_order_attachment'></a>
@@ -751,6 +764,7 @@ $salesorders->delete_an_attachment($salesorderid);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->add_comment($salesorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_sales_order_comments_and_history <a name='list_sales_order_comments_and_history'></a>
@@ -771,6 +785,7 @@ $salesorders->list_sales_order_comments_and_history($salesorderid);
 ```php
 $salesorders = new SalesOrders();
 $salesorders->update_comment($salesorderid, $commentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -791,6 +806,7 @@ $salesorders->delete_a_comment($salesorderid, $commentid);
 ```php
 $organizations = new Organizations();
 $organizations->create_an_organization($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_organization_details <a name='get_organization_details'></a>
@@ -828,6 +844,7 @@ $organizations->get_organization($organizationid);
 ```php
 $organizations = new Organizations();
 $organizations->update_organization($organizationid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 # BankRules <a name='bankrules'></a>
@@ -838,6 +855,7 @@ $organizations->update_organization($organizationid, $data);
 ```php
 $bankrules = new BankRules();
 $bankrules->create_a_rule($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_rules_list <a name='get_rules_list'></a>
@@ -857,6 +875,7 @@ $bankrules->get_rules_list();
 ```php
 $bankrules = new BankRules();
 $bankrules->update_a_rule($ruleid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_rule <a name='get_a_rule'></a>
@@ -885,6 +904,7 @@ $bankrules->delete_a_rule($ruleid);
 ```php
 $bankaccounts = new BankAccounts();
 $bankaccounts->create_a_bank_account($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_view_of_accounts <a name='list_view_of_accounts'></a>
@@ -904,6 +924,7 @@ $bankaccounts->list_view_of_accounts();
 ```php
 $bankaccounts = new BankAccounts();
 $bankaccounts->update_bank_account($accountid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_account_details <a name='get_account_details'></a>
@@ -932,6 +953,7 @@ $bankaccounts->delete_an_account($accountid);
 ```php
 $bankaccounts = new BankAccounts();
 $bankaccounts->deactivate_account($accountid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## activate_account <a name='activate_account'></a>
@@ -942,6 +964,7 @@ $bankaccounts->deactivate_account($accountid, $data);
 ```php
 $bankaccounts = new BankAccounts();
 $bankaccounts->activate_account($accountid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## import_a_bank_credit_card_statement <a name='import_a_bank_credit_card_statement'></a>
@@ -951,6 +974,7 @@ $bankaccounts->activate_account($accountid, $data);
 ```php
 $bankaccounts = new BankAccounts();
 $bankaccounts->import_a_bank_credit_card_statement($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_last_imported_statement <a name='get_last_imported_statement'></a>
@@ -980,6 +1004,7 @@ $bankaccounts->delete_last_imported_statement($accountid, $statementid);
 ```php
 $projects = new Projects();
 $projects->create_a_project($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_projects <a name='list_projects'></a>
@@ -999,6 +1024,7 @@ $projects->list_projects();
 ```php
 $projects = new Projects();
 $projects->update_project($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_project <a name='get_a_project'></a>
@@ -1027,6 +1053,7 @@ $projects->delete_project($projectid);
 ```php
 $projects = new Projects();
 $projects->activate_project($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## inactivate_a_project <a name='inactivate_a_project'></a>
@@ -1037,6 +1064,7 @@ $projects->activate_project($projectid, $data);
 ```php
 $projects = new Projects();
 $projects->inactivate_a_project($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## clone_project <a name='clone_project'></a>
@@ -1047,6 +1075,7 @@ $projects->inactivate_a_project($projectid, $data);
 ```php
 $projects = new Projects();
 $projects->clone_project($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## assign_users <a name='assign_users'></a>
@@ -1057,6 +1086,7 @@ $projects->clone_project($projectid, $data);
 ```php
 $projects = new Projects();
 $projects->assign_users($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_users <a name='list_users'></a>
@@ -1076,6 +1106,7 @@ $projects->list_users($projectid);
 ```php
 $projects = new Projects();
 $projects->invite_user($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_user <a name='update_user'></a>
@@ -1087,6 +1118,7 @@ $projects->invite_user($projectid, $data);
 ```php
 $projects = new Projects();
 $projects->update_user($projectid, $userid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_user <a name='get_a_user'></a>
@@ -1117,6 +1149,7 @@ $projects->delete_user($projectid, $userid);
 ```php
 $projects = new Projects();
 $projects->post_comment($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_comments <a name='list_comments'></a>
@@ -1155,6 +1188,7 @@ $projects->list_invoices($projectid);
 ```php
 $recurringbills = new RecurringBills();
 $recurringbills->create_a_recurring_bill($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_recurring_bills <a name='list_recurring_bills'></a>
@@ -1174,6 +1208,7 @@ $recurringbills->list_recurring_bills();
 ```php
 $recurringbills = new RecurringBills();
 $recurringbills->update_a_recurring_bill($recurringbillid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_recurring_bill <a name='get_a_recurring_bill'></a>
@@ -1202,6 +1237,7 @@ $recurringbills->delete_a_recurring_bill($recurringbillid);
 ```php
 $recurringbills = new RecurringBills();
 $recurringbills->stop_a_recurring_bill($recurringbillid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## resume_a_recurring_bill <a name='resume_a_recurring_bill'></a>
@@ -1212,6 +1248,7 @@ $recurringbills->stop_a_recurring_bill($recurringbillid, $data);
 ```php
 $recurringbills = new RecurringBills();
 $recurringbills->resume_a_recurring_bill($recurringbillid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_recurring_bill_history <a name='list_recurring_bill_history'></a>
@@ -1232,6 +1269,7 @@ $recurringbills->list_recurring_bill_history($recurringbillid);
 ```php
 $custommodules = new CustomModules();
 $custommodules->create_custom_modules($modulename, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## bulk_update_custom_module <a name='bulk_update_custom_module'></a>
@@ -1242,6 +1280,7 @@ $custommodules->create_custom_modules($modulename, $data);
 ```php
 $custommodules = new CustomModules();
 $custommodules->bulk_update_custom_module($modulename, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_record_list_of_a_custom_module <a name='get_record_list_of_a_custom_module'></a>
@@ -1271,6 +1310,7 @@ $custommodules->delete_custom_modules($modulename);
 ```php
 $custommodules = new CustomModules();
 $custommodules->update_custom_module($modulename, $moduleid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_individual_record_details <a name='get_individual_record_details'></a>
@@ -1301,6 +1341,7 @@ $custommodules->delete_individual_records($modulename, $moduleid);
 ```php
 $recurringexpenses = new RecurringExpenses();
 $recurringexpenses->create_a_recurring_expense($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_recurring_expenses <a name='list_recurring_expenses'></a>
@@ -1320,6 +1361,7 @@ $recurringexpenses->list_recurring_expenses();
 ```php
 $recurringexpenses = new RecurringExpenses();
 $recurringexpenses->update_a_recurring_expense($recurringexpenseid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_recurring_expense <a name='get_a_recurring_expense'></a>
@@ -1348,6 +1390,7 @@ $recurringexpenses->delete_a_recurring_expense($recurringexpenseid);
 ```php
 $recurringexpenses = new RecurringExpenses();
 $recurringexpenses->stop_a_recurring_expense($recurringexpenseid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## resume_a_recurring_expense <a name='resume_a_recurring_expense'></a>
@@ -1358,6 +1401,7 @@ $recurringexpenses->stop_a_recurring_expense($recurringexpenseid, $data);
 ```php
 $recurringexpenses = new RecurringExpenses();
 $recurringexpenses->resume_a_recurring_expense($recurringexpenseid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_child_expenses_created <a name='list_child_expenses_created'></a>
@@ -1386,6 +1430,7 @@ $recurringexpenses->list_recurring_expense_history($recurringexpenseid);
 ```php
 $invoices = new Invoices();
 $invoices->create_an_invoice($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_invoices <a name='list_invoices'></a>
@@ -1405,6 +1450,7 @@ $invoices->list_invoices();
 ```php
 $invoices = new Invoices();
 $invoices->update_an_invoice($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_invoice <a name='get_an_invoice'></a>
@@ -1433,6 +1479,7 @@ $invoices->delete_an_invoice($invoiceid);
 ```php
 $invoices = new Invoices();
 $invoices->mark_an_invoice_as_sent($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## void_an_invoice <a name='void_an_invoice'></a>
@@ -1443,6 +1490,7 @@ $invoices->mark_an_invoice_as_sent($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->void_an_invoice($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_as_draft <a name='mark_as_draft'></a>
@@ -1453,6 +1501,7 @@ $invoices->void_an_invoice($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->mark_as_draft($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_invoices <a name='email_invoices'></a>
@@ -1462,6 +1511,7 @@ $invoices->mark_as_draft($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->email_invoices($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_an_invoice_for_approval <a name='submit_an_invoice_for_approval'></a>
@@ -1472,6 +1522,7 @@ $invoices->email_invoices($data);
 ```php
 $invoices = new Invoices();
 $invoices->submit_an_invoice_for_approval($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_an_invoice <a name='approve_an_invoice'></a>
@@ -1482,6 +1533,7 @@ $invoices->submit_an_invoice_for_approval($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->approve_an_invoice($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_an_invoice <a name='email_an_invoice'></a>
@@ -1492,6 +1544,7 @@ $invoices->approve_an_invoice($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->email_an_invoice($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_invoice_email_content <a name='get_invoice_email_content'></a>
@@ -1511,6 +1564,7 @@ $invoices->get_invoice_email_content($invoiceid);
 ```php
 $invoices = new Invoices();
 $invoices->remind_customer($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_payment_reminder_mail_content <a name='get_payment_reminder_mail_content'></a>
@@ -1529,6 +1583,7 @@ $invoices->get_payment_reminder_mail_content($invoiceid);
 ```php
 $invoices = new Invoices();
 $invoices->bulk_invoice_reminder($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## bulk_export_invoices <a name='bulk_export_invoices'></a>
@@ -1557,6 +1612,7 @@ $invoices->bulk_print_invoices();
 ```php
 $invoices = new Invoices();
 $invoices->disable_payment_reminder($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## enable_payment_reminder <a name='enable_payment_reminder'></a>
@@ -1567,6 +1623,7 @@ $invoices->disable_payment_reminder($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->enable_payment_reminder($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## write_off_invoice <a name='write_off_invoice'></a>
@@ -1577,6 +1634,7 @@ $invoices->enable_payment_reminder($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->write_off_invoice($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## cancel_write_off <a name='cancel_write_off'></a>
@@ -1587,6 +1645,7 @@ $invoices->write_off_invoice($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->cancel_write_off($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -1597,6 +1656,7 @@ $invoices->cancel_write_off($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->update_billing_address($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -1607,6 +1667,7 @@ $invoices->update_billing_address($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->update_shipping_address($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_invoice_templates <a name='list_invoice_templates'></a>
@@ -1627,6 +1688,7 @@ $invoices->list_invoice_templates();
 ```php
 $invoices = new Invoices();
 $invoices->update_invoice_template($invoiceid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_invoice_payments <a name='list_invoice_payments'></a>
@@ -1655,6 +1717,7 @@ $invoices->list_credits_applied($invoiceid);
 ```php
 $invoices = new Invoices();
 $invoices->apply_credits($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_payment <a name='delete_a_payment'></a>
@@ -1685,6 +1748,7 @@ $invoices->delete_applied_credit($invoiceid, $creditnotesinvoiceid);
 ```php
 $invoices = new Invoices();
 $invoices->add_attachment_to_an_invoice($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_attachment_preference <a name='update_attachment_preference'></a>
@@ -1695,6 +1759,7 @@ $invoices->add_attachment_to_an_invoice($invoiceid, $data);
 ```php
 $invoices = new Invoices();
 $invoices->update_attachment_preference($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_invoice_attachment <a name='get_an_invoice_attachment'></a>
@@ -1732,6 +1797,7 @@ $invoices->delete_the_expense_receipt($expenseid);
 ```php
 $invoices = new Invoices();
 $invoices->add_comment($invoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_invoice_comments_and_history <a name='list_invoice_comments_and_history'></a>
@@ -1752,6 +1818,7 @@ $invoices->list_invoice_comments_and_history($invoiceid);
 ```php
 $invoices = new Invoices();
 $invoices->update_comment($invoiceid, $commentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -1772,6 +1839,7 @@ $invoices->delete_a_comment($invoiceid, $commentid);
 ```php
 $contacts = new Contacts();
 $contacts->create_a_contact($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_contacts <a name='list_contacts'></a>
@@ -1791,6 +1859,7 @@ $contacts->list_contacts();
 ```php
 $contacts = new Contacts();
 $contacts->update_a_contact($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_contact <a name='get_contact'></a>
@@ -1819,6 +1888,7 @@ $contacts->delete_a_contact($contactid);
 ```php
 $contacts = new Contacts();
 $contacts->mark_as_active($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_as_inactive <a name='mark_as_inactive'></a>
@@ -1829,6 +1899,7 @@ $contacts->mark_as_active($contactid, $data);
 ```php
 $contacts = new Contacts();
 $contacts->mark_as_inactive($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## enable_portal_access <a name='enable_portal_access'></a>
@@ -1839,6 +1910,7 @@ $contacts->mark_as_inactive($contactid, $data);
 ```php
 $contacts = new Contacts();
 $contacts->enable_portal_access($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## enable_payment_reminders <a name='enable_payment_reminders'></a>
@@ -1849,6 +1921,7 @@ $contacts->enable_portal_access($contactid, $data);
 ```php
 $contacts = new Contacts();
 $contacts->enable_payment_reminders($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## disable_payment_reminders <a name='disable_payment_reminders'></a>
@@ -1859,6 +1932,7 @@ $contacts->enable_payment_reminders($contactid, $data);
 ```php
 $contacts = new Contacts();
 $contacts->disable_payment_reminders($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_statement <a name='email_statement'></a>
@@ -1869,6 +1943,7 @@ $contacts->disable_payment_reminders($contactid, $data);
 ```php
 $contacts = new Contacts();
 $contacts->email_statement($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_statement_mail_content <a name='get_statement_mail_content'></a>
@@ -1888,6 +1963,7 @@ $contacts->get_statement_mail_content($contactid);
 ```php
 $contacts = new Contacts();
 $contacts->email_contact($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_comments <a name='list_comments'></a>
@@ -1907,6 +1983,7 @@ $contacts->list_comments($contactid);
 ```php
 $contacts = new Contacts();
 $contacts->add_additional_address($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_contact_addresses <a name='get_contact_addresses'></a>
@@ -1927,6 +2004,7 @@ $contacts->get_contact_addresses($contactid);
 ```php
 $contacts = new Contacts();
 $contacts->edit_additional_address($contactid, $addressid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_additional_address <a name='delete_additional_address'></a>
@@ -1956,6 +2034,7 @@ $contacts->list_refunds($contactid);
 ```php
 $contacts = new Contacts();
 $contacts->track_1099($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## untrack_1099 <a name='untrack_1099'></a>
@@ -1966,6 +2045,7 @@ $contacts->track_1099($contactid, $data);
 ```php
 $contacts = new Contacts();
 $contacts->untrack_1099($contactid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 # VendorCredits <a name='vendorcredits'></a>
@@ -1976,6 +2056,7 @@ $contacts->untrack_1099($contactid, $data);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->create_a_vendor_credit($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_vendor_credits <a name='list_vendor_credits'></a>
@@ -1995,6 +2076,7 @@ $vendorcredits->list_vendor_credits();
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->update_vendor_credit($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_vendor_credit <a name='get_vendor_credit'></a>
@@ -2023,6 +2105,7 @@ $vendorcredits->delete_vendor_credit($vendorcreditid);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->convert_to_open($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## void_vendor_credit <a name='void_vendor_credit'></a>
@@ -2033,6 +2116,7 @@ $vendorcredits->convert_to_open($vendorcreditid, $data);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->void_vendor_credit($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_a_vendor_credit_for_approval <a name='submit_a_vendor_credit_for_approval'></a>
@@ -2043,6 +2127,7 @@ $vendorcredits->void_vendor_credit($vendorcreditid, $data);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->submit_a_vendor_credit_for_approval($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_a_vendor_credit <a name='approve_a_vendor_credit'></a>
@@ -2053,6 +2138,7 @@ $vendorcredits->submit_a_vendor_credit_for_approval($vendorcreditid, $data);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->approve_a_vendor_credit($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## apply_credits_to_a_bill <a name='apply_credits_to_a_bill'></a>
@@ -2063,6 +2149,7 @@ $vendorcredits->approve_a_vendor_credit($vendorcreditid, $data);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->apply_credits_to_a_bill($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_bills_credited <a name='list_bills_credited'></a>
@@ -2092,6 +2179,7 @@ $vendorcredits->delete_bills_credited($vendorcreditid, $vendorcreditbillid);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->refund_a_vendor_credit($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_refunds_of_a_vendor_credit <a name='list_refunds_of_a_vendor_credit'></a>
@@ -2112,6 +2200,7 @@ $vendorcredits->list_refunds_of_a_vendor_credit($vendorcreditid);
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->update_vendor_credit_refund($vendorcreditid, $vendorcreditrefundid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_vendor_credit_refund <a name='get_vendor_credit_refund'></a>
@@ -2151,6 +2240,7 @@ $vendorcredits->list_vendor_credit_refunds();
 ```php
 $vendorcredits = new VendorCredits();
 $vendorcredits->add_a_comment($vendorcreditid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_vendor_credit_comments_and_history <a name='list_vendor_credit_comments_and_history'></a>
@@ -2180,6 +2270,7 @@ $vendorcredits->delete_a_comment($vendorcreditid, $commentid);
 ```php
 $recurringinvoices = new RecurringInvoices();
 $recurringinvoices->create_a_recurring_invoice($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_all_recurring_invoice <a name='list_all_recurring_invoice'></a>
@@ -2199,6 +2290,7 @@ $recurringinvoices->list_all_recurring_invoice();
 ```php
 $recurringinvoices = new RecurringInvoices();
 $recurringinvoices->update_recurring_invoice($recurringinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_recurring_invoice <a name='get_a_recurring_invoice'></a>
@@ -2227,6 +2319,7 @@ $recurringinvoices->delete_a_recurring_invoice($recurringinvoiceid);
 ```php
 $recurringinvoices = new RecurringInvoices();
 $recurringinvoices->stop_a_recurring_invoice($recurringinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## resume_a_recurring_invoice <a name='resume_a_recurring_invoice'></a>
@@ -2237,6 +2330,7 @@ $recurringinvoices->stop_a_recurring_invoice($recurringinvoiceid, $data);
 ```php
 $recurringinvoices = new RecurringInvoices();
 $recurringinvoices->resume_a_recurring_invoice($recurringinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_recurring_invoice_template <a name='update_recurring_invoice_template'></a>
@@ -2248,6 +2342,7 @@ $recurringinvoices->resume_a_recurring_invoice($recurringinvoiceid, $data);
 ```php
 $recurringinvoices = new RecurringInvoices();
 $recurringinvoices->update_recurring_invoice_template($recurringinvoiceid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_recurring_invoice_history <a name='list_recurring_invoice_history'></a>
@@ -2267,6 +2362,7 @@ $recurringinvoices->list_recurring_invoice_history($recurringinvoiceid);
 ```php
 $expenses = new Expenses();
 $expenses->create_an_expense($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_expenses <a name='list_expenses'></a>
@@ -2286,6 +2382,7 @@ $expenses->list_expenses();
 ```php
 $expenses = new Expenses();
 $expenses->update_an_expense($expenseid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_expense <a name='get_an_expense'></a>
@@ -2322,6 +2419,7 @@ $expenses->list_expense_history_and_comments($expenseid);
 ```php
 $expenses = new Expenses();
 $expenses->create_an_employee($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_employees <a name='list_employees'></a>
@@ -2359,6 +2457,7 @@ $expenses->delete_an_employee($employeeid);
 ```php
 $expenses = new Expenses();
 $expenses->add_receipt_to_an_expense($expenseid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_expense_receipt <a name='get_an_expense_receipt'></a>
@@ -2387,6 +2486,7 @@ $expenses->delete_a_receipt($expenseid);
 ```php
 $currency = new Currency();
 $currency->create_a_currency($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_currencies <a name='list_currencies'></a>
@@ -2406,6 +2506,7 @@ $currency->list_currencies();
 ```php
 $currency = new Currency();
 $currency->update_a_currency($currencyid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_currency <a name='get_a_currency'></a>
@@ -2434,6 +2535,7 @@ $currency->delete_a_currency($currencyid);
 ```php
 $currency = new Currency();
 $currency->create_an_exchange_rate($currencyid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_exchange_rates <a name='list_exchange_rates'></a>
@@ -2454,6 +2556,7 @@ $currency->list_exchange_rates($currencyid);
 ```php
 $currency = new Currency();
 $currency->update_an_exchange_rate($currencyid, $exchangerateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_exchange_rate <a name='get_an_exchange_rate'></a>
@@ -2484,6 +2587,7 @@ $currency->delete_an_exchage_rate($currencyid, $exchangerateid);
 ```php
 $openingbalances = new OpeningBalances();
 $openingbalances->create_opening_balance($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_opening_balance <a name='update_opening_balance'></a>
@@ -2493,6 +2597,7 @@ $openingbalances->create_opening_balance($data);
 ```php
 $openingbalances = new OpeningBalances();
 $openingbalances->update_opening_balance($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_opening_balance <a name='get_opening_balance'></a>
@@ -2521,6 +2626,7 @@ $openingbalances->delete_opening_balance();
 ```php
 $basecurrencyadjustment = new BaseCurrencyAdjustment();
 $basecurrencyadjustment->create_a_base_currency_adjustment($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_base_currency_adjustment <a name='list_base_currency_adjustment'></a>
@@ -2567,6 +2673,7 @@ $basecurrencyadjustment->list_account_details_for_base_currency_adjustment();
 ```php
 $estimates = new Estimates();
 $estimates->create_an_estimate($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_estimates <a name='list_estimates'></a>
@@ -2586,6 +2693,7 @@ $estimates->list_estimates();
 ```php
 $estimates = new Estimates();
 $estimates->update_an_estimate($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_estimate <a name='get_an_estimate'></a>
@@ -2614,6 +2722,7 @@ $estimates->delete_an_estimate($estimateid);
 ```php
 $estimates = new Estimates();
 $estimates->mark_an_estimate_as_sent($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_an_estimate_as_accepted <a name='mark_an_estimate_as_accepted'></a>
@@ -2624,6 +2733,7 @@ $estimates->mark_an_estimate_as_sent($estimateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->mark_an_estimate_as_accepted($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_an_estimate_as_declined <a name='mark_an_estimate_as_declined'></a>
@@ -2634,6 +2744,7 @@ $estimates->mark_an_estimate_as_accepted($estimateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->mark_an_estimate_as_declined($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_an_estimate_for_approval <a name='submit_an_estimate_for_approval'></a>
@@ -2644,6 +2755,7 @@ $estimates->mark_an_estimate_as_declined($estimateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->submit_an_estimate_for_approval($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_an_estimate <a name='approve_an_estimate'></a>
@@ -2654,6 +2766,7 @@ $estimates->submit_an_estimate_for_approval($estimateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->approve_an_estimate($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_an_estimate <a name='email_an_estimate'></a>
@@ -2664,6 +2777,7 @@ $estimates->approve_an_estimate($estimateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->email_an_estimate($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_estimate_email_content <a name='get_estimate_email_content'></a>
@@ -2682,6 +2796,7 @@ $estimates->get_estimate_email_content($estimateid);
 ```php
 $estimates = new Estimates();
 $estimates->email_multiple_estimates($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## bulk_export_estimates <a name='bulk_export_estimates'></a>
@@ -2710,6 +2825,7 @@ $estimates->bulk_print_estimates();
 ```php
 $estimates = new Estimates();
 $estimates->update_billing_address($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -2720,6 +2836,7 @@ $estimates->update_billing_address($estimateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->update_shipping_address($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_estimate_template <a name='list_estimate_template'></a>
@@ -2740,6 +2857,7 @@ $estimates->list_estimate_template();
 ```php
 $estimates = new Estimates();
 $estimates->update_estimate_template($estimateid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## add_comments <a name='add_comments'></a>
@@ -2750,6 +2868,7 @@ $estimates->update_estimate_template($estimateid, $templateid, $data);
 ```php
 $estimates = new Estimates();
 $estimates->add_comments($estimateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_estimate_comments_and_history <a name='list_estimate_comments_and_history'></a>
@@ -2770,6 +2889,7 @@ $estimates->list_estimate_comments_and_history($estimateid);
 ```php
 $estimates = new Estimates();
 $estimates->update_comment($estimateid, $commentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -2790,6 +2910,7 @@ $estimates->delete_a_comment($estimateid, $commentid);
 ```php
 $taxes = new Taxes();
 $taxes->create_a_tax($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_taxes <a name='list_taxes'></a>
@@ -2809,6 +2930,7 @@ $taxes->list_taxes();
 ```php
 $taxes = new Taxes();
 $taxes->update_a_tax($taxid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_tax <a name='get_a_tax'></a>
@@ -2837,6 +2959,7 @@ $taxes->delete_a_tax($taxid);
 ```php
 $taxes = new Taxes();
 $taxes->update_a_tax_group($taxgroupid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_tax_group <a name='get_a_tax_group'></a>
@@ -2864,6 +2987,7 @@ $taxes->delete_a_tax_group($taxgroupid);
 ```php
 $taxes = new Taxes();
 $taxes->create_a_tax_group($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## create_a_tax_authority__us_and_ca_edition_only_ <a name='create_a_tax_authority__us_and_ca_edition_only_'></a>
@@ -2873,6 +2997,7 @@ $taxes->create_a_tax_group($data);
 ```php
 $taxes = new Taxes();
 $taxes->create_a_tax_authority__us_and_ca_edition_only_($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_tax_authorities__us_edition_only_ <a name='list_tax_authorities__us_edition_only_'></a>
@@ -2892,6 +3017,7 @@ $taxes->list_tax_authorities__us_edition_only_();
 ```php
 $taxes = new Taxes();
 $taxes->update_a_tax_authority__us_and_ca_edition_only_($taxauthorityid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_tax_authority__us_and_ca_edition_only_ <a name='get_a_tax_authority__us_and_ca_edition_only_'></a>
@@ -2919,6 +3045,7 @@ $taxes->delete_a_tax_authority__us_and_ca_edition_only_($taxauthorityid);
 ```php
 $taxes = new Taxes();
 $taxes->create_a_tax_exemption__us_edition_only_($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_tax_exemptions__us_edition_only_ <a name='list_tax_exemptions__us_edition_only_'></a>
@@ -2938,6 +3065,7 @@ $taxes->list_tax_exemptions__us_edition_only_();
 ```php
 $taxes = new Taxes();
 $taxes->update_a_tax_exemption__us_edition_only_($taxexemptionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_tax_exemption__us_edition_only_ <a name='get_a_tax_exemption__us_edition_only_'></a>
@@ -2966,6 +3094,7 @@ $taxes->delete_a_tax_exemption__us_edition_only_($taxexemptionid);
 ```php
 $journals = new Journals();
 $journals->create_a_journal($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_journal_list <a name='get_journal_list'></a>
@@ -2985,6 +3114,7 @@ $journals->get_journal_list();
 ```php
 $journals = new Journals();
 $journals->update_a_journal($journalid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_journal <a name='get_journal'></a>
@@ -3013,6 +3143,7 @@ $journals->delete_a_journal($journalid);
 ```php
 $journals = new Journals();
 $journals->mark_a_journal_as_published($journalid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## add_attachment_to_a_journal <a name='add_attachment_to_a_journal'></a>
@@ -3023,6 +3154,7 @@ $journals->mark_a_journal_as_published($journalid, $data);
 ```php
 $journals = new Journals();
 $journals->add_attachment_to_a_journal($journalid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## add_comment <a name='add_comment'></a>
@@ -3033,6 +3165,7 @@ $journals->add_attachment_to_a_journal($journalid, $data);
 ```php
 $journals = new Journals();
 $journals->add_comment($jounralid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -3053,6 +3186,7 @@ $journals->delete_a_comment($jounralid, $commentid);
 ```php
 $bills = new Bills();
 $bills->create_a_bill($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_bills <a name='list_bills'></a>
@@ -3072,6 +3206,7 @@ $bills->list_bills();
 ```php
 $bills = new Bills();
 $bills->update_a_bill($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_bill <a name='get_a_bill'></a>
@@ -3100,6 +3235,7 @@ $bills->delete_a_bill($billid);
 ```php
 $bills = new Bills();
 $bills->void_a_bill($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_a_bill_as_open <a name='mark_a_bill_as_open'></a>
@@ -3110,6 +3246,7 @@ $bills->void_a_bill($billid, $data);
 ```php
 $bills = new Bills();
 $bills->mark_a_bill_as_open($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_a_bill_for_approval <a name='submit_a_bill_for_approval'></a>
@@ -3120,6 +3257,7 @@ $bills->mark_a_bill_as_open($billid, $data);
 ```php
 $bills = new Bills();
 $bills->submit_a_bill_for_approval($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_a_bill <a name='approve_a_bill'></a>
@@ -3130,6 +3268,7 @@ $bills->submit_a_bill_for_approval($billid, $data);
 ```php
 $bills = new Bills();
 $bills->approve_a_bill($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_billing_address <a name='update_billing_address'></a>
@@ -3140,6 +3279,7 @@ $bills->approve_a_bill($billid, $data);
 ```php
 $bills = new Bills();
 $bills->update_billing_address($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_bill_payments <a name='list_bill_payments'></a>
@@ -3159,6 +3299,7 @@ $bills->list_bill_payments($billid);
 ```php
 $bills = new Bills();
 $bills->apply_credits($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_payment <a name='delete_a_payment'></a>
@@ -3179,6 +3320,7 @@ $bills->delete_a_payment($billid, $billpaymentid);
 ```php
 $bills = new Bills();
 $bills->add_attachment_to_a_bill($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_bill_attachment <a name='get_a_bill_attachment'></a>
@@ -3207,6 +3349,7 @@ $bills->delete_an_attachment($billid);
 ```php
 $bills = new Bills();
 $bills->add_comment($billid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_bill_comments_and_history <a name='list_bill_comments_and_history'></a>
@@ -3236,6 +3379,7 @@ $bills->delete_a_comment($billid, $commentid);
 ```php
 $timeentries = new TimeEntries();
 $timeentries->log_time_entries($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_time_entries <a name='list_time_entries'></a>
@@ -3264,6 +3408,7 @@ $timeentries->delete_time_entries();
 ```php
 $timeentries = new TimeEntries();
 $timeentries->update_time_entry($timeentryid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_time_entry <a name='get_a_time_entry'></a>
@@ -3292,6 +3437,7 @@ $timeentries->delete_time_entry($timeentryid);
 ```php
 $timeentries = new TimeEntries();
 $timeentries->start_timer($timeentryid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## stop_timer <a name='stop_timer'></a>
@@ -3301,6 +3447,7 @@ $timeentries->start_timer($timeentryid, $data);
 ```php
 $timeentries = new TimeEntries();
 $timeentries->stop_timer($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_timer <a name='get_timer'></a>
@@ -3320,6 +3467,7 @@ $timeentries->get_timer();
 ```php
 $chartofaccounts = new ChartOfAccounts();
 $chartofaccounts->create_an_account($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_chart_of_accounts <a name='list_chart_of_accounts'></a>
@@ -3339,6 +3487,7 @@ $chartofaccounts->list_chart_of_accounts();
 ```php
 $chartofaccounts = new ChartOfAccounts();
 $chartofaccounts->update_an_account($accountid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_account <a name='get_an_account'></a>
@@ -3367,6 +3516,7 @@ $chartofaccounts->delete_an_account($accountid);
 ```php
 $chartofaccounts = new ChartOfAccounts();
 $chartofaccounts->mark_an_account_as_active($accountid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_an_account_as_inactive <a name='mark_an_account_as_inactive'></a>
@@ -3377,6 +3527,7 @@ $chartofaccounts->mark_an_account_as_active($accountid, $data);
 ```php
 $chartofaccounts = new ChartOfAccounts();
 $chartofaccounts->mark_an_account_as_inactive($accountid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_of_transactions_for_an_account <a name='list_of_transactions_for_an_account'></a>
@@ -3406,6 +3557,7 @@ $chartofaccounts->delete_a_transaction($transactionid);
 ```php
 $tasks = new Tasks();
 $tasks->add_a_task($projectid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_tasks <a name='list_tasks'></a>
@@ -3426,6 +3578,7 @@ $tasks->list_tasks($projectid);
 ```php
 $tasks = new Tasks();
 $tasks->update_a_task($projectid, $taskid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_task <a name='get_a_task'></a>
@@ -3456,6 +3609,7 @@ $tasks->delete_task($projectid, $taskid);
 ```php
 $customerpayments = new CustomerPayments();
 $customerpayments->create_a_payment($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_customer_payments <a name='list_customer_payments'></a>
@@ -3475,6 +3629,7 @@ $customerpayments->list_customer_payments();
 ```php
 $customerpayments = new CustomerPayments();
 $customerpayments->update_a_payment($paymentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## retrieve_a_payment <a name='retrieve_a_payment'></a>
@@ -3503,6 +3658,7 @@ $customerpayments->delete_a_payment($paymentid);
 ```php
 $customerpayments = new CustomerPayments();
 $customerpayments->refund_an_excess_customer_payment($customerpaymentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_refunds_of_a_customer_payment <a name='list_refunds_of_a_customer_payment'></a>
@@ -3523,6 +3679,7 @@ $customerpayments->list_refunds_of_a_customer_payment($customerpaymentid);
 ```php
 $customerpayments = new CustomerPayments();
 $customerpayments->update_a_refund($customerpaymentid, $refundid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## details_of_a_refund <a name='details_of_a_refund'></a>
@@ -3553,6 +3710,7 @@ $customerpayments->delete_a_refund($customerpaymentid, $refundid);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->create_a_retainerinvoice($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_a_retainer_invoices <a name='list_a_retainer_invoices'></a>
@@ -3572,6 +3730,7 @@ $retainerinvoices->list_a_retainer_invoices();
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->update_a_retainerinvoice($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_retainer_invoice <a name='get_a_retainer_invoice'></a>
@@ -3600,6 +3759,7 @@ $retainerinvoices->delete_a_retainer_invoice($retainerinvoiceid);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->mark_a_retainer_invoice_as_sent($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_retainer_invoice_template <a name='update_retainer_invoice_template'></a>
@@ -3611,6 +3771,7 @@ $retainerinvoices->mark_a_retainer_invoice_as_sent($retainerinvoiceid, $data);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->update_retainer_invoice_template($retainerinvoiceid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## void_a_retainer_invoice <a name='void_a_retainer_invoice'></a>
@@ -3621,6 +3782,7 @@ $retainerinvoices->update_retainer_invoice_template($retainerinvoiceid, $templat
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->void_a_retainer_invoice($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_as_draft <a name='mark_as_draft'></a>
@@ -3631,6 +3793,7 @@ $retainerinvoices->void_a_retainer_invoice($retainerinvoiceid, $data);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->mark_as_draft($reatinerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_a_retainer_invoice_for_approval <a name='submit_a_retainer_invoice_for_approval'></a>
@@ -3641,6 +3804,7 @@ $retainerinvoices->mark_as_draft($reatinerinvoiceid, $data);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->submit_a_retainer_invoice_for_approval($reatinerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_a_retainer_invoice <a name='approve_a_retainer_invoice'></a>
@@ -3651,6 +3815,7 @@ $retainerinvoices->submit_a_retainer_invoice_for_approval($reatinerinvoiceid, $d
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->approve_a_retainer_invoice($reatinerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_a_retainer_invoice <a name='email_a_retainer_invoice'></a>
@@ -3661,6 +3826,7 @@ $retainerinvoices->approve_a_retainer_invoice($reatinerinvoiceid, $data);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->email_a_retainer_invoice($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_retainer_invoice_email_content <a name='get_retainer_invoice_email_content'></a>
@@ -3680,6 +3846,7 @@ $retainerinvoices->get_retainer_invoice_email_content($retainerinvoiceid);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->update_billing_address($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_retainer_invoice_templates <a name='list_retainer_invoice_templates'></a>
@@ -3699,6 +3866,7 @@ $retainerinvoices->list_retainer_invoice_templates();
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->add_attachment_to_a_retainer_invoice($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_retainer_invoice_attachment <a name='get_a_retainer_invoice_attachment'></a>
@@ -3728,6 +3896,7 @@ $retainerinvoices->delete_an_attachment($retainerinvoiceid, $documentid);
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->add_comment($retainerinvoiceid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_retainer_invoice_comments_and_history <a name='list_retainer_invoice_comments_and_history'></a>
@@ -3748,6 +3917,7 @@ $retainerinvoices->list_retainer_invoice_comments_and_history($retainerinvoiceid
 ```php
 $retainerinvoices = new RetainerInvoices();
 $retainerinvoices->update_comment($retainerinvoiceid, $commentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -3768,6 +3938,7 @@ $retainerinvoices->delete_a_comment($retainerinvoiceid, $commentid);
 ```php
 $users = new Users();
 $users->create_a_user($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_users <a name='list_users'></a>
@@ -3787,6 +3958,7 @@ $users->list_users();
 ```php
 $users = new Users();
 $users->update_a_user($userid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_user <a name='get_a_user'></a>
@@ -3824,6 +3996,7 @@ $users->get_current_user();
 ```php
 $users = new Users();
 $users->invite_a_user($userid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_user_as_active <a name='mark_user_as_active'></a>
@@ -3834,6 +4007,7 @@ $users->invite_a_user($userid, $data);
 ```php
 $users = new Users();
 $users->mark_user_as_active($userid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_user_as_inactive <a name='mark_user_as_inactive'></a>
@@ -3844,6 +4018,7 @@ $users->mark_user_as_active($userid, $data);
 ```php
 $users = new Users();
 $users->mark_user_as_inactive($userid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 # CreditNotes <a name='creditnotes'></a>
@@ -3854,6 +4029,7 @@ $users->mark_user_as_inactive($userid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->create_a_credit_note($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_all_credit_notes <a name='list_all_credit_notes'></a>
@@ -3873,6 +4049,7 @@ $creditnotes->list_all_credit_notes();
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->update_a_credit_note($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_credit_note <a name='get_a_credit_note'></a>
@@ -3901,6 +4078,7 @@ $creditnotes->delete_a_credit_note($creditnoteid);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->email_a_credit_note($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_email_content <a name='get_email_content'></a>
@@ -3920,6 +4098,7 @@ $creditnotes->get_email_content($creditnoteid);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->void_a_credit_note($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## convert_credit_note_to_draft <a name='convert_credit_note_to_draft'></a>
@@ -3930,6 +4109,7 @@ $creditnotes->void_a_credit_note($creditnoteid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->convert_credit_note_to_draft($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## convert_to_open <a name='convert_to_open'></a>
@@ -3940,6 +4120,7 @@ $creditnotes->convert_credit_note_to_draft($creditnoteid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->convert_to_open($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_a_credit_note_for_approval <a name='submit_a_credit_note_for_approval'></a>
@@ -3950,6 +4131,7 @@ $creditnotes->convert_to_open($creditnoteid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->submit_a_credit_note_for_approval($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_a_credit_note <a name='approve_a_credit_note'></a>
@@ -3960,6 +4142,7 @@ $creditnotes->submit_a_credit_note_for_approval($creditnoteid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->approve_a_credit_note($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_history <a name='email_history'></a>
@@ -3979,6 +4162,7 @@ $creditnotes->email_history($creditnoteid);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->update_billing_address($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_shipping_address <a name='update_shipping_address'></a>
@@ -3989,6 +4173,7 @@ $creditnotes->update_billing_address($creditnoteid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->update_shipping_address($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_credit_note_template <a name='list_credit_note_template'></a>
@@ -4009,6 +4194,7 @@ $creditnotes->list_credit_note_template();
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->update_a_credit_note_template($creditnoteid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## credit_to_an_invoice <a name='credit_to_an_invoice'></a>
@@ -4019,6 +4205,7 @@ $creditnotes->update_a_credit_note_template($creditnoteid, $templateid, $data);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->credit_to_an_invoice($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_invoices_credited <a name='list_invoices_credited'></a>
@@ -4048,6 +4235,7 @@ $creditnotes->delete_invoices_credited($creditnoteid, $creditnoteinvoiceid);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->add_a_comment($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_credit_note_comments_and_history <a name='list_credit_note_comments_and_history'></a>
@@ -4086,6 +4274,7 @@ $creditnotes->list_credit_note_refunds();
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->refund_credit_note($creditnoteid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_refunds_of_a_credit_note <a name='list_refunds_of_a_credit_note'></a>
@@ -4106,6 +4295,7 @@ $creditnotes->list_refunds_of_a_credit_note($creditnoteid);
 ```php
 $creditnotes = new CreditNotes();
 $creditnotes->update_credit_note_refund($creditnoteid, $creditnoterefundid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_credit_note_refund <a name='get_credit_note_refund'></a>
@@ -4136,6 +4326,7 @@ $creditnotes->delete_credit_note_refund($creditnoteid, $creditnoterefundid);
 ```php
 $items = new Items();
 $items->create_an_item($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_items <a name='list_items'></a>
@@ -4155,6 +4346,7 @@ $items->list_items();
 ```php
 $items = new Items();
 $items->update_an_item($itemid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_an_item <a name='get_an_item'></a>
@@ -4183,6 +4375,7 @@ $items->delete_an_item($itemid);
 ```php
 $items = new Items();
 $items->mark_as_active($itemid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_as_inactive <a name='mark_as_inactive'></a>
@@ -4193,6 +4386,7 @@ $items->mark_as_active($itemid, $data);
 ```php
 $items = new Items();
 $items->mark_as_inactive($itemid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 # PurchaseOrders <a name='purchaseorders'></a>
@@ -4203,6 +4397,7 @@ $items->mark_as_inactive($itemid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->create_a_purchase_order($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_purchase_orders <a name='list_purchase_orders'></a>
@@ -4222,6 +4417,7 @@ $purchaseorders->list_purchase_orders();
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->update_a_purchase_order($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_purchase_order <a name='get_a_purchase_order'></a>
@@ -4250,6 +4446,7 @@ $purchaseorders->delete_purchase_order($purchaseorderid);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->mark_a_purchase_order_as_open($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## mark_as_billed <a name='mark_as_billed'></a>
@@ -4260,6 +4457,7 @@ $purchaseorders->mark_a_purchase_order_as_open($purchaseorderid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->mark_as_billed($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## cancel_a_purchase_order <a name='cancel_a_purchase_order'></a>
@@ -4270,6 +4468,7 @@ $purchaseorders->mark_as_billed($purchaseorderid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->cancel_a_purchase_order($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## submit_a_purchase_order_for_approval <a name='submit_a_purchase_order_for_approval'></a>
@@ -4280,6 +4479,7 @@ $purchaseorders->cancel_a_purchase_order($purchaseorderid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->submit_a_purchase_order_for_approval($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## approve_a_purchase_order <a name='approve_a_purchase_order'></a>
@@ -4290,6 +4490,7 @@ $purchaseorders->submit_a_purchase_order_for_approval($purchaseorderid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->approve_a_purchase_order($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## email_a_purchase_order <a name='email_a_purchase_order'></a>
@@ -4300,6 +4501,7 @@ $purchaseorders->approve_a_purchase_order($purchaseorderid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->email_a_purchase_order($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_purchase_order_email_content <a name='get_purchase_order_email_content'></a>
@@ -4319,6 +4521,7 @@ $purchaseorders->get_purchase_order_email_content($purchaseorderid);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->update_billing_address($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_purchase_order_templates <a name='list_purchase_order_templates'></a>
@@ -4339,6 +4542,7 @@ $purchaseorders->list_purchase_order_templates();
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->update_purchase_order_template($purchaseorderid, $templateid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## add_attachment_to_a_purchase_order <a name='add_attachment_to_a_purchase_order'></a>
@@ -4349,6 +4553,7 @@ $purchaseorders->update_purchase_order_template($purchaseorderid, $templateid, $
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->add_attachment_to_a_purchase_order($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_attachment_preference <a name='update_attachment_preference'></a>
@@ -4359,6 +4564,7 @@ $purchaseorders->add_attachment_to_a_purchase_order($purchaseorderid, $data);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->update_attachment_preference($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_a_purchase_order_attachment <a name='get_a_purchase_order_attachment'></a>
@@ -4387,6 +4593,7 @@ $purchaseorders->delete_an_attachment($purchaseorderid);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->add_comment($purchaseorderid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## list_purchase_order_comments_and_history <a name='list_purchase_order_comments_and_history'></a>
@@ -4407,6 +4614,7 @@ $purchaseorders->list_purchase_order_comments_and_history($purchaseorderid);
 ```php
 $purchaseorders = new PurchaseOrders();
 $purchaseorders->update_comment($purchaseorderid, $commentid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_comment <a name='delete_a_comment'></a>
@@ -4427,6 +4635,7 @@ $purchaseorders->delete_a_comment($purchaseorderid, $commentid);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->create_a_transaction_for_an_account($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_transactions_list <a name='get_transactions_list'></a>
@@ -4446,6 +4655,7 @@ $banktransactions->get_transactions_list();
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->update_a_transaction($banktransactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_transaction <a name='get_transaction'></a>
@@ -4474,6 +4684,7 @@ $banktransactions->delete_a_transaction($banktransactionid);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->match_a_transaction($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## get_matching_transactions <a name='get_matching_transactions'></a>
@@ -4493,6 +4704,7 @@ $banktransactions->get_matching_transactions($transactionid);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->unmatch_a_matched_transaction($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## exclude_a_transaction <a name='exclude_a_transaction'></a>
@@ -4503,6 +4715,7 @@ $banktransactions->unmatch_a_matched_transaction($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->exclude_a_transaction($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## restore_a_transaction <a name='restore_a_transaction'></a>
@@ -4513,6 +4726,7 @@ $banktransactions->exclude_a_transaction($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->restore_a_transaction($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_an_uncategorized_transaction <a name='categorize_an_uncategorized_transaction'></a>
@@ -4523,6 +4737,7 @@ $banktransactions->restore_a_transaction($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_an_uncategorized_transaction($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_as_expense <a name='categorize_as_expense'></a>
@@ -4533,6 +4748,7 @@ $banktransactions->categorize_an_uncategorized_transaction($transactionid, $data
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_as_expense($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## uncategorize_a_categorized_transaction <a name='uncategorize_a_categorized_transaction'></a>
@@ -4543,6 +4759,7 @@ $banktransactions->categorize_as_expense($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->uncategorize_a_categorized_transaction($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_a_vendor_payment <a name='categorize_a_vendor_payment'></a>
@@ -4553,6 +4770,7 @@ $banktransactions->uncategorize_a_categorized_transaction($transactionid, $data)
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_a_vendor_payment($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_as_customer_payment <a name='categorize_as_customer_payment'></a>
@@ -4563,6 +4781,7 @@ $banktransactions->categorize_a_vendor_payment($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_as_customer_payment($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_as_credit_note_refunds <a name='categorize_as_credit_note_refunds'></a>
@@ -4573,6 +4792,7 @@ $banktransactions->categorize_as_customer_payment($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_as_credit_note_refunds($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_as_vendor_credit_refunds <a name='categorize_as_vendor_credit_refunds'></a>
@@ -4583,6 +4803,7 @@ $banktransactions->categorize_as_credit_note_refunds($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_as_vendor_credit_refunds($transactionid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_as_customer_payment_refund <a name='categorize_as_customer_payment_refund'></a>
@@ -4593,6 +4814,7 @@ $banktransactions->categorize_as_vendor_credit_refunds($transactionid, $data);
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_as_customer_payment_refund($statementlineid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## categorize_as_vendor_payment_refund <a name='categorize_as_vendor_payment_refund'></a>
@@ -4603,6 +4825,7 @@ $banktransactions->categorize_as_customer_payment_refund($statementlineid, $data
 ```php
 $banktransactions = new BankTransactions();
 $banktransactions->categorize_as_vendor_payment_refund($statementlineid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 # ContactPersons <a name='contactpersons'></a>
@@ -4613,6 +4836,7 @@ $banktransactions->categorize_as_vendor_payment_refund($statementlineid, $data);
 ```php
 $contactpersons = new ContactPersons();
 $contactpersons->create_a_contact_person($data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## update_a_contact_person <a name='update_a_contact_person'></a>
@@ -4623,6 +4847,7 @@ $contactpersons->create_a_contact_person($data);
 ```php
 $contactpersons = new ContactPersons();
 $contactpersons->update_a_contact_person($contactpersonid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
 ## delete_a_contact_person <a name='delete_a_contact_person'></a>
@@ -4661,5 +4886,6 @@ $contactpersons->get_a_contact_person($contactid, $contactpersonid);
 ```php
 $contactpersons = new ContactPersons();
 $contactpersons->mark_as_primary_contact_person($contactpersonid, $data);
+// Array Keys for $data can be found in Official documentation here: https://www.zoho.com/books/api/v3/
 ```
 
