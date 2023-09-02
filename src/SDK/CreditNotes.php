@@ -8,7 +8,7 @@ class CreditNotes extends BaseClass
 {
     /**
      * Create a credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class CreditNotes extends BaseClass
     public function create_a_credit_note($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class CreditNotes extends BaseClass
 
     /**
      * List all Credit Notes
-     * URL: https://books.zoho.com/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_all_credit_notes()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Update a credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $creditnoteid
      * Headers:
@@ -63,7 +63,7 @@ class CreditNotes extends BaseClass
     public function update_a_credit_note($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Get a credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * Headers:
@@ -90,7 +90,7 @@ class CreditNotes extends BaseClass
     public function get_a_credit_note($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Delete a credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $creditnoteid
      * Headers:
@@ -114,7 +114,7 @@ class CreditNotes extends BaseClass
     public function delete_a_credit_note($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Email a credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -139,7 +139,7 @@ class CreditNotes extends BaseClass
     public function email_a_credit_note($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Get email content
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * Headers:
@@ -166,7 +166,7 @@ class CreditNotes extends BaseClass
     public function get_email_content($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -182,7 +182,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Void a Credit Note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/status/void?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/status/void?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -191,7 +191,7 @@ class CreditNotes extends BaseClass
     public function void_a_credit_note($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/status/void?organization_id={{ORGANIZATION_ID}}"
         );
@@ -210,7 +210,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Convert Credit Note to Draft.
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/status/draft?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/status/draft?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -219,7 +219,7 @@ class CreditNotes extends BaseClass
     public function convert_credit_note_to_draft($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/status/draft?organization_id={{ORGANIZATION_ID}}"
         );
@@ -238,7 +238,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Convert to Open
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/status/open?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/status/open?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -247,7 +247,7 @@ class CreditNotes extends BaseClass
     public function convert_to_open($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/status/open?organization_id={{ORGANIZATION_ID}}"
         );
@@ -266,7 +266,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Submit a credit note for approval
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/submit?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/submit?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -275,7 +275,7 @@ class CreditNotes extends BaseClass
     public function submit_a_credit_note_for_approval($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/submit?organization_id={{ORGANIZATION_ID}}"
         );
@@ -294,7 +294,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Approve a credit note.
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/approve?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/approve?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -303,7 +303,7 @@ class CreditNotes extends BaseClass
     public function approve_a_credit_note($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/approve?organization_id={{ORGANIZATION_ID}}"
         );
@@ -322,7 +322,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Email history
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/emailhistory?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/emailhistory?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * Headers:
@@ -330,7 +330,7 @@ class CreditNotes extends BaseClass
     public function email_history($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/emailhistory?organization_id={{ORGANIZATION_ID}}"
         );
@@ -346,7 +346,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Update billing address
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/address/billing?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/address/billing?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $creditnoteid
      * Headers:
@@ -355,7 +355,7 @@ class CreditNotes extends BaseClass
     public function update_billing_address($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/address/billing?organization_id={{ORGANIZATION_ID}}"
         );
@@ -374,7 +374,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Update Shipping address
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $creditnoteid
      * Headers:
@@ -383,7 +383,7 @@ class CreditNotes extends BaseClass
     public function update_shipping_address($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/address/shipping?organization_id={{ORGANIZATION_ID}}"
         );
@@ -402,14 +402,14 @@ class CreditNotes extends BaseClass
 
     /**
      * List credit note template
-     * URL: https://books.zoho.com/api/v3/creditnotes/templates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/templates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_credit_note_template()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/templates?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/templates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -423,7 +423,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Update a credit note template
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $creditnoteid
      * @param $templateid
@@ -436,7 +436,7 @@ class CreditNotes extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/templates/" .
                 $templateid .
@@ -457,7 +457,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Credit to an invoice
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/invoices?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/invoices?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -466,7 +466,7 @@ class CreditNotes extends BaseClass
     public function credit_to_an_invoice($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/invoices?organization_id={{ORGANIZATION_ID}}"
         );
@@ -485,7 +485,7 @@ class CreditNotes extends BaseClass
 
     /**
      * List invoices credited
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/invoices?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/invoices?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * Headers:
@@ -493,7 +493,7 @@ class CreditNotes extends BaseClass
     public function list_invoices_credited($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/invoices?organization_id={{ORGANIZATION_ID}}"
         );
@@ -509,7 +509,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Delete invoices credited
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/invoices/${creditnote_invoice_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/invoices/${creditnote_invoice_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $creditnoteid
      * @param $creditnoteinvoiceid
@@ -520,7 +520,7 @@ class CreditNotes extends BaseClass
         $creditnoteinvoiceid
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/invoices/" .
                 $creditnoteinvoiceid .
@@ -538,7 +538,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Add a comment
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -547,7 +547,7 @@ class CreditNotes extends BaseClass
     public function add_a_comment($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -566,7 +566,7 @@ class CreditNotes extends BaseClass
 
     /**
      * List credit note comments & history
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * Headers:
@@ -574,7 +574,7 @@ class CreditNotes extends BaseClass
     public function list_credit_note_comments_and_history($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -590,7 +590,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Delete a Comment
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $creditnoteid
      * @param $commentid
@@ -599,7 +599,7 @@ class CreditNotes extends BaseClass
     public function delete_a_comment($creditnoteid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/comments/" .
                 $commentid .
@@ -617,14 +617,14 @@ class CreditNotes extends BaseClass
 
     /**
      * List credit note refunds
-     * URL: https://books.zoho.com/api/v3/creditnotes/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_credit_note_refunds()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/refunds?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/refunds?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -638,7 +638,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Refund credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $creditnoteid
      * Headers:
@@ -647,7 +647,7 @@ class CreditNotes extends BaseClass
     public function refund_credit_note($creditnoteid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -666,7 +666,7 @@ class CreditNotes extends BaseClass
 
     /**
      * List refunds of a credit note
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * Headers:
@@ -674,7 +674,7 @@ class CreditNotes extends BaseClass
     public function list_refunds_of_a_credit_note($creditnoteid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -690,7 +690,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Update credit note refund
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/refunds/${creditnote_refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/refunds/${creditnote_refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $creditnoteid
      * @param $creditnoterefundid
@@ -703,7 +703,7 @@ class CreditNotes extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/refunds/" .
                 $creditnoterefundid .
@@ -724,7 +724,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Get credit note refund
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/refunds/${creditnote_refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/refunds/${creditnote_refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $creditnoteid
      * @param $creditnoterefundid
@@ -733,7 +733,7 @@ class CreditNotes extends BaseClass
     public function get_credit_note_refund($creditnoteid, $creditnoterefundid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/refunds/" .
                 $creditnoterefundid .
@@ -751,7 +751,7 @@ class CreditNotes extends BaseClass
 
     /**
      * Delete credit note refund
-     * URL: https://books.zoho.com/api/v3/creditnotes/${creditnote_id}/refunds/${creditnote_refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/${creditnote_id}/refunds/${creditnote_refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $creditnoteid
      * @param $creditnoterefundid
@@ -762,7 +762,7 @@ class CreditNotes extends BaseClass
         $creditnoterefundid
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/creditnotes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/creditnotes/" .
                 $creditnoteid .
                 "/refunds/" .
                 $creditnoterefundid .

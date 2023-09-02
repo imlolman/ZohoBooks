@@ -8,7 +8,7 @@ class Expenses extends BaseClass
 {
     /**
      * Create an Expense
-     * URL: https://books.zoho.com/api/v3/expenses?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Expenses extends BaseClass
     public function create_an_expense($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Expenses extends BaseClass
 
     /**
      * List Expenses
-     * URL: https://books.zoho.com/api/v3/expenses?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_expenses()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Expenses extends BaseClass
 
     /**
      * Update an Expense
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $expenseid
      * Headers:
@@ -63,7 +63,7 @@ class Expenses extends BaseClass
     public function update_an_expense($expenseid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Expenses extends BaseClass
 
     /**
      * Get an Expense
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $expenseid
      * Headers:
@@ -90,7 +90,7 @@ class Expenses extends BaseClass
     public function get_an_expense($expenseid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Expenses extends BaseClass
 
     /**
      * Delete an Expense
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $expenseid
      * Headers:
@@ -114,7 +114,7 @@ class Expenses extends BaseClass
     public function delete_an_expense($expenseid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Expenses extends BaseClass
 
     /**
      * List expense History & Comments
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $expenseid
      * Headers:
@@ -138,7 +138,7 @@ class Expenses extends BaseClass
     public function list_expense_history_and_comments($expenseid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -154,7 +154,7 @@ class Expenses extends BaseClass
 
     /**
      * Create an employee
-     * URL: https://books.zoho.com/api/v3/employees?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employees?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -162,7 +162,7 @@ class Expenses extends BaseClass
     public function create_an_employee($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/employees?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employees?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -179,14 +179,14 @@ class Expenses extends BaseClass
 
     /**
      * List employees
-     * URL: https://books.zoho.com/api/v3/employees?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employees?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_employees()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/employees?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employees?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -200,7 +200,7 @@ class Expenses extends BaseClass
 
     /**
      * Get an employee
-     * URL: https://books.zoho.com/api/v3/employees/${employee_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employees/${employee_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $employeeid
      * Headers:
@@ -208,7 +208,7 @@ class Expenses extends BaseClass
     public function get_an_employee($employeeid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/employees/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employees/" .
                 $employeeid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -224,7 +224,7 @@ class Expenses extends BaseClass
 
     /**
      * Delete an employee
-     * URL: https://books.zoho.com/api/v3/employee/${employee_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employee/${employee_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $employeeid
      * Headers:
@@ -232,7 +232,7 @@ class Expenses extends BaseClass
     public function delete_an_employee($employeeid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/employee/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/employee/" .
                 $employeeid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -248,7 +248,7 @@ class Expenses extends BaseClass
 
     /**
      * Add receipt to an expense.
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}/receipt?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}/receipt?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $expenseid
      * Headers:
@@ -257,7 +257,7 @@ class Expenses extends BaseClass
     public function add_receipt_to_an_expense($expenseid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "/receipt?organization_id={{ORGANIZATION_ID}}"
         );
@@ -276,7 +276,7 @@ class Expenses extends BaseClass
 
     /**
      * Get an expense receipt
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}/receipt?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}/receipt?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $expenseid
      * Headers:
@@ -284,7 +284,7 @@ class Expenses extends BaseClass
     public function get_an_expense_receipt($expenseid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "/receipt?organization_id={{ORGANIZATION_ID}}"
         );
@@ -300,7 +300,7 @@ class Expenses extends BaseClass
 
     /**
      * Delete a receipt
-     * URL: https://books.zoho.com/api/v3/expenses/${expense_id}/receipt?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/${expense_id}/receipt?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $expenseid
      * Headers:
@@ -308,7 +308,7 @@ class Expenses extends BaseClass
     public function delete_a_receipt($expenseid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/expenses/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/expenses/" .
                 $expenseid .
                 "/receipt?organization_id={{ORGANIZATION_ID}}"
         );

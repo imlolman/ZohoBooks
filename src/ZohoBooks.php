@@ -24,6 +24,7 @@ class ZohoBooks
                 "REFRESH_TOKEN" => $config["REFRESH_TOKEN"],
                 "ORGANIZATION_ID" => $config["ORGANIZATION_ID"],
                 "ACCESS_TOKEN_EXPIRY" => $config["ACCESS_TOKEN_EXPIRY"],
+                "ZOHO_BOOKS_DOMAIN" => $config["ZOHO_BOOKS_DOMAIN"],
             ]);
         }
 

@@ -8,7 +8,7 @@ class RecurringBills extends BaseClass
 {
     /**
      * Create a recurring bill
-     * URL: https://books.zoho.com/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class RecurringBills extends BaseClass
     public function create_a_recurring_bill($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class RecurringBills extends BaseClass
 
     /**
      * List recurring bills
-     * URL: https://books.zoho.com/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_recurring_bills()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class RecurringBills extends BaseClass
 
     /**
      * Update a recurring bill
-     * URL: https://books.zoho.com/api/v3/recurringbills/${recurring_bill_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/${recurring_bill_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $recurringbillid
      * Headers:
@@ -63,7 +63,7 @@ class RecurringBills extends BaseClass
     public function update_a_recurring_bill($recurringbillid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringbills/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/" .
                 $recurringbillid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class RecurringBills extends BaseClass
 
     /**
      * Get a recurring bill
-     * URL: https://books.zoho.com/api/v3/recurring_bills/${recurring_bill_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurring_bills/${recurring_bill_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $recurringbillid
      * Headers:
@@ -90,7 +90,7 @@ class RecurringBills extends BaseClass
     public function get_a_recurring_bill($recurringbillid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurring_bills/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurring_bills/" .
                 $recurringbillid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class RecurringBills extends BaseClass
 
     /**
      * Delete a recurring bill
-     * URL: https://books.zoho.com/api/v3/recurring_bills/${recurring_bill_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurring_bills/${recurring_bill_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $recurringbillid
      * Headers:
@@ -114,7 +114,7 @@ class RecurringBills extends BaseClass
     public function delete_a_recurring_bill($recurringbillid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurring_bills/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurring_bills/" .
                 $recurringbillid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class RecurringBills extends BaseClass
 
     /**
      * Stop a recurring bill
-     * URL: https://books.zoho.com/api/v3/recurringbills/${recurring_bill_id}/status/stop?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/${recurring_bill_id}/status/stop?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $recurringbillid
      * Headers:
@@ -139,7 +139,7 @@ class RecurringBills extends BaseClass
     public function stop_a_recurring_bill($recurringbillid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringbills/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/" .
                 $recurringbillid .
                 "/status/stop?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class RecurringBills extends BaseClass
 
     /**
      * Resume a recurring Bill
-     * URL: https://books.zoho.com/api/v3/recurringbills/${recurring_bill_id}/status/resume?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/${recurring_bill_id}/status/resume?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $recurringbillid
      * Headers:
@@ -167,7 +167,7 @@ class RecurringBills extends BaseClass
     public function resume_a_recurring_bill($recurringbillid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringbills/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/" .
                 $recurringbillid .
                 "/status/resume?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class RecurringBills extends BaseClass
 
     /**
      * List recurring bill history
-     * URL: https://books.zoho.com/api/v3/recurringbills/${recurring_bill_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/${recurring_bill_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $recurringbillid
      * Headers:
@@ -194,7 +194,7 @@ class RecurringBills extends BaseClass
     public function list_recurring_bill_history($recurringbillid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/recurringbills/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/recurringbills/" .
                 $recurringbillid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );

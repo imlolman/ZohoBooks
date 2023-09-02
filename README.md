@@ -29,6 +29,7 @@ $config = [
   "REFRESH_TOKEN" => "", // Your refresh token to be genetated using OAuth2
   "ORGANIZATION_ID" => "", // Your organization id from ZohoBooks
   "ACCESS_TOKEN_EXPIRY" => "", // Your access token to be genetated using OAuth2
+  "ZOHO_BOOKS_DOMAIN" => "books.zoho.com", // Your ZohoBooks domain (default: books.zoho.com), can be books.zoho.in, books.zoho.eu, etc.
 ]
 
 // Initialize the SDK

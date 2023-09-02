@@ -8,7 +8,7 @@ class Items extends BaseClass
 {
     /**
      * Create an Item
-     * URL: https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Items extends BaseClass
     public function create_an_item($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Items extends BaseClass
 
     /**
      * List items
-     * URL: https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_items()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Items extends BaseClass
 
     /**
      * Update an item
-     * URL: https://books.zoho.com/api/v3/items/${item_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/${item_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $itemid
      * Headers:
@@ -63,7 +63,7 @@ class Items extends BaseClass
     public function update_an_item($itemid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/" .
                 $itemid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Items extends BaseClass
 
     /**
      * Get an item
-     * URL: https://books.zoho.com/api/v3/items/${item_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/${item_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $itemid
      * Headers:
@@ -90,7 +90,7 @@ class Items extends BaseClass
     public function get_an_item($itemid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/" .
                 $itemid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Items extends BaseClass
 
     /**
      * Delete an item
-     * URL: https://books.zoho.com/api/v3/items/${item_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/${item_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $itemid
      * Headers:
@@ -114,7 +114,7 @@ class Items extends BaseClass
     public function delete_an_item($itemid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/" .
                 $itemid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Items extends BaseClass
 
     /**
      * Mark as active
-     * URL: https://books.zoho.com/api/v3/items/${item_id}/active?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/${item_id}/active?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $itemid
      * Headers:
@@ -139,7 +139,7 @@ class Items extends BaseClass
     public function mark_as_active($itemid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/" .
                 $itemid .
                 "/active?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Items extends BaseClass
 
     /**
      * Mark as inactive
-     * URL: https://books.zoho.com/api/v3/items/${item_id}/inactive?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/${item_id}/inactive?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $itemid
      * Headers:
@@ -167,7 +167,7 @@ class Items extends BaseClass
     public function mark_as_inactive($itemid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/items/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/items/" .
                 $itemid .
                 "/inactive?organization_id={{ORGANIZATION_ID}}"
         );

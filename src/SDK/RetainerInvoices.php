@@ -8,7 +8,7 @@ class RetainerInvoices extends BaseClass
 {
     /**
      * Create a retainerinvoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class RetainerInvoices extends BaseClass
     public function create_a_retainerinvoice($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class RetainerInvoices extends BaseClass
 
     /**
      * List a retainer invoices
-     * URL: https://books.zoho.com/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_a_retainer_invoices()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * update a retainerinvoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $retainerinvoiceid
      * Headers:
@@ -63,7 +63,7 @@ class RetainerInvoices extends BaseClass
     public function update_a_retainerinvoice($retainerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Get a retainer invoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $retainerinvoiceid
      * Headers:
@@ -90,7 +90,7 @@ class RetainerInvoices extends BaseClass
     public function get_a_retainer_invoice($retainerinvoiceid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Delete a retainer invoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $retainerinvoiceid
      * Headers:
@@ -114,7 +114,7 @@ class RetainerInvoices extends BaseClass
     public function delete_a_retainer_invoice($retainerinvoiceid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Mark a retainer invoice as sent
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/status/sent?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/status/sent?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $retainerinvoiceid
      * Headers:
@@ -141,7 +141,7 @@ class RetainerInvoices extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/status/sent?organization_id={{ORGANIZATION_ID}}"
         );
@@ -160,7 +160,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Update retainer invoice template
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $retainerinvoiceid
      * @param $templateid
@@ -173,7 +173,7 @@ class RetainerInvoices extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/templates/" .
                 $templateid .
@@ -194,7 +194,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Void a retainer invoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/status/void?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/status/void?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $retainerinvoiceid
      * Headers:
@@ -203,7 +203,7 @@ class RetainerInvoices extends BaseClass
     public function void_a_retainer_invoice($retainerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/status/void?organization_id={{ORGANIZATION_ID}}"
         );
@@ -222,7 +222,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Mark as draft
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${reatinerinvoice_id}/status/draft?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${reatinerinvoice_id}/status/draft?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $reatinerinvoiceid
      * Headers:
@@ -231,7 +231,7 @@ class RetainerInvoices extends BaseClass
     public function mark_as_draft($reatinerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $reatinerinvoiceid .
                 "/status/draft?organization_id={{ORGANIZATION_ID}}"
         );
@@ -250,7 +250,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Submit a retainer invoice for approval
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${reatinerinvoice_id}/submit?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${reatinerinvoice_id}/submit?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $reatinerinvoiceid
      * Headers:
@@ -261,7 +261,7 @@ class RetainerInvoices extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $reatinerinvoiceid .
                 "/submit?organization_id={{ORGANIZATION_ID}}"
         );
@@ -280,7 +280,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Approve a retainer invoice.
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${reatinerinvoice_id}/approve?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${reatinerinvoice_id}/approve?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $reatinerinvoiceid
      * Headers:
@@ -289,7 +289,7 @@ class RetainerInvoices extends BaseClass
     public function approve_a_retainer_invoice($reatinerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $reatinerinvoiceid .
                 "/approve?organization_id={{ORGANIZATION_ID}}"
         );
@@ -308,7 +308,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Email a retainer invoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $retainerinvoiceid
      * Headers:
@@ -317,7 +317,7 @@ class RetainerInvoices extends BaseClass
     public function email_a_retainer_invoice($retainerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -336,7 +336,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Get retainer invoice email content
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $retainerinvoiceid
      * Headers:
@@ -344,7 +344,7 @@ class RetainerInvoices extends BaseClass
     public function get_retainer_invoice_email_content($retainerinvoiceid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -360,7 +360,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Update billing address
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/address/billing?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/address/billing?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $retainerinvoiceid
      * Headers:
@@ -369,7 +369,7 @@ class RetainerInvoices extends BaseClass
     public function update_billing_address($retainerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/address/billing?organization_id={{ORGANIZATION_ID}}"
         );
@@ -388,14 +388,14 @@ class RetainerInvoices extends BaseClass
 
     /**
      * List retainer invoice templates
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/templates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/templates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_retainer_invoice_templates()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/templates?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/templates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -409,7 +409,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Add attachment to a retainer invoice
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $retainerinvoiceid
      * Headers:
@@ -420,7 +420,7 @@ class RetainerInvoices extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -439,7 +439,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Get a retainer invoice attachment
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $retainerinvoiceid
      * Headers:
@@ -447,7 +447,7 @@ class RetainerInvoices extends BaseClass
     public function get_a_retainer_invoice_attachment($retainerinvoiceid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -463,7 +463,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Delete an attachment
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/documents/${document_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/documents/${document_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $retainerinvoiceid
      * @param $documentid
@@ -472,7 +472,7 @@ class RetainerInvoices extends BaseClass
     public function delete_an_attachment($retainerinvoiceid, $documentid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/documents/" .
                 $documentid .
@@ -490,7 +490,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Add comment
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $retainerinvoiceid
      * Headers:
@@ -499,7 +499,7 @@ class RetainerInvoices extends BaseClass
     public function add_comment($retainerinvoiceid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -518,7 +518,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * List retainer invoice comments & history
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $retainerinvoiceid
      * Headers:
@@ -527,7 +527,7 @@ class RetainerInvoices extends BaseClass
         $retainerinvoiceid
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -543,7 +543,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Update comment
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $retainerinvoiceid
      * @param $commentid
@@ -553,7 +553,7 @@ class RetainerInvoices extends BaseClass
     public function update_comment($retainerinvoiceid, $commentid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/comments/" .
                 $commentid .
@@ -574,7 +574,7 @@ class RetainerInvoices extends BaseClass
 
     /**
      * Delete a comment
-     * URL: https://books.zoho.com/api/v3/retainerinvoices/${retainerinvoice_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/${retainerinvoice_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $retainerinvoiceid
      * @param $commentid
@@ -583,7 +583,7 @@ class RetainerInvoices extends BaseClass
     public function delete_a_comment($retainerinvoiceid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/retainerinvoices/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/retainerinvoices/" .
                 $retainerinvoiceid .
                 "/comments/" .
                 $commentid .

@@ -8,7 +8,7 @@ class Projects extends BaseClass
 {
     /**
      * Create a project
-     * URL: https://books.zoho.com/api/v3/projects?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Projects extends BaseClass
     public function create_a_project($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Projects extends BaseClass
 
     /**
      * List projects
-     * URL: https://books.zoho.com/api/v3/projects?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_projects()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Projects extends BaseClass
 
     /**
      * Update project
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $projectid
      * Headers:
@@ -63,7 +63,7 @@ class Projects extends BaseClass
     public function update_project($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Projects extends BaseClass
 
     /**
      * Get a project
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * Headers:
@@ -90,7 +90,7 @@ class Projects extends BaseClass
     public function get_a_project($projectid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Projects extends BaseClass
 
     /**
      * Delete project
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $projectid
      * Headers:
@@ -114,7 +114,7 @@ class Projects extends BaseClass
     public function delete_project($projectid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Projects extends BaseClass
 
     /**
      * Activate project
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/active?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/active?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -139,7 +139,7 @@ class Projects extends BaseClass
     public function activate_project($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/active?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Projects extends BaseClass
 
     /**
      * Inactivate a project
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/inactive?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/inactive?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -167,7 +167,7 @@ class Projects extends BaseClass
     public function inactivate_a_project($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/inactive?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class Projects extends BaseClass
 
     /**
      * Clone project
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/clone?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/clone?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -195,7 +195,7 @@ class Projects extends BaseClass
     public function clone_project($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/clone?organization_id={{ORGANIZATION_ID}}"
         );
@@ -214,7 +214,7 @@ class Projects extends BaseClass
 
     /**
      * Assign users
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/users?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/users?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -223,7 +223,7 @@ class Projects extends BaseClass
     public function assign_users($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/users?organization_id={{ORGANIZATION_ID}}"
         );
@@ -242,7 +242,7 @@ class Projects extends BaseClass
 
     /**
      * List Users
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/users?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/users?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * Headers:
@@ -250,7 +250,7 @@ class Projects extends BaseClass
     public function list_users($projectid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/users?organization_id={{ORGANIZATION_ID}}"
         );
@@ -266,7 +266,7 @@ class Projects extends BaseClass
 
     /**
      * Invite user
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/users/invite?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/users/invite?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -275,7 +275,7 @@ class Projects extends BaseClass
     public function invite_user($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/users/invite?organization_id={{ORGANIZATION_ID}}"
         );
@@ -294,7 +294,7 @@ class Projects extends BaseClass
 
     /**
      * Update user
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/users/${user_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/users/${user_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $projectid
      * @param $userid
@@ -304,7 +304,7 @@ class Projects extends BaseClass
     public function update_user($projectid, $userid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/users/" .
                 $userid .
@@ -325,7 +325,7 @@ class Projects extends BaseClass
 
     /**
      * Get a User
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/users/${user_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/users/${user_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * @param $userid
@@ -334,7 +334,7 @@ class Projects extends BaseClass
     public function get_a_user($projectid, $userid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/users/" .
                 $userid .
@@ -352,7 +352,7 @@ class Projects extends BaseClass
 
     /**
      * Delete user
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/users/${user_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/users/${user_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $projectid
      * @param $userid
@@ -361,7 +361,7 @@ class Projects extends BaseClass
     public function delete_user($projectid, $userid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/users/" .
                 $userid .
@@ -379,7 +379,7 @@ class Projects extends BaseClass
 
     /**
      * Post comment
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -388,7 +388,7 @@ class Projects extends BaseClass
     public function post_comment($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -407,7 +407,7 @@ class Projects extends BaseClass
 
     /**
      * List comments
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * Headers:
@@ -415,7 +415,7 @@ class Projects extends BaseClass
     public function list_comments($projectid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -431,7 +431,7 @@ class Projects extends BaseClass
 
     /**
      * Delete comment
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $projectid
      * @param $commentid
@@ -440,7 +440,7 @@ class Projects extends BaseClass
     public function delete_comment($projectid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/comments/" .
                 $commentid .
@@ -458,7 +458,7 @@ class Projects extends BaseClass
 
     /**
      * List invoices
-     * URL: https://books.zoho.com/api/v3/projects/${project_id}/invoices?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/invoices?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * Headers:
@@ -466,7 +466,7 @@ class Projects extends BaseClass
     public function list_invoices($projectid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
                 $projectid .
                 "/invoices?organization_id={{ORGANIZATION_ID}}"
         );

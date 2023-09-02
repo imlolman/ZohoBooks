@@ -8,7 +8,7 @@ class Currency extends BaseClass
 {
     /**
      * Create a Currency
-     * URL: https://books.zoho.com/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Currency extends BaseClass
     public function create_a_currency($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Currency extends BaseClass
 
     /**
      * List Currencies
-     * URL: https://books.zoho.com/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_currencies()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Currency extends BaseClass
 
     /**
      * Update a Currency
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $currencyid
      * Headers:
@@ -63,7 +63,7 @@ class Currency extends BaseClass
     public function update_a_currency($currencyid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Currency extends BaseClass
 
     /**
      * Get a Currency
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $currencyid
      * Headers:
@@ -90,7 +90,7 @@ class Currency extends BaseClass
     public function get_a_currency($currencyid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Currency extends BaseClass
 
     /**
      * Delete a currency
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $currencyid
      * Headers:
@@ -114,7 +114,7 @@ class Currency extends BaseClass
     public function delete_a_currency($currencyid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Currency extends BaseClass
 
     /**
      * Create an exchange rate
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}/exchangerates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}/exchangerates?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $currencyid
      * Headers:
@@ -139,7 +139,7 @@ class Currency extends BaseClass
     public function create_an_exchange_rate($currencyid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "/exchangerates?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Currency extends BaseClass
 
     /**
      * List exchange rates
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}/exchangerates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}/exchangerates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $currencyid
      * Headers:
@@ -166,7 +166,7 @@ class Currency extends BaseClass
     public function list_exchange_rates($currencyid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "/exchangerates?organization_id={{ORGANIZATION_ID}}"
         );
@@ -182,7 +182,7 @@ class Currency extends BaseClass
 
     /**
      * Update an exchange rate
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}/exchangerates/${exchange_rate_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}/exchangerates/${exchange_rate_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $currencyid
      * @param $exchangerateid
@@ -195,7 +195,7 @@ class Currency extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "/exchangerates/" .
                 $exchangerateid .
@@ -216,7 +216,7 @@ class Currency extends BaseClass
 
     /**
      * Get an exchange rate.
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}/exchangerates/${exchange_rate_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}/exchangerates/${exchange_rate_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $currencyid
      * @param $exchangerateid
@@ -225,7 +225,7 @@ class Currency extends BaseClass
     public function get_an_exchange_rate($currencyid, $exchangerateid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "/exchangerates/" .
                 $exchangerateid .
@@ -243,7 +243,7 @@ class Currency extends BaseClass
 
     /**
      * Delete an exchage rate
-     * URL: https://books.zoho.com/api/v3/settings/currencies/${currency_id}/exchangerates/${exchange_rate_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/${currency_id}/exchangerates/${exchange_rate_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $currencyid
      * @param $exchangerateid
@@ -252,7 +252,7 @@ class Currency extends BaseClass
     public function delete_an_exchage_rate($currencyid, $exchangerateid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/currencies/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/currencies/" .
                 $currencyid .
                 "/exchangerates/" .
                 $exchangerateid .

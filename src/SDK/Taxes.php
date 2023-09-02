@@ -8,7 +8,7 @@ class Taxes extends BaseClass
 {
     /**
      * Create a tax
-     * URL: https://books.zoho.com/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Taxes extends BaseClass
     public function create_a_tax($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Taxes extends BaseClass
 
     /**
      * List taxes
-     * URL: https://books.zoho.com/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_taxes()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Taxes extends BaseClass
 
     /**
      * Update a tax
-     * URL: https://books.zoho.com/api/v3/settings/taxes/${tax_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes/${tax_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $taxid
      * Headers:
@@ -63,7 +63,7 @@ class Taxes extends BaseClass
     public function update_a_tax($taxid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes/" .
                 $taxid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Taxes extends BaseClass
 
     /**
      * Get a tax
-     * URL: https://books.zoho.com/api/v3/settings/taxes/${tax_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes/${tax_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $taxid
      * Headers:
@@ -90,7 +90,7 @@ class Taxes extends BaseClass
     public function get_a_tax($taxid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes/" .
                 $taxid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Taxes extends BaseClass
 
     /**
      * Delete a tax
-     * URL: https://books.zoho.com/api/v3/settings/taxes/${tax_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes/${tax_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $taxid
      * Headers:
@@ -114,7 +114,7 @@ class Taxes extends BaseClass
     public function delete_a_tax($taxid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxes/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxes/" .
                 $taxid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Taxes extends BaseClass
 
     /**
      * Update a tax group
-     * URL: https://books.zoho.com/api/v3/settings/taxgroups/${tax_group_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups/${tax_group_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $taxgroupid
      * Headers:
@@ -139,7 +139,7 @@ class Taxes extends BaseClass
     public function update_a_tax_group($taxgroupid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxgroups/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups/" .
                 $taxgroupid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Taxes extends BaseClass
 
     /**
      * Get a tax group
-     * URL: https://books.zoho.com/api/v3/settings/taxgroups/${tax_group_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups/${tax_group_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $taxgroupid
      * Headers:
@@ -166,7 +166,7 @@ class Taxes extends BaseClass
     public function get_a_tax_group($taxgroupid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxgroups/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups/" .
                 $taxgroupid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -182,7 +182,7 @@ class Taxes extends BaseClass
 
     /**
      * Delete a tax group
-     * URL: https://books.zoho.com/api/v3/settings/taxgroups/${tax_group_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups/${tax_group_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $taxgroupid
      * Headers:
@@ -190,7 +190,7 @@ class Taxes extends BaseClass
     public function delete_a_tax_group($taxgroupid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxgroups/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups/" .
                 $taxgroupid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -206,7 +206,7 @@ class Taxes extends BaseClass
 
     /**
      * Create a tax group
-     * URL: https://books.zoho.com/api/v3/settings/taxgroups?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -214,7 +214,7 @@ class Taxes extends BaseClass
     public function create_a_tax_group($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxgroups?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxgroups?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -231,7 +231,7 @@ class Taxes extends BaseClass
 
     /**
      * Create a tax authority [US and CA Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -239,7 +239,7 @@ class Taxes extends BaseClass
     public function create_a_tax_authority__us_and_ca_edition_only_($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -256,14 +256,14 @@ class Taxes extends BaseClass
 
     /**
      * List tax authorities [US Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_tax_authorities__us_edition_only_()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -277,7 +277,7 @@ class Taxes extends BaseClass
 
     /**
      * Update a tax authority [US and CA Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxauthorities/${tax_authority_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities/${tax_authority_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $taxauthorityid
      * Headers:
@@ -288,7 +288,7 @@ class Taxes extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxauthorities/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities/" .
                 $taxauthorityid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -307,7 +307,7 @@ class Taxes extends BaseClass
 
     /**
      * Get a tax authority [US and CA Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxauthorities/${tax_authority_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities/${tax_authority_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $taxauthorityid
      * Headers:
@@ -316,7 +316,7 @@ class Taxes extends BaseClass
         $taxauthorityid
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxauthorities/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities/" .
                 $taxauthorityid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -332,7 +332,7 @@ class Taxes extends BaseClass
 
     /**
      * Delete a tax authority [US and CA Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxauthorities/${tax_authority_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities/${tax_authority_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $taxauthorityid
      * Headers:
@@ -341,7 +341,7 @@ class Taxes extends BaseClass
         $taxauthorityid
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxauthorities/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxauthorities/" .
                 $taxauthorityid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -357,7 +357,7 @@ class Taxes extends BaseClass
 
     /**
      * Create a tax exemption [US Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -365,7 +365,7 @@ class Taxes extends BaseClass
     public function create_a_tax_exemption__us_edition_only_($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -382,14 +382,14 @@ class Taxes extends BaseClass
 
     /**
      * List tax exemptions [US Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_tax_exemptions__us_edition_only_()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -403,7 +403,7 @@ class Taxes extends BaseClass
 
     /**
      * Update a tax exemption [US Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxexemptions/${tax_exemption_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions/${tax_exemption_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $taxexemptionid
      * Headers:
@@ -414,7 +414,7 @@ class Taxes extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxexemptions/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions/" .
                 $taxexemptionid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -433,7 +433,7 @@ class Taxes extends BaseClass
 
     /**
      * Get a tax exemption [US Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxexemptions/${tax_exemption_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions/${tax_exemption_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $taxexemptionid
      * Headers:
@@ -441,7 +441,7 @@ class Taxes extends BaseClass
     public function get_a_tax_exemption__us_edition_only_($taxexemptionid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxexemptions/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions/" .
                 $taxexemptionid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -457,7 +457,7 @@ class Taxes extends BaseClass
 
     /**
      * Delete a tax exemption [US Edition only]
-     * URL: https://books.zoho.com/api/v3/settings/taxexemptions/${tax_exemption_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions/${tax_exemption_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $taxexemptionid
      * Headers:
@@ -465,7 +465,7 @@ class Taxes extends BaseClass
     public function delete_a_tax_exemption__us_edition_only_($taxexemptionid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/settings/taxexemptions/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/taxexemptions/" .
                 $taxexemptionid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );

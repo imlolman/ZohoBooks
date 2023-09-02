@@ -8,7 +8,7 @@ class Users extends BaseClass
 {
     /**
      * Create a user
-     * URL: https://books.zoho.com/api/v3/users?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Users extends BaseClass
     public function create_a_user($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Users extends BaseClass
 
     /**
      * List Users
-     * URL: https://books.zoho.com/api/v3/users?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_users()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Users extends BaseClass
 
     /**
      * Update a user
-     * URL: https://books.zoho.com/api/v3/users/${user_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/${user_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $userid
      * Headers:
@@ -63,7 +63,7 @@ class Users extends BaseClass
     public function update_a_user($userid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/" .
                 $userid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Users extends BaseClass
 
     /**
      * Get a user
-     * URL: https://books.zoho.com/api/v3/users/${user_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/${user_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $userid
      * Headers:
@@ -90,7 +90,7 @@ class Users extends BaseClass
     public function get_a_user($userid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/" .
                 $userid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Users extends BaseClass
 
     /**
      * Delete a user
-     * URL: https://books.zoho.com/api/v3/users/${user_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/${user_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $userid
      * Headers:
@@ -114,7 +114,7 @@ class Users extends BaseClass
     public function delete_a_user($userid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/" .
                 $userid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,14 +130,14 @@ class Users extends BaseClass
 
     /**
      * Get current user
-     * URL: https://books.zoho.com/api/v3/users/me?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/me?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function get_current_user()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/me?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/me?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -151,7 +151,7 @@ class Users extends BaseClass
 
     /**
      * Invite a user
-     * URL: https://books.zoho.com/api/v3/users/${user_id}/invite?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/${user_id}/invite?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $userid
      * Headers:
@@ -160,7 +160,7 @@ class Users extends BaseClass
     public function invite_a_user($userid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/" .
                 $userid .
                 "/invite?organization_id={{ORGANIZATION_ID}}"
         );
@@ -179,7 +179,7 @@ class Users extends BaseClass
 
     /**
      * Mark user as active
-     * URL: https://books.zoho.com/api/v3/users/${user_id}/active?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/${user_id}/active?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $userid
      * Headers:
@@ -188,7 +188,7 @@ class Users extends BaseClass
     public function mark_user_as_active($userid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/" .
                 $userid .
                 "/active?organization_id={{ORGANIZATION_ID}}"
         );
@@ -207,7 +207,7 @@ class Users extends BaseClass
 
     /**
      * Mark user as inactive
-     * URL: https://books.zoho.com/api/v3/users/${user_id}/inactive?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/${user_id}/inactive?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $userid
      * Headers:
@@ -216,7 +216,7 @@ class Users extends BaseClass
     public function mark_user_as_inactive($userid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/users/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/users/" .
                 $userid .
                 "/inactive?organization_id={{ORGANIZATION_ID}}"
         );

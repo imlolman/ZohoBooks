@@ -8,7 +8,7 @@ class CustomModules extends BaseClass
 {
     /**
      * Create  Custom Modules
-     * URL: https://books.zoho.com/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $modulename
      * Headers:
@@ -17,7 +17,7 @@ class CustomModules extends BaseClass
     public function create_custom_modules($modulename, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -36,7 +36,7 @@ class CustomModules extends BaseClass
 
     /**
      * Bulk Update Custom Module
-     * URL: https://books.zoho.com/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $modulename
      * Headers:
@@ -45,7 +45,7 @@ class CustomModules extends BaseClass
     public function bulk_update_custom_module($modulename, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -64,7 +64,7 @@ class CustomModules extends BaseClass
 
     /**
      * Get Record List of a Custom Module
-     * URL: https://books.zoho.com/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $modulename
      * Headers:
@@ -72,7 +72,7 @@ class CustomModules extends BaseClass
     public function get_record_list_of_a_custom_module($modulename)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -88,7 +88,7 @@ class CustomModules extends BaseClass
 
     /**
      * Delete Custom Modules
-     * URL: https://books.zoho.com/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $modulename
      * Headers:
@@ -96,7 +96,7 @@ class CustomModules extends BaseClass
     public function delete_custom_modules($modulename)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -112,7 +112,7 @@ class CustomModules extends BaseClass
 
     /**
      * Update Custom Module
-     * URL: https://books.zoho.com/api/v3/${module_name}/${module_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}/${module_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $modulename
      * @param $moduleid
@@ -122,7 +122,7 @@ class CustomModules extends BaseClass
     public function update_custom_module($modulename, $moduleid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "/" .
                 $moduleid .
@@ -143,7 +143,7 @@ class CustomModules extends BaseClass
 
     /**
      * Get Individual Record Details
-     * URL: https://books.zoho.com/api/v3/${module_name}/${module_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}/${module_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $modulename
      * @param $moduleid
@@ -152,7 +152,7 @@ class CustomModules extends BaseClass
     public function get_individual_record_details($modulename, $moduleid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "/" .
                 $moduleid .
@@ -170,7 +170,7 @@ class CustomModules extends BaseClass
 
     /**
      * Delete individual records
-     * URL: https://books.zoho.com/api/v3/${module_name}/${module_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/${module_name}/${module_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $modulename
      * @param $moduleid
@@ -179,7 +179,7 @@ class CustomModules extends BaseClass
     public function delete_individual_records($modulename, $moduleid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/" .
                 $modulename .
                 "/" .
                 $moduleid .

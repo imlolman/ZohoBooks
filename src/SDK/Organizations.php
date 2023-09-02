@@ -8,7 +8,7 @@ class Organizations extends BaseClass
 {
     /**
      * Create an organization
-     * URL: https://books.zoho.com/api/v3/organizations?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Organizations extends BaseClass
     public function create_an_organization($data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/organizations?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Organizations extends BaseClass
 
     /**
      * Get organization details
-     * URL: https://books.zoho.com/api/v3/organizations?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function get_organization_details()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/organizations?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,14 +54,14 @@ class Organizations extends BaseClass
 
     /**
      * Delete an organization
-     * URL: https://books.zoho.com/api/v3/organizations?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * Headers:
      */
     public function delete_an_organization()
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/organizations?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -75,7 +75,7 @@ class Organizations extends BaseClass
 
     /**
      * Get organization
-     * URL: https://books.zoho.com/api/v3/organizations/${organization_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations/${organization_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $organizationid
      * Headers:
@@ -83,7 +83,7 @@ class Organizations extends BaseClass
     public function get_organization($organizationid)
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/organizations/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations/" .
                 $organizationid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -99,7 +99,7 @@ class Organizations extends BaseClass
 
     /**
      * Update organization
-     * URL: https://books.zoho.com/api/v3/organizations/${organization_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations/${organization_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $organizationid
      * Headers:
@@ -108,7 +108,7 @@ class Organizations extends BaseClass
     public function update_organization($organizationid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://books.zoho.com/api/v3/organizations/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/organizations/" .
                 $organizationid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
