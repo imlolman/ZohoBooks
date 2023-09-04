@@ -49,11 +49,14 @@ class ZohoBooks
         $REFRESH_TOKEN = $this->config["REFRESH_TOKEN"];
         $ACCESS_TOKEN_EXPIRY = $this->config["ACCESS_TOKEN_EXPIRY"];
 
+        $tempArray = explode(".", $this->config["ZOHO_BOOKS_DOMAIN"]);
+        $domain = end($tempArray);
+
         if (time() > $ACCESS_TOKEN_EXPIRY) {
             $client = new \GuzzleHttp\Client();
 
             $response = $client->post(
-                "https://accounts.zoho.com/oauth/v2/token",
+                "https://accounts.zoho.".$domain."/oauth/v2/token",
                 [
                     "form_params" => [
                         "refresh_token" => $REFRESH_TOKEN,
@@ -65,6 +68,7 @@ class ZohoBooks
             );
 
             $response_data = json_decode($response->getBody(), true);
+
 
             if (isset($response_data["access_token"])) {
                 $new_access_token = $response_data["access_token"];
