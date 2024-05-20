@@ -8,7 +8,7 @@ class TimeEntries extends BaseClass
 {
     /**
      * Log time entries
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class TimeEntries extends BaseClass
     public function log_time_entries($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class TimeEntries extends BaseClass
 
     /**
      * List time entries.
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_time_entries()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,14 +54,14 @@ class TimeEntries extends BaseClass
 
     /**
      * Delete time entries
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * Headers:
      */
     public function delete_time_entries()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -75,7 +75,7 @@ class TimeEntries extends BaseClass
 
     /**
      * Update time entry
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/${time_entry_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/${time_entry_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $timeentryid
      * Headers:
@@ -84,7 +84,7 @@ class TimeEntries extends BaseClass
     public function update_time_entry($timeentryid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/" .
                 $timeentryid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -103,7 +103,7 @@ class TimeEntries extends BaseClass
 
     /**
      * Get a time entry
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/${time_entry_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/${time_entry_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $timeentryid
      * Headers:
@@ -111,7 +111,7 @@ class TimeEntries extends BaseClass
     public function get_a_time_entry($timeentryid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/" .
                 $timeentryid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -127,7 +127,7 @@ class TimeEntries extends BaseClass
 
     /**
      * Delete time entry
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/${time_entry_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/${time_entry_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $timeentryid
      * Headers:
@@ -135,7 +135,7 @@ class TimeEntries extends BaseClass
     public function delete_time_entry($timeentryid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/" .
                 $timeentryid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -151,7 +151,7 @@ class TimeEntries extends BaseClass
 
     /**
      * Start timer
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/${time_entry_id}/timer/start?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/${time_entry_id}/timer/start?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $timeentryid
      * Headers:
@@ -160,7 +160,7 @@ class TimeEntries extends BaseClass
     public function start_timer($timeentryid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/" .
                 $timeentryid .
                 "/timer/start?organization_id={{ORGANIZATION_ID}}"
         );
@@ -179,7 +179,7 @@ class TimeEntries extends BaseClass
 
     /**
      * Stop timer
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/timer/stop?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/timer/stop?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -187,7 +187,7 @@ class TimeEntries extends BaseClass
     public function stop_timer($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/timer/stop?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/timer/stop?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -204,14 +204,14 @@ class TimeEntries extends BaseClass
 
     /**
      * Get timer
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/runningtimer/me?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/runningtimer/me?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function get_timer()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/timeentries/runningtimer/me?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/timeentries/runningtimer/me?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];

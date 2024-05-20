@@ -8,7 +8,7 @@ class Journals extends BaseClass
 {
     /**
      * Create a journal
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Journals extends BaseClass
     public function create_a_journal($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Journals extends BaseClass
 
     /**
      * Get journal list
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function get_journal_list()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Journals extends BaseClass
 
     /**
      * Update a journal
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${journal_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${journal_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $journalid
      * Headers:
@@ -63,7 +63,7 @@ class Journals extends BaseClass
     public function update_a_journal($journalid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $journalid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Journals extends BaseClass
 
     /**
      * Get journal
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${journal_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${journal_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $journalid
      * Headers:
@@ -90,7 +90,7 @@ class Journals extends BaseClass
     public function get_journal($journalid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $journalid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Journals extends BaseClass
 
     /**
      * Delete a journal
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${journal_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${journal_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $journalid
      * Headers:
@@ -114,7 +114,7 @@ class Journals extends BaseClass
     public function delete_a_journal($journalid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $journalid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Journals extends BaseClass
 
     /**
      * Mark a journal as published
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${journal_id}/status/publish?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${journal_id}/status/publish?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $journalid
      * Headers:
@@ -139,7 +139,7 @@ class Journals extends BaseClass
     public function mark_a_journal_as_published($journalid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $journalid .
                 "/status/publish?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Journals extends BaseClass
 
     /**
      * Add attachment to a journal
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${journal_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${journal_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $journalid
      * Headers:
@@ -167,7 +167,7 @@ class Journals extends BaseClass
     public function add_attachment_to_a_journal($journalid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $journalid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class Journals extends BaseClass
 
     /**
      * Add comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${jounral_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${jounral_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $jounralid
      * Headers:
@@ -195,7 +195,7 @@ class Journals extends BaseClass
     public function add_comment($jounralid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $jounralid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -214,7 +214,7 @@ class Journals extends BaseClass
 
     /**
      * Delete a comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/${jounral_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/${jounral_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $jounralid
      * @param $commentid
@@ -223,7 +223,7 @@ class Journals extends BaseClass
     public function delete_a_comment($jounralid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/journals/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/journals/" .
                 $jounralid .
                 "/comments/" .
                 $commentid .

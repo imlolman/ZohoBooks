@@ -8,7 +8,7 @@ class CustomerPayments extends BaseClass
 {
     /**
      * Create a payment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class CustomerPayments extends BaseClass
     public function create_a_payment($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class CustomerPayments extends BaseClass
 
     /**
      * List Customer Payments
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_customer_payments()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Update a payment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${payment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${payment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $paymentid
      * Headers:
@@ -63,7 +63,7 @@ class CustomerPayments extends BaseClass
     public function update_a_payment($paymentid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $paymentid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Retrieve a payment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${payment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${payment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $paymentid
      * Headers:
@@ -90,7 +90,7 @@ class CustomerPayments extends BaseClass
     public function retrieve_a_payment($paymentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $paymentid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Delete a payment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${payment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${payment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $paymentid
      * Headers:
@@ -114,7 +114,7 @@ class CustomerPayments extends BaseClass
     public function delete_a_payment($paymentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $paymentid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Refund an excess customer payment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${customer_payment_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${customer_payment_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $customerpaymentid
      * Headers:
@@ -141,7 +141,7 @@ class CustomerPayments extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $customerpaymentid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -160,7 +160,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * List refunds of a customer payment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${customer_payment_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${customer_payment_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $customerpaymentid
      * Headers:
@@ -168,7 +168,7 @@ class CustomerPayments extends BaseClass
     public function list_refunds_of_a_customer_payment($customerpaymentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $customerpaymentid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -184,7 +184,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Update a refund
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${customer_payment_id}/refunds/${refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${customer_payment_id}/refunds/${refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $customerpaymentid
      * @param $refundid
@@ -194,7 +194,7 @@ class CustomerPayments extends BaseClass
     public function update_a_refund($customerpaymentid, $refundid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $customerpaymentid .
                 "/refunds/" .
                 $refundid .
@@ -215,7 +215,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Details of a refund
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${customer_payment_id}/refunds/${refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${customer_payment_id}/refunds/${refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $customerpaymentid
      * @param $refundid
@@ -224,7 +224,7 @@ class CustomerPayments extends BaseClass
     public function details_of_a_refund($customerpaymentid, $refundid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $customerpaymentid .
                 "/refunds/" .
                 $refundid .
@@ -242,7 +242,7 @@ class CustomerPayments extends BaseClass
 
     /**
      * Delete a Refund
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/${customer_payment_id}/refunds/${refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/${customer_payment_id}/refunds/${refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $customerpaymentid
      * @param $refundid
@@ -251,7 +251,7 @@ class CustomerPayments extends BaseClass
     public function delete_a_refund($customerpaymentid, $refundid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/customerpayments/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/customerpayments/" .
                 $customerpaymentid .
                 "/refunds/" .
                 $refundid .

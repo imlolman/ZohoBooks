@@ -8,7 +8,7 @@ class Contacts extends BaseClass
 {
     /**
      * Create a Contact
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Contacts extends BaseClass
     public function create_a_contact($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Contacts extends BaseClass
 
     /**
      * List Contacts
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_contacts()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Contacts extends BaseClass
 
     /**
      * Update a Contact
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $contactid
      * Headers:
@@ -63,7 +63,7 @@ class Contacts extends BaseClass
     public function update_a_contact($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Contacts extends BaseClass
 
     /**
      * Get Contact
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $contactid
      * Headers:
@@ -90,7 +90,7 @@ class Contacts extends BaseClass
     public function get_contact($contactid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Contacts extends BaseClass
 
     /**
      * Delete a Contact
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $contactid
      * Headers:
@@ -114,7 +114,7 @@ class Contacts extends BaseClass
     public function delete_a_contact($contactid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Contacts extends BaseClass
 
     /**
      * Mark as Active
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/active?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/active?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -139,7 +139,7 @@ class Contacts extends BaseClass
     public function mark_as_active($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/active?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Contacts extends BaseClass
 
     /**
      * Mark as Inactive
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/inactive?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/inactive?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -167,7 +167,7 @@ class Contacts extends BaseClass
     public function mark_as_inactive($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/inactive?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class Contacts extends BaseClass
 
     /**
      * Enable Portal Access
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/portal/enable?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/portal/enable?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -195,7 +195,7 @@ class Contacts extends BaseClass
     public function enable_portal_access($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/portal/enable?organization_id={{ORGANIZATION_ID}}"
         );
@@ -214,7 +214,7 @@ class Contacts extends BaseClass
 
     /**
      * Enable Payment Reminders
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/paymentreminder/enable?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/paymentreminder/enable?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -223,7 +223,7 @@ class Contacts extends BaseClass
     public function enable_payment_reminders($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/paymentreminder/enable?organization_id={{ORGANIZATION_ID}}"
         );
@@ -242,7 +242,7 @@ class Contacts extends BaseClass
 
     /**
      * Disable Payment Reminders
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/paymentreminder/disable?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/paymentreminder/disable?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -251,7 +251,7 @@ class Contacts extends BaseClass
     public function disable_payment_reminders($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/paymentreminder/disable?organization_id={{ORGANIZATION_ID}}"
         );
@@ -270,7 +270,7 @@ class Contacts extends BaseClass
 
     /**
      * Email Statement
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/statements/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/statements/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -279,7 +279,7 @@ class Contacts extends BaseClass
     public function email_statement($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/statements/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -298,7 +298,7 @@ class Contacts extends BaseClass
 
     /**
      * Get Statement Mail Content
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/statements/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/statements/email?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $contactid
      * Headers:
@@ -306,7 +306,7 @@ class Contacts extends BaseClass
     public function get_statement_mail_content($contactid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/statements/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -322,7 +322,7 @@ class Contacts extends BaseClass
 
     /**
      * Email Contact
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -331,7 +331,7 @@ class Contacts extends BaseClass
     public function email_contact($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -350,7 +350,7 @@ class Contacts extends BaseClass
 
     /**
      * List Comments
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $contactid
      * Headers:
@@ -358,7 +358,7 @@ class Contacts extends BaseClass
     public function list_comments($contactid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -374,7 +374,7 @@ class Contacts extends BaseClass
 
     /**
      * Add Additional Address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/address?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/address?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -383,7 +383,7 @@ class Contacts extends BaseClass
     public function add_additional_address($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/address?organization_id={{ORGANIZATION_ID}}"
         );
@@ -402,7 +402,7 @@ class Contacts extends BaseClass
 
     /**
      * Get Contact Addresses
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/address?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/address?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $contactid
      * Headers:
@@ -410,7 +410,7 @@ class Contacts extends BaseClass
     public function get_contact_addresses($contactid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/address?organization_id={{ORGANIZATION_ID}}"
         );
@@ -426,7 +426,7 @@ class Contacts extends BaseClass
 
     /**
      * Edit Additional Address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/address/${address_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/address/${address_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $contactid
      * @param $addressid
@@ -436,7 +436,7 @@ class Contacts extends BaseClass
     public function edit_additional_address($contactid, $addressid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/address/" .
                 $addressid .
@@ -457,7 +457,7 @@ class Contacts extends BaseClass
 
     /**
      * Delete Additional Address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/address/${address_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/address/${address_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $contactid
      * @param $addressid
@@ -466,7 +466,7 @@ class Contacts extends BaseClass
     public function delete_additional_address($contactid, $addressid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/address/" .
                 $addressid .
@@ -484,7 +484,7 @@ class Contacts extends BaseClass
 
     /**
      * List Refunds
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $contactid
      * Headers:
@@ -492,7 +492,7 @@ class Contacts extends BaseClass
     public function list_refunds($contactid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -508,7 +508,7 @@ class Contacts extends BaseClass
 
     /**
      * Track 1099
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/track1099?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/track1099?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -517,7 +517,7 @@ class Contacts extends BaseClass
     public function track_1099($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/track1099?organization_id={{ORGANIZATION_ID}}"
         );
@@ -536,7 +536,7 @@ class Contacts extends BaseClass
 
     /**
      * Untrack 1099
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/${contact_id}/untrack1099?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/${contact_id}/untrack1099?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $contactid
      * Headers:
@@ -545,7 +545,7 @@ class Contacts extends BaseClass
     public function untrack_1099($contactid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/contacts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/contacts/" .
                 $contactid .
                 "/untrack1099?organization_id={{ORGANIZATION_ID}}"
         );

@@ -8,7 +8,7 @@ class SalesOrders extends BaseClass
 {
     /**
      * Create a sales order
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class SalesOrders extends BaseClass
     public function create_a_sales_order($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class SalesOrders extends BaseClass
 
     /**
      * List sales orders
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_sales_orders()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update a sales order
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $salesorderid
      * Headers:
@@ -63,7 +63,7 @@ class SalesOrders extends BaseClass
     public function update_a_sales_order($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Get a sales order
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $salesorderid
      * Headers:
@@ -90,7 +90,7 @@ class SalesOrders extends BaseClass
     public function get_a_sales_order($salesorderid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Delete a sales order
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $salesorderid
      * Headers:
@@ -114,7 +114,7 @@ class SalesOrders extends BaseClass
     public function delete_a_sales_order($salesorderid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Mark a sales order as open
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/status/open?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/status/open?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -139,7 +139,7 @@ class SalesOrders extends BaseClass
     public function mark_a_sales_order_as_open($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/status/open?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Mark a sales order as void
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/status/void?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/status/void?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -167,7 +167,7 @@ class SalesOrders extends BaseClass
     public function mark_a_sales_order_as_void($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/status/void?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update a sales order sub status
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/substatus/${status_code}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/substatus/${status_code}?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * @param $statuscode
@@ -199,7 +199,7 @@ class SalesOrders extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/substatus/" .
                 $statuscode .
@@ -220,7 +220,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Email a sales order
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -229,7 +229,7 @@ class SalesOrders extends BaseClass
     public function email_a_sales_order($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -248,7 +248,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Get sales order email content
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $salesorderid
      * Headers:
@@ -256,7 +256,7 @@ class SalesOrders extends BaseClass
     public function get_sales_order_email_content($salesorderid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -272,7 +272,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Submit a sales order for approval
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/submit?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/submit?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -281,7 +281,7 @@ class SalesOrders extends BaseClass
     public function submit_a_sales_order_for_approval($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/submit?organization_id={{ORGANIZATION_ID}}"
         );
@@ -300,7 +300,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Approve a sales order.
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/approve?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/approve?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -309,7 +309,7 @@ class SalesOrders extends BaseClass
     public function approve_a_sales_order($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/approve?organization_id={{ORGANIZATION_ID}}"
         );
@@ -328,14 +328,14 @@ class SalesOrders extends BaseClass
 
     /**
      * Bulk export sales orders
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/pdf?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/pdf?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function bulk_export_sales_orders()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/pdf?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/pdf?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -349,14 +349,14 @@ class SalesOrders extends BaseClass
 
     /**
      * Bulk print sales orders
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/print?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/print?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function bulk_print_sales_orders()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/print?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/print?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -370,7 +370,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update billing address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/address/billing?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/address/billing?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $salesorderid
      * Headers:
@@ -379,7 +379,7 @@ class SalesOrders extends BaseClass
     public function update_billing_address($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/address/billing?organization_id={{ORGANIZATION_ID}}"
         );
@@ -398,7 +398,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update shipping address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $salesorderid
      * Headers:
@@ -407,7 +407,7 @@ class SalesOrders extends BaseClass
     public function update_shipping_address($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/address/shipping?organization_id={{ORGANIZATION_ID}}"
         );
@@ -426,14 +426,14 @@ class SalesOrders extends BaseClass
 
     /**
      * List sales order templates
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/templates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/templates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_sales_order_templates()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/templates?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/templates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -447,7 +447,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update sales order template
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $salesorderid
      * @param $templateid
@@ -460,7 +460,7 @@ class SalesOrders extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/templates/" .
                 $templateid .
@@ -481,7 +481,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Add attachment to a sales order
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -490,7 +490,7 @@ class SalesOrders extends BaseClass
     public function add_attachment_to_a_sales_order($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -509,7 +509,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update attachment preference
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $salesorderid
      * Headers:
@@ -518,7 +518,7 @@ class SalesOrders extends BaseClass
     public function update_attachment_preference($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -537,7 +537,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Get a sales order attachment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $salesorderid
      * Headers:
@@ -545,7 +545,7 @@ class SalesOrders extends BaseClass
     public function get_a_sales_order_attachment($salesorderid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -561,7 +561,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Delete an attachment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/attachment?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $salesorderid
      * Headers:
@@ -569,7 +569,7 @@ class SalesOrders extends BaseClass
     public function delete_an_attachment($salesorderid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/attachment?organization_id={{ORGANIZATION_ID}}"
         );
@@ -585,7 +585,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Add comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $salesorderid
      * Headers:
@@ -594,7 +594,7 @@ class SalesOrders extends BaseClass
     public function add_comment($salesorderid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -613,7 +613,7 @@ class SalesOrders extends BaseClass
 
     /**
      * List sales order comments & history
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $salesorderid
      * Headers:
@@ -621,7 +621,7 @@ class SalesOrders extends BaseClass
     public function list_sales_order_comments_and_history($salesorderid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -637,7 +637,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Update comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $salesorderid
      * @param $commentid
@@ -647,7 +647,7 @@ class SalesOrders extends BaseClass
     public function update_comment($salesorderid, $commentid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/comments/" .
                 $commentid .
@@ -668,7 +668,7 @@ class SalesOrders extends BaseClass
 
     /**
      * Delete a comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/${salesorder_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/${salesorder_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $salesorderid
      * @param $commentid
@@ -677,7 +677,7 @@ class SalesOrders extends BaseClass
     public function delete_a_comment($salesorderid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/salesorders/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/salesorders/" .
                 $salesorderid .
                 "/comments/" .
                 $commentid .

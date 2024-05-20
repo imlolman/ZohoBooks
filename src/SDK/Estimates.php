@@ -8,7 +8,7 @@ class Estimates extends BaseClass
 {
     /**
      * Create an Estimate
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class Estimates extends BaseClass
     public function create_an_estimate($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class Estimates extends BaseClass
 
     /**
      * List estimates
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_estimates()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class Estimates extends BaseClass
 
     /**
      * Update an Estimate
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $estimateid
      * Headers:
@@ -63,7 +63,7 @@ class Estimates extends BaseClass
     public function update_an_estimate($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class Estimates extends BaseClass
 
     /**
      * Get an estimate
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $estimateid
      * Headers:
@@ -90,7 +90,7 @@ class Estimates extends BaseClass
     public function get_an_estimate($estimateid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class Estimates extends BaseClass
 
     /**
      * Delete an Estimate
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $estimateid
      * Headers:
@@ -114,7 +114,7 @@ class Estimates extends BaseClass
     public function delete_an_estimate($estimateid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class Estimates extends BaseClass
 
     /**
      * Mark an estimate as sent
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/status/sent?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/status/sent?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -139,7 +139,7 @@ class Estimates extends BaseClass
     public function mark_an_estimate_as_sent($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/status/sent?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class Estimates extends BaseClass
 
     /**
      * Mark an estimate as accepted
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/status/accepted?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/status/accepted?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -167,7 +167,7 @@ class Estimates extends BaseClass
     public function mark_an_estimate_as_accepted($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/status/accepted?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class Estimates extends BaseClass
 
     /**
      * Mark an estimate as declined
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/status/declined?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/status/declined?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -195,7 +195,7 @@ class Estimates extends BaseClass
     public function mark_an_estimate_as_declined($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/status/declined?organization_id={{ORGANIZATION_ID}}"
         );
@@ -214,7 +214,7 @@ class Estimates extends BaseClass
 
     /**
      * Submit an estimate for approval
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/submit?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/submit?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -223,7 +223,7 @@ class Estimates extends BaseClass
     public function submit_an_estimate_for_approval($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/submit?organization_id={{ORGANIZATION_ID}}"
         );
@@ -242,7 +242,7 @@ class Estimates extends BaseClass
 
     /**
      * Approve an estimate.
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/approve?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/approve?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -251,7 +251,7 @@ class Estimates extends BaseClass
     public function approve_an_estimate($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/approve?organization_id={{ORGANIZATION_ID}}"
         );
@@ -270,7 +270,7 @@ class Estimates extends BaseClass
 
     /**
      * Email an estimate
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -279,7 +279,7 @@ class Estimates extends BaseClass
     public function email_an_estimate($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -298,7 +298,7 @@ class Estimates extends BaseClass
 
     /**
      * Get estimate email content
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/email?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $estimateid
      * Headers:
@@ -306,7 +306,7 @@ class Estimates extends BaseClass
     public function get_estimate_email_content($estimateid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/email?organization_id={{ORGANIZATION_ID}}"
         );
@@ -322,7 +322,7 @@ class Estimates extends BaseClass
 
     /**
      * Email multiple estimates
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/email?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/email?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -330,7 +330,7 @@ class Estimates extends BaseClass
     public function email_multiple_estimates($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/email?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/email?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -347,14 +347,14 @@ class Estimates extends BaseClass
 
     /**
      * Bulk export estimates
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/pdf?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/pdf?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function bulk_export_estimates()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/pdf?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/pdf?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -368,14 +368,14 @@ class Estimates extends BaseClass
 
     /**
      * Bulk print estimates
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/print?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/print?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function bulk_print_estimates()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/print?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/print?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -389,7 +389,7 @@ class Estimates extends BaseClass
 
     /**
      * Update billing address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/address/billing?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/address/billing?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $estimateid
      * Headers:
@@ -398,7 +398,7 @@ class Estimates extends BaseClass
     public function update_billing_address($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/address/billing?organization_id={{ORGANIZATION_ID}}"
         );
@@ -417,7 +417,7 @@ class Estimates extends BaseClass
 
     /**
      * Update shipping address
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/address/shipping?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $estimateid
      * Headers:
@@ -426,7 +426,7 @@ class Estimates extends BaseClass
     public function update_shipping_address($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/address/shipping?organization_id={{ORGANIZATION_ID}}"
         );
@@ -445,14 +445,14 @@ class Estimates extends BaseClass
 
     /**
      * List estimate template
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/templates?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/templates?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_estimate_template()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/templates?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/templates?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -466,7 +466,7 @@ class Estimates extends BaseClass
 
     /**
      * Update estimate template
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/templates/${template_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $estimateid
      * @param $templateid
@@ -479,7 +479,7 @@ class Estimates extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/templates/" .
                 $templateid .
@@ -500,7 +500,7 @@ class Estimates extends BaseClass
 
     /**
      * Add Comments
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $estimateid
      * Headers:
@@ -509,7 +509,7 @@ class Estimates extends BaseClass
     public function add_comments($estimateid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -528,7 +528,7 @@ class Estimates extends BaseClass
 
     /**
      * List estimate comments & history
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $estimateid
      * Headers:
@@ -536,7 +536,7 @@ class Estimates extends BaseClass
     public function list_estimate_comments_and_history($estimateid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -552,7 +552,7 @@ class Estimates extends BaseClass
 
     /**
      * Update comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $estimateid
      * @param $commentid
@@ -562,7 +562,7 @@ class Estimates extends BaseClass
     public function update_comment($estimateid, $commentid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/comments/" .
                 $commentid .
@@ -583,7 +583,7 @@ class Estimates extends BaseClass
 
     /**
      * Delete a comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/${estimate_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/${estimate_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $estimateid
      * @param $commentid
@@ -592,7 +592,7 @@ class Estimates extends BaseClass
     public function delete_a_comment($estimateid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/estimates/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/estimates/" .
                 $estimateid .
                 "/comments/" .
                 $commentid .

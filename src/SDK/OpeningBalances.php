@@ -8,7 +8,7 @@ class OpeningBalances extends BaseClass
 {
     /**
      * Create opening balance
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class OpeningBalances extends BaseClass
     public function create_opening_balance($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,7 +33,7 @@ class OpeningBalances extends BaseClass
 
     /**
      * Update opening balance
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * Headers:
      * @param array $data = []
@@ -41,7 +41,7 @@ class OpeningBalances extends BaseClass
     public function update_opening_balance($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -58,14 +58,14 @@ class OpeningBalances extends BaseClass
 
     /**
      * Get opening balance
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function get_opening_balance()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -79,14 +79,14 @@ class OpeningBalances extends BaseClass
 
     /**
      * Delete opening balance
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * Headers:
      */
     public function delete_opening_balance()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/settings/openingbalances?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];

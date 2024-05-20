@@ -8,7 +8,7 @@ class Tasks extends BaseClass
 {
     /**
      * Add a task
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/tasks?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/${project_id}/tasks?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $projectid
      * Headers:
@@ -17,7 +17,7 @@ class Tasks extends BaseClass
     public function add_a_task($projectid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/" .
                 $projectid .
                 "/tasks?organization_id={{ORGANIZATION_ID}}"
         );
@@ -36,7 +36,7 @@ class Tasks extends BaseClass
 
     /**
      * List tasks
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/tasks?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/${project_id}/tasks?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * Headers:
@@ -44,7 +44,7 @@ class Tasks extends BaseClass
     public function list_tasks($projectid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/" .
                 $projectid .
                 "/tasks?organization_id={{ORGANIZATION_ID}}"
         );
@@ -60,7 +60,7 @@ class Tasks extends BaseClass
 
     /**
      * Update a task
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $projectid
      * @param $taskid
@@ -70,7 +70,7 @@ class Tasks extends BaseClass
     public function update_a_task($projectid, $taskid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/" .
                 $projectid .
                 "/tasks/" .
                 $taskid .
@@ -91,7 +91,7 @@ class Tasks extends BaseClass
 
     /**
      * Get a task
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $projectid
      * @param $taskid
@@ -100,7 +100,7 @@ class Tasks extends BaseClass
     public function get_a_task($projectid, $taskid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/" .
                 $projectid .
                 "/tasks/" .
                 $taskid .
@@ -118,7 +118,7 @@ class Tasks extends BaseClass
 
     /**
      * Delete Task
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/${project_id}/tasks/${task_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $projectid
      * @param $taskid
@@ -127,7 +127,7 @@ class Tasks extends BaseClass
     public function delete_task($projectid, $taskid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/projects/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/projects/" .
                 $projectid .
                 "/tasks/" .
                 $taskid .

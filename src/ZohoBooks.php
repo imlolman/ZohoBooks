@@ -56,7 +56,7 @@ class ZohoBooks
             $client = new \GuzzleHttp\Client();
 
             $response = $client->post(
-                "https://accounts.zoho.".$domain."/oauth/v2/token",
+                "https://accounts.zoho." . $domain . "/oauth/v2/token",
                 [
                     "form_params" => [
                         "refresh_token" => $REFRESH_TOKEN,

@@ -8,7 +8,7 @@ class BankRules extends BaseClass
 {
     /**
      * Create a rule
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class BankRules extends BaseClass
     public function create_a_rule($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class BankRules extends BaseClass
 
     /**
      * Get Rules List
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function get_rules_list()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class BankRules extends BaseClass
 
     /**
      * Update a rule
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $ruleid
      * Headers:
@@ -63,7 +63,7 @@ class BankRules extends BaseClass
     public function update_a_rule($ruleid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules/" .
                 $ruleid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class BankRules extends BaseClass
 
     /**
      * Get a rule
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $ruleid
      * Headers:
@@ -90,7 +90,7 @@ class BankRules extends BaseClass
     public function get_a_rule($ruleid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules/" .
                 $ruleid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class BankRules extends BaseClass
 
     /**
      * Delete a rule
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules/${rule_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $ruleid
      * Headers:
@@ -114,7 +114,7 @@ class BankRules extends BaseClass
     public function delete_a_rule($ruleid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/rules/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/rules/" .
                 $ruleid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );

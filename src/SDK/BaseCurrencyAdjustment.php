@@ -8,7 +8,7 @@ class BaseCurrencyAdjustment extends BaseClass
 {
     /**
      * Create a base currency adjustment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class BaseCurrencyAdjustment extends BaseClass
     public function create_a_base_currency_adjustment($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class BaseCurrencyAdjustment extends BaseClass
 
     /**
      * List base currency adjustment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_base_currency_adjustment()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class BaseCurrencyAdjustment extends BaseClass
 
     /**
      * Get a base currency adjustment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment/${base_currency_adjustment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment/${base_currency_adjustment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $basecurrencyadjustmentid
      * Headers:
@@ -62,7 +62,7 @@ class BaseCurrencyAdjustment extends BaseClass
     public function get_a_base_currency_adjustment($basecurrencyadjustmentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment/" .
                 $basecurrencyadjustmentid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -78,7 +78,7 @@ class BaseCurrencyAdjustment extends BaseClass
 
     /**
      * Delete a base currency adjustment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment/${base_currency_adjustment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment/${base_currency_adjustment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $basecurrencyadjustmentid
      * Headers:
@@ -86,7 +86,7 @@ class BaseCurrencyAdjustment extends BaseClass
     public function delete_a_base_currency_adjustment($basecurrencyadjustmentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment/" .
                 $basecurrencyadjustmentid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -102,14 +102,14 @@ class BaseCurrencyAdjustment extends BaseClass
 
     /**
      * List account details for base currency adjustment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment/accounts?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment/accounts?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_account_details_for_base_currency_adjustment()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/basecurrencyadjustment/accounts?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/basecurrencyadjustment/accounts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];

@@ -8,7 +8,7 @@ class BankAccounts extends BaseClass
 {
     /**
      * Create a bank account
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class BankAccounts extends BaseClass
     public function create_a_bank_account($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class BankAccounts extends BaseClass
 
     /**
      * List view of accounts
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_view_of_accounts()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Update bank account
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $accountid
      * Headers:
@@ -63,7 +63,7 @@ class BankAccounts extends BaseClass
     public function update_bank_account($accountid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Get account details
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $accountid
      * Headers:
@@ -90,7 +90,7 @@ class BankAccounts extends BaseClass
     public function get_account_details($accountid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Delete an account
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $accountid
      * Headers:
@@ -114,7 +114,7 @@ class BankAccounts extends BaseClass
     public function delete_an_account($accountid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Deactivate account.
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}/inactive?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}/inactive?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $accountid
      * Headers:
@@ -139,7 +139,7 @@ class BankAccounts extends BaseClass
     public function deactivate_account($accountid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "/inactive?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Activate account
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}/active?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}/active?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $accountid
      * Headers:
@@ -167,7 +167,7 @@ class BankAccounts extends BaseClass
     public function activate_account($accountid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "/active?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Import a Bank/Credit Card Statement
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankstatements?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankstatements?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -194,7 +194,7 @@ class BankAccounts extends BaseClass
     public function import_a_bank_credit_card_statement($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankstatements?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankstatements?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -211,7 +211,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Get last imported statement
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}/statement/lastimported?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}/statement/lastimported?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $accountid
      * Headers:
@@ -219,7 +219,7 @@ class BankAccounts extends BaseClass
     public function get_last_imported_statement($accountid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "/statement/lastimported?organization_id={{ORGANIZATION_ID}}"
         );
@@ -235,7 +235,7 @@ class BankAccounts extends BaseClass
 
     /**
      * Delete last imported statement
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/${account_id}/statement/${statement_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/${account_id}/statement/${statement_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $accountid
      * @param $statementid
@@ -244,7 +244,7 @@ class BankAccounts extends BaseClass
     public function delete_last_imported_statement($accountid, $statementid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/bankaccounts/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/bankaccounts/" .
                 $accountid .
                 "/statement/" .
                 $statementid .

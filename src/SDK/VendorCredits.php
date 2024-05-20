@@ -8,7 +8,7 @@ class VendorCredits extends BaseClass
 {
     /**
      * Create a vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * Headers:
      * @param array $data = []
@@ -16,7 +16,7 @@ class VendorCredits extends BaseClass
     public function create_a_vendor_credit($data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -33,14 +33,14 @@ class VendorCredits extends BaseClass
 
     /**
      * List vendor credits
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_vendor_credits()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -54,7 +54,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Update vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $vendorcreditid
      * Headers:
@@ -63,7 +63,7 @@ class VendorCredits extends BaseClass
     public function update_vendor_credit($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -82,7 +82,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Get vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $vendorcreditid
      * Headers:
@@ -90,7 +90,7 @@ class VendorCredits extends BaseClass
     public function get_vendor_credit($vendorcreditid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -106,7 +106,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Delete vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $vendorcreditid
      * Headers:
@@ -114,7 +114,7 @@ class VendorCredits extends BaseClass
     public function delete_vendor_credit($vendorcreditid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "?organization_id={{ORGANIZATION_ID}}"
         );
@@ -130,7 +130,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Convert to open
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/status/open?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/status/open?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -139,7 +139,7 @@ class VendorCredits extends BaseClass
     public function convert_to_open($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/status/open?organization_id={{ORGANIZATION_ID}}"
         );
@@ -158,7 +158,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Void vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/status/void?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/status/void?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -167,7 +167,7 @@ class VendorCredits extends BaseClass
     public function void_vendor_credit($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/status/void?organization_id={{ORGANIZATION_ID}}"
         );
@@ -186,7 +186,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Submit a Vendor credit for approval
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/submit?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/submit?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -197,7 +197,7 @@ class VendorCredits extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/submit?organization_id={{ORGANIZATION_ID}}"
         );
@@ -216,7 +216,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Approve a Vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/approve?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/approve?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -225,7 +225,7 @@ class VendorCredits extends BaseClass
     public function approve_a_vendor_credit($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/approve?organization_id={{ORGANIZATION_ID}}"
         );
@@ -244,7 +244,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Apply credits to a bill
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/bills?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/bills?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -253,7 +253,7 @@ class VendorCredits extends BaseClass
     public function apply_credits_to_a_bill($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/bills?organization_id={{ORGANIZATION_ID}}"
         );
@@ -272,7 +272,7 @@ class VendorCredits extends BaseClass
 
     /**
      * List bills credited
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/bills?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/bills?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $vendorcreditid
      * Headers:
@@ -280,7 +280,7 @@ class VendorCredits extends BaseClass
     public function list_bills_credited($vendorcreditid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/bills?organization_id={{ORGANIZATION_ID}}"
         );
@@ -296,7 +296,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Delete bills credited
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/bills/${vendor_credit_bill_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/bills/${vendor_credit_bill_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $vendorcreditid
      * @param $vendorcreditbillid
@@ -305,7 +305,7 @@ class VendorCredits extends BaseClass
     public function delete_bills_credited($vendorcreditid, $vendorcreditbillid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/bills/" .
                 $vendorcreditbillid .
@@ -323,7 +323,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Refund a vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -332,7 +332,7 @@ class VendorCredits extends BaseClass
     public function refund_a_vendor_credit($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -351,7 +351,7 @@ class VendorCredits extends BaseClass
 
     /**
      * List refunds of a vendor credit
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $vendorcreditid
      * Headers:
@@ -359,7 +359,7 @@ class VendorCredits extends BaseClass
     public function list_refunds_of_a_vendor_credit($vendorcreditid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/refunds?organization_id={{ORGANIZATION_ID}}"
         );
@@ -375,7 +375,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Update vendor credit refund
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/refunds/${vendor_credit_refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/refunds/${vendor_credit_refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: PUT
      * @param $vendorcreditid
      * @param $vendorcreditrefundid
@@ -388,7 +388,7 @@ class VendorCredits extends BaseClass
         $data = []
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/refunds/" .
                 $vendorcreditrefundid .
@@ -409,7 +409,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Get vendor credit refund
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/refunds/${vendor_credit_refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/refunds/${vendor_credit_refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $vendorcreditid
      * @param $vendorcreditrefundid
@@ -420,7 +420,7 @@ class VendorCredits extends BaseClass
         $vendorcreditrefundid
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/refunds/" .
                 $vendorcreditrefundid .
@@ -438,7 +438,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Delete vendor credit refund
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/refunds/${vendor_credit_refund_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/refunds/${vendor_credit_refund_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $vendorcreditid
      * @param $vendorcreditrefundid
@@ -449,7 +449,7 @@ class VendorCredits extends BaseClass
         $vendorcreditrefundid
     ) {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/refunds/" .
                 $vendorcreditrefundid .
@@ -467,14 +467,14 @@ class VendorCredits extends BaseClass
 
     /**
      * List vendor credit refunds
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/refunds?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/refunds?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * Headers:
      */
     public function list_vendor_credit_refunds()
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/refunds?organization_id={{ORGANIZATION_ID}}"
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/refunds?organization_id={{ORGANIZATION_ID}}"
         );
         $options = [];
         $options["headers"] = [];
@@ -488,7 +488,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Add a comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: POST
      * @param $vendorcreditid
      * Headers:
@@ -497,7 +497,7 @@ class VendorCredits extends BaseClass
     public function add_a_comment($vendorcreditid, $data = [])
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -516,7 +516,7 @@ class VendorCredits extends BaseClass
 
     /**
      * List vendor credit comments & history
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/comments?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/comments?organization_id={{ORGANIZATION_ID}}
      * Method: GET
      * @param $vendorcreditid
      * Headers:
@@ -524,7 +524,7 @@ class VendorCredits extends BaseClass
     public function list_vendor_credit_comments_and_history($vendorcreditid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/comments?organization_id={{ORGANIZATION_ID}}"
         );
@@ -540,7 +540,7 @@ class VendorCredits extends BaseClass
 
     /**
      * Delete a comment
-     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/${vendor_credit_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
+     * URL: https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/${vendor_credit_id}/comments/${comment_id}?organization_id={{ORGANIZATION_ID}}
      * Method: DELETE
      * @param $vendorcreditid
      * @param $commentid
@@ -549,7 +549,7 @@ class VendorCredits extends BaseClass
     public function delete_a_comment($vendorcreditid, $commentid)
     {
         $url = $this->replaceVariables(
-            "https://{{ZOHO_BOOKS_DOMAIN}}/api/v3/vendorcredits/" .
+            "https://{{ZOHO_BOOKS_DOMAIN}}/books/v3/vendorcredits/" .
                 $vendorcreditid .
                 "/comments/" .
                 $commentid .
