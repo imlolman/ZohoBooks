@@ -72,12 +72,15 @@ class ZohoBooks
 
             if (isset($response_data["access_token"])) {
                 $new_access_token = $response_data["access_token"];
+                $api_url = $response_data["api_domain"];
+                $api_domain = parse_url($api_url, PHP_URL_HOST);
                 $new_access_token_expiry =
                     time() + $response_data["expires_in"];
 
                 // Update the configuration
                 $this->config["ACCESS_TOKEN"] = $new_access_token;
                 $this->config["ACCESS_TOKEN_EXPIRY"] = $new_access_token_expiry;
+                $this->config["ZOHO_BOOKS_DOMAIN"] = $api_domain;
 
                 return true;
             }
