@@ -10,6 +10,14 @@ composer require imlolman/zohobooks
 
 ### Usage
 
+1: We have to get code to get access and refresh token. We can get code by visiting the following URL in the browser and authorizing the zohoBooks, you will get code in return:
+```https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id={{{{ CLIENT ID HERE }}}}&scope=ZohoBooks.fullaccess.all&redirect_uri={{{{ YOUR REDIRECT URI HERE }}}}&prompt=consent&access_type=offline```
+
+2: After visiting the URL, you will get an authorization code that you can use to get access and refresh token by sending a `POST` request to the following URL:
+```https://accounts.zoho.com/oauth/v2/token?client_id={{{{ CLIENT ID HERE }}}}&grant_type=authorization_code&client_secret={{{{ CLIENT SECRET HERE }}}}&redirect_uri={{{{ REDIRECT URI }}}}&code={{{{ AUTHORIZATION CODE FROM ABOVE REQUEST }}}}```
+
+3: Once you have tokens, use in below code
+
 ```php
 
 <?php
