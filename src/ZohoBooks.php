@@ -15,7 +15,7 @@ class ZohoBooks
 
     public static function init($config = null)
     {
-        if (null === static::$instance) {
+        if (null === static::$instance || $config) {
             static::$instance = new static([
                 "CLIENT_ID" => $config["CLIENT_ID"],
                 "CLIENT_SECRET" => $config["CLIENT_SECRET"],
